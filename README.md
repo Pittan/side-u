@@ -79,5 +79,5 @@ Apple Music の開発者トークン（有効期限 180 日）を作り直すた
 - [x] 実機確認: iPhone Safari / Android Chrome で作成〜共有、Instagram ストーリーズへの貼り付け（透過）、iPhone でのドラッグ
 - [x] 本物の Apple Music で 13 曲のプレイリストが曲順どおりにできる
 - [x] 実機確認用のページ `/spike/share-image` を削除する
-- [ ] Cloudflare Web Analytics の自動設定をオフにする（計測用のスクリプトが差し込まれないこと）
+- [x] Cloudflare Web Analytics の自動設定をオフにする（計測用のスクリプトが差し込まれないこと）
 - [ ] 共有 URL を X・LINE・Discord に貼って、共通の OGP 画像が出る
