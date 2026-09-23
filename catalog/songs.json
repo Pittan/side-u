@@ -6,7 +6,10 @@
     "artist": "ぱふゅ〜む",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -39,7 +42,10 @@
     "artist": "ぱふゅ〜む",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -76,7 +82,7 @@
       "status": "available",
       "songId": "657660772",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -93,7 +99,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -109,7 +118,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -129,7 +141,7 @@
       "status": "available",
       "songId": "657660770",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -146,7 +158,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -162,7 +177,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -182,7 +200,7 @@
       "status": "available",
       "songId": "657660771",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -203,7 +221,7 @@
       "status": "available",
       "songId": "657660769",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -224,7 +242,7 @@
       "status": "available",
       "songId": "657660766",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -245,7 +263,7 @@
       "status": "available",
       "songId": "657660773",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -266,7 +284,7 @@
       "status": "available",
       "songId": "657660774",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -287,7 +305,7 @@
       "status": "available",
       "songId": "657660767",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -308,7 +326,7 @@
       "status": "available",
       "songId": "657660775",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -327,9 +345,9 @@
     "selectable": true,
     "appleMusic": {
       "status": "available",
-      "songId": "657660768",
+      "songId": "657680482",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -350,7 +368,7 @@
       "status": "available",
       "songId": "657660776",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -371,7 +389,7 @@
       "status": "available",
       "songId": "657660765",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -388,7 +406,12 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660768",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -396,8 +419,7 @@
       }
     ],
     "releasedOn": "2006-08-02",
-    "parentId": 18,
-    "memo": "Apple Music の ID がシングル版（#18）と同じだったため外した。照合時に Album Version の ID を調べる"
+    "parentId": 18
   },
   {
     "id": 22,
@@ -410,7 +432,7 @@
       "status": "available",
       "songId": "1479641007",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -431,7 +453,7 @@
       "status": "available",
       "songId": "657666323",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -448,7 +470,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657685788",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -466,9 +493,9 @@
     "selectable": true,
     "appleMusic": {
       "status": "available",
-      "songId": "657666313",
+      "songId": "657685989",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -545,7 +572,7 @@
       "status": "available",
       "songId": "657688078",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -566,7 +593,7 @@
       "status": "available",
       "songId": "657688079",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -621,7 +648,7 @@
       "status": "available",
       "songId": "657666314",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -642,7 +669,7 @@
       "status": "available",
       "songId": "657666315",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -663,7 +690,7 @@
       "status": "available",
       "songId": "657666319",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -684,7 +711,7 @@
       "status": "available",
       "songId": "657666320",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -705,7 +732,7 @@
       "status": "available",
       "songId": "657666321",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -726,7 +753,7 @@
       "status": "available",
       "songId": "657666322",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -747,7 +774,7 @@
       "status": "available",
       "songId": "657666324",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -768,7 +795,7 @@
       "status": "available",
       "songId": "657671891",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -789,7 +816,7 @@
       "status": "available",
       "songId": "657689624",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -827,7 +854,7 @@
       "status": "available",
       "songId": "657689626",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -849,7 +876,7 @@
       "status": "available",
       "songId": "658115976",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -870,7 +897,7 @@
       "status": "available",
       "songId": "658115977",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -925,7 +952,7 @@
       "status": "available",
       "songId": "663649112",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -946,7 +973,7 @@
       "status": "available",
       "songId": "663649113",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1001,7 +1028,7 @@
       "status": "available",
       "songId": "657671890",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1022,7 +1049,7 @@
       "status": "available",
       "songId": "657671893",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1044,7 +1071,7 @@
       "status": "available",
       "songId": "657671894",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1065,7 +1092,7 @@
       "status": "available",
       "songId": "657671895",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1086,7 +1113,7 @@
       "status": "available",
       "songId": "657671896",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1107,7 +1134,7 @@
       "status": "available",
       "songId": "657671897",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1128,7 +1155,7 @@
       "status": "available",
       "songId": "657671898",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1149,7 +1176,7 @@
       "status": "available",
       "songId": "657671899",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1170,7 +1197,7 @@
       "status": "available",
       "songId": "657671901",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1192,7 +1219,7 @@
       "status": "available",
       "songId": "663529349",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1213,7 +1240,7 @@
       "status": "available",
       "songId": "663529350",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1268,7 +1295,7 @@
       "status": "available",
       "songId": "1465083593",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1289,7 +1316,7 @@
       "status": "available",
       "songId": "1465083592",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1344,7 +1371,7 @@
       "status": "available",
       "songId": "1465083590",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1365,7 +1392,7 @@
       "status": "available",
       "songId": "1465086759",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1420,7 +1447,7 @@
       "status": "available",
       "songId": "1479641225",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1441,7 +1468,7 @@
       "status": "available",
       "songId": "1479641226",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1496,7 +1523,7 @@
       "status": "available",
       "songId": "1479641228",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1517,7 +1544,7 @@
       "status": "available",
       "songId": "1465086761",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1572,7 +1599,7 @@
       "status": "available",
       "songId": "1465083584",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1593,7 +1620,7 @@
       "status": "available",
       "songId": "1465083585",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1615,7 +1642,7 @@
       "status": "available",
       "songId": "1465083586",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1637,7 +1664,7 @@
       "status": "available",
       "songId": "1465083588",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1658,7 +1685,7 @@
       "status": "available",
       "songId": "1465083589",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1679,7 +1706,7 @@
       "status": "available",
       "songId": "1465083594",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1700,7 +1727,7 @@
       "status": "available",
       "songId": "1465083595",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1721,7 +1748,7 @@
       "status": "available",
       "songId": "1444618416",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1742,7 +1769,7 @@
       "status": "available",
       "songId": "1444618418",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1797,7 +1824,7 @@
       "status": "available",
       "songId": "1444892949",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1818,7 +1845,7 @@
       "status": "available",
       "songId": "1444893071",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1839,7 +1866,7 @@
       "status": "available",
       "songId": "1444893072",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1911,7 +1938,7 @@
       "status": "available",
       "songId": "1465086752",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1933,7 +1960,7 @@
       "status": "available",
       "songId": "1465086762",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1955,7 +1982,7 @@
       "status": "available",
       "songId": "1445029658",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -1976,7 +2003,7 @@
       "status": "available",
       "songId": "1445030000",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2031,7 +2058,7 @@
       "status": "available",
       "songId": "1444633634",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2052,7 +2079,7 @@
       "status": "available",
       "songId": "1444633635",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2107,7 +2134,7 @@
       "status": "available",
       "songId": "1440777782",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2128,7 +2155,7 @@
       "status": "available",
       "songId": "1440777860",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2150,7 +2177,7 @@
       "status": "available",
       "songId": "1440777863",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2172,7 +2199,7 @@
       "status": "available",
       "songId": "1440777865",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2193,7 +2220,7 @@
       "status": "available",
       "songId": "1440777867",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2214,7 +2241,7 @@
       "status": "available",
       "songId": "1440777878",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2235,7 +2262,7 @@
       "status": "available",
       "songId": "1440778032",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2256,7 +2283,7 @@
       "status": "available",
       "songId": "1440778044",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2277,7 +2304,7 @@
       "status": "available",
       "songId": "1440778046",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2299,7 +2326,7 @@
       "status": "available",
       "songId": "1440778050",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2320,7 +2347,7 @@
       "status": "available",
       "songId": "1440769888",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2342,7 +2369,7 @@
       "status": "available",
       "songId": "1440769894",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2364,7 +2391,7 @@
       "status": "available",
       "songId": "1445028026",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2385,7 +2412,7 @@
       "status": "available",
       "songId": "1445028035",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2440,7 +2467,7 @@
       "status": "available",
       "songId": "1479641401",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2461,7 +2488,7 @@
       "status": "available",
       "songId": "1479641419",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2482,7 +2509,7 @@
       "status": "available",
       "songId": "1479641423",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2503,7 +2530,7 @@
       "status": "available",
       "songId": "1444855090",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2592,7 +2619,7 @@
       "status": "available",
       "songId": "1444864372",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2613,7 +2640,7 @@
       "status": "available",
       "songId": "1444864376",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2634,7 +2661,7 @@
       "status": "available",
       "songId": "1444864377",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2706,7 +2733,7 @@
       "status": "available",
       "songId": "1445046471",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2727,7 +2754,7 @@
       "status": "available",
       "songId": "1445046477",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2744,7 +2771,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -2815,7 +2845,7 @@
       "status": "available",
       "songId": "1440800555",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2836,7 +2866,7 @@
       "status": "available",
       "songId": "1440800828",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2857,7 +2887,7 @@
       "status": "available",
       "songId": "1440800954",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2878,7 +2908,7 @@
       "status": "available",
       "songId": "1440800964",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2899,7 +2929,7 @@
       "status": "available",
       "songId": "1440800970",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2920,7 +2950,7 @@
       "status": "available",
       "songId": "1440800977",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2942,7 +2972,7 @@
       "status": "available",
       "songId": "1440801284",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2964,7 +2994,7 @@
       "status": "available",
       "songId": "1440801293",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -2985,7 +3015,7 @@
       "status": "available",
       "songId": "1440801302",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3007,7 +3037,7 @@
       "status": "available",
       "songId": "1440801309",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3029,7 +3059,7 @@
       "status": "available",
       "songId": "1440801628",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3051,7 +3081,7 @@
       "status": "available",
       "songId": "1442464415",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3089,7 +3119,7 @@
       "status": "available",
       "songId": "1444865952",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3110,7 +3140,7 @@
       "status": "available",
       "songId": "1479021791",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3131,7 +3161,7 @@
       "status": "available",
       "songId": "1479021792",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3186,7 +3216,7 @@
       "status": "available",
       "songId": "1479021920",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3207,7 +3237,7 @@
       "status": "available",
       "songId": "1479022136",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3262,7 +3292,7 @@
       "status": "available",
       "songId": "1420297620",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3283,7 +3313,7 @@
       "status": "available",
       "songId": "1420297602",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3321,7 +3351,7 @@
       "status": "available",
       "songId": "1420297358",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3342,7 +3372,7 @@
       "status": "available",
       "songId": "1420297359",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3363,7 +3393,7 @@
       "status": "available",
       "songId": "1420297606",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3384,7 +3414,7 @@
       "status": "available",
       "songId": "1420297607",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3405,7 +3435,7 @@
       "status": "available",
       "songId": "1420297609",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3426,7 +3456,7 @@
       "status": "available",
       "songId": "1420297990",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3447,7 +3477,7 @@
       "status": "available",
       "songId": "1479640871",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3468,7 +3498,7 @@
       "status": "available",
       "songId": "1479641759",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3493,7 +3523,7 @@
       "status": "available",
       "songId": "1488564841",
       "storefront": "jp",
-      "verifiedAt": null
+      "verifiedAt": "2026-09-23"
     },
     "sources": [
       {
@@ -3514,7 +3544,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3529,7 +3562,10 @@
     "artist": "Perfume",
     "kind": "remix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3545,7 +3581,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3561,7 +3600,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3576,7 +3618,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3596,7 +3641,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3616,7 +3664,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3636,7 +3687,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3652,7 +3706,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3667,7 +3724,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3683,7 +3743,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3699,7 +3762,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3715,7 +3781,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3730,7 +3799,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3745,7 +3817,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3760,7 +3835,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3775,7 +3853,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3790,7 +3871,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3805,7 +3889,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3821,7 +3908,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3841,7 +3931,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3861,7 +3954,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3881,7 +3977,10 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3898,7 +3997,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1530114772",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3952,7 +4056,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1573544590",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3968,7 +4077,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1611515473",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -3984,7 +4098,12 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1611515476",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4035,7 +4154,12 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1584278865",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4052,7 +4176,12 @@
     "artist": "Perfume",
     "kind": "remix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1584278871",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4086,7 +4215,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841696",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4102,7 +4236,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1584278883",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4118,7 +4257,11 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23",
+      "note": "Apple Music にはライブの intro 版（ポリゴンウェイヴ EP）のみ"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4134,7 +4277,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841703",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4150,7 +4298,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841415",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4166,7 +4319,12 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841416",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4183,7 +4341,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841423",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4203,7 +4366,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841424",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4219,7 +4387,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841697",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4235,7 +4408,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1632841698",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4266,7 +4444,10 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "unavailable",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "perfume-database",
@@ -4281,7 +4462,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1700698383",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: Moon",
@@ -4306,7 +4492,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1700698389",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: Moon",
@@ -4360,7 +4551,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1711709422",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: すみっコディスコ",
@@ -4380,7 +4576,12 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1711709423",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: すみっコディスコ",
@@ -4414,7 +4615,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1746455753",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: The Light",
@@ -4434,7 +4640,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181858",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4455,7 +4666,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181859",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4476,7 +4692,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181862",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4497,7 +4718,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181866",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4518,7 +4744,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181989",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4539,7 +4770,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181993",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4560,7 +4796,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1768181997",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
@@ -4581,7 +4822,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1793672551",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4601,7 +4847,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1804230441",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4621,7 +4872,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1823905372",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4641,7 +4897,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1831932379",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4662,7 +4923,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1831932380",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4683,7 +4949,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1831932386",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4704,7 +4975,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1831932388",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4725,7 +5001,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1831932389",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4749,7 +5030,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1831932395",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
@@ -4770,7 +5056,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1854642534",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: ふめつのあなた",
@@ -4790,7 +5081,12 @@
     "artist": "Perfume",
     "kind": "canonical",
     "selectable": true,
-    "appleMusic": null,
+    "appleMusic": {
+      "status": "available",
+      "songId": "6765640926",
+      "storefront": "jp",
+      "verifiedAt": "2026-09-23"
+    },
     "sources": [
       {
         "label": "公式ディスコグラフィ: コールドスリープ",

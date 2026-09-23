@@ -38,11 +38,12 @@ M1〜M3（アプリ）
 - [ ] ビジュアルの作り込み、タグの本番の語彙
 
 最後にまとめて行う（外部サービスの準備が必要なもの）
-- [ ] Cloudflare へのデプロイ、`sideu.perfumehub.app` の設定（`wrangler login` が必要）
+- [x] Cloudflare へのデプロイ（`side-u.side-u.workers.dev`）、`perfumehub.app` のネームサーバーを Cloudflare に移管
+- [ ] `sideu.perfumehub.app` で開けることの確認（GitHub Actions からの初回デプロイ）
 - [ ] 実機確認: Instagram ストーリーズへの貼り付けと透明度（iOS / Android。HTTPS が必要）
-- [ ] Apple Developer で MusicKit の鍵を発行し、`pnpm apple:token` でトークンを作って本物の Apple Music で確認
-- [ ] Apple Music の ID の照合（重複 1 件: エレクトロ・ワールド #18 / #21）
-- [ ] MusicKit で 13 曲のプレイリストを曲順どおりに作成できるか確認
+- [x] Apple Developer で MusicKit の鍵を発行し、`pnpm apple:token` でトークンを作って本物の Apple Music で確認
+- [x] Apple Music の ID の照合（`pnpm catalog:verify-am`。配信あり 159 曲 / 配信なし 32 曲）
+- [x] MusicKit で 13 曲のプレイリストを作成できるか確認（手元の開発サーバーで、本物の Apple Music アカウントで確認）
 
 ## デプロイ
 
@@ -73,7 +74,7 @@ Apple Music の開発者トークン（有効期限 180 日）を作り直すた
 
 ### 公開前のチェックリスト
 
-- [ ] `pnpm catalog:validate --strict` が通る（Apple Music の ID をすべて照合済み）
+- [x] `pnpm catalog:validate --strict` が通る（Apple Music の ID をすべて照合済み）
 - [ ] タグの本番の語彙を `catalog/tags.json` に入れ、公開する ID を `catalog/published-ids.lock` に記録する
 - [ ] 実機確認: iPhone Safari / Android Chrome で作成〜共有、Instagram ストーリーズへの貼り付け（透過）、iPhone でのドラッグ
 - [ ] 本物の Apple Music で 13 曲のプレイリストが曲順どおりにできる
