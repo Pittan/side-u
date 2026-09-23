@@ -54,7 +54,7 @@ Apple Music の開発者トークン（有効期限 180 日）を作り直すた
 1. **Cloudflare**
    - `perfumehub.app` のゾーンが、デプロイ先と同じ Cloudflare アカウントにあること
    - API トークンを作る（テンプレート「Edit Cloudflare Workers」）
-   - 初回だけ手元から `pnpm deploy` して、`side-u.<アカウント>.workers.dev` で動くことを確認する（`pnpm exec wrangler login` が必要）
+   - 初回だけ手元から `pnpm run deploy` して、`side-u.<アカウント>.workers.dev` で動くことを確認する（`pnpm deploy` は pnpm 自身のコマンドなので `run` が必要）（`pnpm exec wrangler login` が必要）
    - 確認できたら `wrangler.jsonc` の `routes`（`sideu.perfumehub.app` の custom domain）のコメントを外して push する
 2. **Apple Developer**
    - Certificates, Identifiers & Profiles → Keys で、Media Services（MusicKit）を有効にした鍵を作り、`.p8` をダウンロードする
