@@ -59,3 +59,106 @@ export type Tag = {
 
 export const MAX_SONG_ID = 0xffff
 export const MAX_TAG_ID = 0xff
+
+// ---------------------------------------------------------------------------
+// ブラウザ・Worker に渡す軽量版（DESIGN.md §2.5）。`virtual:catalog` がビルド時に生成する。
+// ---------------------------------------------------------------------------
+
+export type CatalogSong = {
+  id: number
+  title: string
+  kana: string
+  aliases?: string[]
+  /** 'Perfume' 以外の名義のときだけ入る */
+  artist?: string
+  parentId?: number
+  kind: SongKind
+  selectable: boolean
+  releasedOn?: string
+  /** 初出の作品（「作品・年」の表示用） */
+  firstReleaseId?: number
+  /** Apple Music のカタログ ID。null = 配信なしを確認済み、undefined = 未調査 */
+  appleMusicId?: string | null
+}
+
+export type CatalogRelease = Pick<Release, 'id' | 'title' | 'kana' | 'kind' | 'releasedOn' | 'trackIds'>
+
+export type CatalogData = {
+  songs: CatalogSong[]
+  releases: CatalogRelease[]
+  tagCategories: TagCategory[]
+  tags: Tag[]
+}
+
+export type Catalog = CatalogData & {
+  songById: ReadonlyMap<number, CatalogSong>
+  releaseById: ReadonlyMap<number, CatalogRelease>
+  tagById: ReadonlyMap<number, Tag>
+  /** 親曲 ID → 別バージョンの曲 */
+  childrenByParentId: ReadonlyMap<number, CatalogSong[]>
+}
+
+export function toCatalogData(input: {
+  songs: Song[]
+  releases: Release[]
+  tagCategories: TagCategory[]
+  tags: Tag[]
+}): CatalogData {
+  const releasesByDate = [...input.releases].sort(
+    (a, b) => a.releasedOn.localeCompare(b.releasedOn) || a.id - b.id,
+  )
+  const firstReleaseId = new Map<number, number>()
+  for (const release of releasesByDate) {
+    for (const id of release.trackIds) {
+      if (!firstReleaseId.has(id)) firstReleaseId.set(id, release.id)
+    }
+  }
+
+  const songs = input.songs.map(song => {
+    const result: CatalogSong = {
+      id: song.id,
+      title: song.title,
+      kana: song.kana,
+      kind: song.kind,
+      selectable: song.selectable,
+    }
+    if (song.aliases) result.aliases = song.aliases
+    if (song.artist !== 'Perfume') result.artist = song.artist
+    if (song.parentId !== undefined) result.parentId = song.parentId
+    if (song.releasedOn) result.releasedOn = song.releasedOn
+    const releaseId = firstReleaseId.get(song.id)
+    if (releaseId !== undefined) result.firstReleaseId = releaseId
+    if (song.appleMusic?.status === 'available') result.appleMusicId = song.appleMusic.songId
+    else if (song.appleMusic?.status === 'unavailable') result.appleMusicId = null
+    return result
+  })
+
+  const releases = input.releases.map(({ id, title, kana, kind, releasedOn, trackIds }) => ({
+    id,
+    title,
+    kana,
+    kind,
+    releasedOn,
+    trackIds,
+  }))
+
+  const tagCategories = [...input.tagCategories].sort((a, b) => a.order - b.order)
+  return { songs, releases, tagCategories, tags: input.tags }
+}
+
+export function createCatalog(data: CatalogData): Catalog {
+  const childrenByParentId = new Map<number, CatalogSong[]>()
+  for (const song of data.songs) {
+    if (song.parentId === undefined) continue
+    const children = childrenByParentId.get(song.parentId) ?? []
+    children.push(song)
+    childrenByParentId.set(song.parentId, children)
+  }
+  return {
+    ...data,
+    songById: new Map(data.songs.map(song => [song.id, song])),
+    releaseById: new Map(data.releases.map(release => [release.id, release])),
+    tagById: new Map(data.tags.map(tag => [tag.id, tag])),
+    childrenByParentId,
+  }
+}

@@ -1,0 +1,5 @@
+[
+  { "id": "scene", "label": "シーン", "order": 1 },
+  { "id": "mood", "label": "ムード", "order": 2 },
+  { "id": "flavor", "label": "フレーバー", "order": 3 }
+]
