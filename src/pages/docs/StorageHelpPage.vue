@@ -16,7 +16,7 @@ import { DOCS_UPDATED_ON } from '@/site'
       アプリの中のブラウザは、閉じると保存した内容が消えることがあります。Safari や Chrome で開き直してください。
     </p>
     <div class="table-scroll">
-      <table>
+      <table class="responsive-table">
         <thead>
           <tr>
             <th scope="col">アプリ</th>
@@ -25,20 +25,20 @@ import { DOCS_UPDATED_ON } from '@/site'
         </thead>
         <tbody>
           <tr>
-            <td>X</td>
-            <td>画面の下または右上のメニューから「ブラウザで開く」</td>
+            <td data-label="アプリ">X</td>
+            <td data-label="Safari・Chrome で開く方法（目安）">画面の下または右上のメニューから「ブラウザで開く」</td>
           </tr>
           <tr>
-            <td>Instagram・Facebook</td>
-            <td>右上の「…」から「外部ブラウザで開く」</td>
+            <td data-label="アプリ">Instagram・Facebook</td>
+            <td data-label="Safari・Chrome で開く方法（目安）">右上の「…」から「外部ブラウザで開く」</td>
           </tr>
           <tr>
-            <td>LINE</td>
-            <td>SIDE U の案内にある「ブラウザで開く」ボタン、または右上のメニューから「他のアプリで開く」</td>
+            <td data-label="アプリ">LINE</td>
+            <td data-label="Safari・Chrome で開く方法（目安）">SIDE U の案内にある「ブラウザで開く」ボタン、または右上のメニューから「他のアプリで開く」</td>
           </tr>
           <tr>
-            <td>TikTok</td>
-            <td>右上の「…」から「ブラウザで開く」</td>
+            <td data-label="アプリ">TikTok</td>
+            <td data-label="Safari・Chrome で開く方法（目安）">右上の「…」から「ブラウザで開く」</td>
           </tr>
         </tbody>
       </table>

@@ -70,6 +70,56 @@ main :deep(.table-scroll) {
   overflow-x: auto;
 }
 
+/* スマホの幅では、表の行をカードにして縦に並べる（列が細くなって 1 文字ずつ折り返すのを防ぐ） */
+@media (max-width: 40rem) {
+  main :deep(.responsive-table),
+  main :deep(.responsive-table tbody),
+  main :deep(.responsive-table tr),
+  main :deep(.responsive-table td) {
+    display: block;
+  }
+
+  main :deep(.responsive-table thead) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  main :deep(.responsive-table tr) {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+  }
+
+  main :deep(.responsive-table td) {
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  main :deep(.responsive-table td:last-child) {
+    border-bottom: none;
+  }
+
+  main :deep(.responsive-table td[data-label])::before {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    content: attr(data-label);
+  }
+
+  main :deep(.responsive-table td:first-child) {
+    background: var(--color-surface);
+    font-weight: 700;
+  }
+
+  main :deep(.responsive-table td:first-child)::before {
+    display: none;
+  }
+}
+
 main :deep(a) {
   color: var(--color-accent);
 }

@@ -13,4 +13,4 @@ export const CONTACT = {
 } as const
 
 /** 説明ページの最終更新日 */
-export const DOCS_UPDATED_ON = '2026-09-23'
+export const DOCS_UPDATED_ON = '2026-09-24'
