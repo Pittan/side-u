@@ -3,6 +3,8 @@
   "name": "side-u",
   "main": "worker/index.ts",
   "compatibility_date": "2026-09-01",
+  // 本番に出す前の版を、版ごとの URL（<版 ID の先頭 8 文字>-side-u.side-u.workers.dev）で試せるようにする
+  "preview_urls": true,
   // DNS レコードと証明書は Cloudflare が自動で作る（perfumehub.app のゾーンが同じアカウントにあること）
   "routes": [{ "pattern": "sideu.perfumehub.app", "custom_domain": true }],
   "assets": {
