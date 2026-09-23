@@ -6,7 +6,7 @@ import { useShareImages, type GeneratedImage } from '@/composables/useShareImage
 import { useToast } from '@/composables/useToast'
 import AppleMusicSection from './AppleMusicSection.vue'
 
-const props = defineProps<{ data: ShareImageData; shareUrl: string; songIds: number[] }>()
+const props = defineProps<{ data: ShareImageData; shareUrl: string; songIds: number[]; tagIds: number[] }>()
 const toast = useToast()
 const { images, generating, canCopy, canShare, copy, share, save } = useShareImages(computed(() => props.data))
 const alt = computed(() => altText(props.data))
@@ -63,7 +63,7 @@ const label = (image: GeneratedImage) => VARIANTS[image.variant].label
     <p class="note">名前は「#」より後ろに入っていて、SIDE U のサーバーには送られません。</p>
   </section>
 
-  <AppleMusicSection :song-ids="songIds" />
+  <AppleMusicSection :payload="data.payload" :song-ids="songIds" :name="data.name" :tag-ids="tagIds" />
 </template>
 
 <style scoped>

@@ -162,6 +162,8 @@ onBeforeUnmount(() => {
         <summary aria-label="メニュー">⋯</summary>
         <div class="menu-items">
           <button type="button" @click="resetDialog?.open()">リセット</button>
+          <RouterLink to="/help/storage">保存について</RouterLink>
+          <RouterLink to="/privacy">プライバシー</RouterLink>
           <RouterLink to="/">トップへ</RouterLink>
         </div>
       </details>

@@ -16,7 +16,8 @@
     "catalog:import": "tsx scripts/import-perfume-database.ts",
     "catalog:validate": "tsx scripts/validate-catalog.ts",
     "cf-typegen": "wrangler types worker/worker-configuration.d.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "apple:token": "tsx scripts/generate-apple-token.ts"
   },
   "dependencies": {
     "sortablejs": "^1.15.7",
@@ -30,6 +31,7 @@
     "@types/sortablejs": "^1.15.9",
     "@vitejs/plugin-vue": "^6.0.9",
     "@vue/tsconfig": "^0.9.1",
+    "jose": "^6.2.12",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "vite": "^8.3.0",

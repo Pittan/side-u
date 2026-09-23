@@ -48,7 +48,13 @@ function remix() {
     </div>
   </section>
 
-  <AppleMusicSection :song-ids="sideU.songIds" label="Apple Musicでこのプレイリストをつくる" />
+  <AppleMusicSection
+    :payload="payload"
+    :song-ids="sideU.songIds"
+    :name="name"
+    :tag-ids="sideU.tagIds"
+    label="Apple Musicでこのプレイリストをつくる"
+  />
 
   <section aria-labelledby="create-heading">
     <h2 id="create-heading" class="section-heading">自分のSide Uをつくる</h2>

@@ -8,6 +8,7 @@ import { SIDE_U_LENGTH } from '@shared/payload'
 import DiscardDraftDialog from '@/components/common/DiscardDraftDialog.vue'
 import { useDraft } from '@/composables/useDraft'
 import { startWireframeScene } from '@/render/wireframe-scene'
+import { DISCLAIMER } from '@/site'
 
 const router = useRouter()
 const { draft, status, replace } = useDraft()
@@ -76,7 +77,12 @@ onBeforeUnmount(() => stop?.())
       </template>
 
       <footer class="footer">
-        <p>SIDE Uは非公式のファン制作ツールです。Perfume、所属事務所、レコード会社、Appleとは関係ありません。</p>
+        <p>{{ DISCLAIMER }}</p>
+        <nav class="links" aria-label="説明ページ">
+          <RouterLink to="/privacy">プライバシー</RouterLink>
+          <RouterLink to="/terms">利用規約・免責</RouterLink>
+          <RouterLink to="/sources">データの出典</RouterLink>
+        </nav>
       </footer>
     </main>
     <DiscardDraftDialog ref="discardDialog" overlay-key="discard-home" confirm-label="破棄して新しくつくる" @confirm="startNew" />
@@ -181,5 +187,15 @@ onBeforeUnmount(() => stop?.())
 .footer {
   opacity: 0.7;
   font-size: 0.75rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.links a {
+  color: inherit;
 }
 </style>

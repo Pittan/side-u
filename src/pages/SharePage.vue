@@ -9,6 +9,7 @@ import AppToast from '@/components/common/AppToast.vue'
 import OwnerView from '@/components/share/OwnerView.vue'
 import VisitorView from '@/components/share/VisitorView.vue'
 import { useDraft } from '@/composables/useDraft'
+import { DISCLAIMER } from '@/site'
 
 const route = useRoute()
 const { draft } = useDraft()
@@ -56,13 +57,14 @@ const shareUrl = computed(() => `${location.origin}${route.fullPath.split('#')[0
 
       <template v-else-if="isOwner && shareData">
         <h1 class="title">{{ name ? `${name} の Side U ができました` : 'Side U ができました' }}</h1>
-        <OwnerView :data="shareData" :share-url="shareUrl" :song-ids="sideU.songIds" />
+        <OwnerView :data="shareData" :share-url="shareUrl" :song-ids="sideU.songIds" :tag-ids="sideU.tagIds" />
       </template>
 
       <VisitorView v-else :payload="payload" :side-u="sideU" :name="name" />
 
       <p class="disclaimer">
-        SIDE Uは非公式のファン制作ツールです。Perfume、所属事務所、レコード会社、Appleとは関係ありません。
+        {{ DISCLAIMER }}
+        <RouterLink to="/privacy">プライバシー</RouterLink>・<RouterLink to="/terms">利用規約</RouterLink>
       </p>
     </main>
     <AppToast />

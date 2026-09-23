@@ -19,6 +19,7 @@ const lineUrl = computed(() => (inAppBrowser === 'line' ? externalBrowserUrl(loc
     <p>Safari や Chrome で開き直すのがおすすめです。</p>
     <a v-if="lineUrl" :href="lineUrl" class="button">ブラウザで開く</a>
     <p v-else class="how">画面の右上や下にあるメニューから「ブラウザで開く」を選んでください。</p>
+    <RouterLink to="/help/storage">くわしく</RouterLink>
   </aside>
 </template>
 

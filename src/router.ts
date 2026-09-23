@@ -3,10 +3,15 @@ import { useToast } from './composables/useToast'
 
 export const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior: (to, from, saved) => saved ?? (to.path !== from.path ? { top: 0 } : undefined),
   routes: [
     { path: '/', component: () => import('./pages/HomePage.vue') },
     { path: '/edit', component: () => import('./pages/EditorPage.vue') },
     { path: '/u/:payload', component: () => import('./pages/SharePage.vue') },
+    { path: '/privacy', component: () => import('./pages/docs/PrivacyPage.vue') },
+    { path: '/terms', component: () => import('./pages/docs/TermsPage.vue') },
+    { path: '/sources', component: () => import('./pages/docs/SourcesPage.vue') },
+    { path: '/help/storage', component: () => import('./pages/docs/StorageHelpPage.vue') },
     // M0 の実機確認用。公開前に削除する
     { path: '/spike/share-image', component: () => import('./spikes/ShareImageSpike.vue') },
     { path: '/:pathMatch(.*)*', component: () => import('./pages/NotFoundPage.vue') },
