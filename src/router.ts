@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useToast } from './composables/useToast'
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -10,4 +11,9 @@ export const router = createRouter({
     { path: '/spike/share-image', component: () => import('./spikes/ShareImageSpike.vue') },
     { path: '/:pathMatch(.*)*', component: () => import('./pages/NotFoundPage.vue') },
   ],
+})
+
+// ページを移動したら、前のページの通知は消す（シートの開閉など、同じページ内の移動では消さない）
+router.afterEach((to, from) => {
+  if (to.path !== from.path) useToast().dismiss()
 })

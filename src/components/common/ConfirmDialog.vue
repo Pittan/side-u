@@ -67,8 +67,15 @@ h2 {
 
 .actions {
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: flex-end;
   gap: 0.5rem;
   margin-top: 1.25rem;
+}
+
+/* 狭い画面では縦に並べる（ボタンの文言を折り返さない） */
+.actions .button {
+  flex: 1 1 auto;
+  white-space: nowrap;
 }
 </style>

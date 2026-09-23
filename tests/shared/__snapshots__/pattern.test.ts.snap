@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`生成規則が変わっていない（変えるときは payload のバージョンで振り分ける） 1`] = `"#101820"`;
+
+exports[`生成規則が変わっていない（変えるときは payload のバージョンで振り分ける） 2`] = `10`;
