@@ -1,0 +1,85 @@
+name: CI / Deploy
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  # Apple Music の開発者トークン（有効期限 180 日）を作り直すため、毎月 1 日に再デプロイする
+  schedule:
+    - cron: '0 18 1 * *' # 日本時間 毎月 2 日 3:00
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm catalog:validate
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium webkit
+      - run: pnpm test:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          retention-days: 7
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      # 秘密鍵は GitHub の Secrets にだけ置く。未登録なら Apple Music 連携なしでデプロイする（ボタンは「現在使えません」になる）
+      - name: Apple Music の開発者トークンを作る
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_KEY_ID: ${{ secrets.APPLE_KEY_ID }}
+          APPLE_PRIVATE_KEY: ${{ secrets.APPLE_PRIVATE_KEY }}
+        run: |
+          if [ -n "$APPLE_PRIVATE_KEY" ]; then
+            pnpm apple:token --days 180 --write .env.production.local
+          else
+            echo "::warning::APPLE_* の Secrets がないため、Apple Music 連携なしでデプロイします"
+          fi
+
+      - run: pnpm build
+
+      - name: Cloudflare にデプロイ
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          # Secrets を登録するまでは、デプロイせずに警告だけ出す（CI を赤くしない）
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN の Secret がないため、デプロイしませんでした"
+            exit 0
+          fi
+          pnpm exec wrangler deploy

@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
-import { catalogPlugin } from './scripts/vite-plugin-catalog'
+import { catalogPlugin } from './scripts/vite-plugin-catalog.ts'
 
 // Cloudflare のプラグインを使わない、テスト用の設定
 export default defineConfig({

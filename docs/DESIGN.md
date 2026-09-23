@@ -578,7 +578,7 @@ type Draft = {
 MusicKit JS には、Apple の秘密鍵（`.p8`）で署名した JWT（開発者トークン）が必要。**ビルド時に署名して、静的な JS に埋め込む**。
 
 - `scripts/generate-apple-token.ts`（`jose` で ES256 署名）
-  - `iss` = Team ID、`iat` = 現在時刻、`exp` = 90 日後
+  - `iss` = Team ID、`iat` = 現在時刻、`exp` = 180 日後（Apple の上限は約 6 か月。CI では `--days 180`）
   - `origin` = [`https://sideu.perfumehub.app`]（ブラウザからの利用を自分のドメインに限定する）
   - 出力を `VITE_APPLE_DEVELOPER_TOKEN` と `VITE_APPLE_DEVELOPER_TOKEN_EXP` として Vite に渡す
 - 秘密鍵・Key ID・Team ID は **GitHub Actions の Secrets にだけ**置く。リポジトリにも Cloudflare にも置かない
@@ -659,8 +659,9 @@ MVP では、すべての共有 URL で `og/default.png` と共通のメタデ�
 
 - PR: `typecheck` → `lint` → `test` → `validate:catalog` → `build` → Playwright
 - `main` への push: 上記に加えて `wrangler deploy`
-- **月 1 回の定期実行**で再ビルド・デプロイし、開発者トークンを作り直す（毎回 90 日の有効期限なので、最低でも 60 日の余裕がある）
-- デプロイ後に、本番の JS に埋め込まれたトークンの有効期限を確認し、30 日を切っていたらワークフローを失敗させる（GitHub の通知で気づける）
+- **月 1 回の定期実行**で再ビルド・デプロイし、開発者トークンを作り直す（毎回 180 日の有効期限なので、定期実行が何度か止まっても切れない）
+- 注意: 公開リポジトリでは、60 日間コミットがないと GitHub が定期実行を止める（止める前にメールが来る）。止まったら Actions の画面から有効に戻すか、手動で実行する
+- ワークフローは `.github/workflows/ci.yml`。テストが通ったときだけデプロイする。Secrets が未登録のあいだは、デプロイを警告付きで飛ばす
 - GitHub Secrets: `CLOUDFLARE_API_TOKEN`, `APPLE_TEAM_ID`, `APPLE_KEY_ID`, `APPLE_PRIVATE_KEY`
 - Cloudflare は Free プランのまま
 

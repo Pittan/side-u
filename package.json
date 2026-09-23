@@ -17,7 +17,8 @@
     "catalog:validate": "tsx scripts/validate-catalog.ts",
     "cf-typegen": "wrangler types worker/worker-configuration.d.ts",
     "test:e2e": "playwright test",
-    "apple:token": "tsx scripts/generate-apple-token.ts"
+    "apple:token": "tsx scripts/generate-apple-token.ts",
+    "images:generate": "tsx scripts/generate-static-images.ts"
   },
   "dependencies": {
     "sortablejs": "^1.15.7",

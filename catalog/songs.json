@@ -388,12 +388,7 @@
     "artist": "Perfume",
     "kind": "mix",
     "selectable": true,
-    "appleMusic": {
-      "status": "available",
-      "songId": "657660768",
-      "storefront": "jp",
-      "verifiedAt": null
-    },
+    "appleMusic": null,
     "sources": [
       {
         "label": "perfume-database",
@@ -401,7 +396,8 @@
       }
     ],
     "releasedOn": "2006-08-02",
-    "parentId": 18
+    "parentId": 18,
+    "memo": "Apple Music の ID がシングル版（#18）と同じだったため外した。照合時に Album Version の ID を調べる"
   },
   {
     "id": 22,
