@@ -2,12 +2,17 @@
 import { computed, effectScope, readonly, ref, watch } from 'vue'
 import { catalog } from '@shared/catalog-instance'
 import { encodePayload, SIDE_U_LENGTH, type SideU } from '@shared/payload'
+import { debounce } from '@/editor/debounce'
 import { draftStatus, emptyDraft, isDraftEmpty, parseDraft, toggleTag as toggle, type Draft } from '@/editor/draft'
 import type { ListState } from '@/editor/list-ops'
 import { useStorageHealth } from './useStorageHealth'
 
 const STORAGE_KEY = 'side-u:draft'
-const SAVE_DELAY_MS = 300
+/** 最後の変更から 1 秒たったら保存する。変更が続いても 5 秒に 1 回は保存する */
+const SAVE_WAIT_MS = 1000
+const SAVE_MAX_WAIT_MS = 5000
+/** 未保存の状態がこれより長く続いたときだけ「保存中…」を出す（ふだんの操作でちらつかせない） */
+const SHOW_PENDING_AFTER_MS = 1500
 
 type SaveStatus = 'saved' | 'pending' | 'unavailable'
 
@@ -15,7 +20,7 @@ const draft = ref<Draft>(emptyDraft())
 const saveStatus = ref<SaveStatus>('saved')
 const removedOnLoad = ref<number[]>([])
 let initialized = false
-let timer: ReturnType<typeof setTimeout> | undefined
+let pendingTimer: ReturnType<typeof setTimeout> | undefined
 
 function load() {
   try {
@@ -30,6 +35,7 @@ function load() {
 }
 
 function save() {
+  clearTimeout(pendingTimer)
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(draft.value))
     saveStatus.value = 'saved'
@@ -38,6 +44,8 @@ function save() {
   }
 }
 
+const scheduleSave = debounce(save, SAVE_WAIT_MS, SAVE_MAX_WAIT_MS)
+
 function init() {
   if (initialized) return
   initialized = true
@@ -45,24 +53,23 @@ function init() {
   load()
   // 最初に呼んだコンポーネントに紐づくと、そのコンポーネントが消えたときに保存が止まってしまうので、
   // どのコンポーネントにも属さないスコープで監視する
+  // 下書きは update() で毎回まるごと置き換えるので、中身をたどる deep な監視はいらない
   effectScope(true).run(() => {
-    watch(
-      draft,
-      () => {
-        if (saveStatus.value === 'unavailable') return
-        saveStatus.value = 'pending'
-        clearTimeout(timer)
-        timer = setTimeout(save, SAVE_DELAY_MS)
-      },
-      { deep: true },
-    )
+    watch(draft, () => {
+      if (saveStatus.value === 'unavailable') return
+      if (!scheduleSave.pending) {
+        clearTimeout(pendingTimer)
+        pendingTimer = setTimeout(() => {
+          if (scheduleSave.pending) saveStatus.value = 'pending'
+        }, SHOW_PENDING_AFTER_MS)
+      }
+      scheduleSave()
+    })
   })
-  // タブを閉じる・アプリを切り替えるときは待たずに保存する
-  addEventListener('pagehide', () => {
-    if (saveStatus.value === 'pending') {
-      clearTimeout(timer)
-      save()
-    }
+  // タブを閉じる・アプリを切り替える・画面をロックするときは待たずに保存する（スマホで一番大事）
+  addEventListener('pagehide', () => scheduleSave.flush())
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') scheduleSave.flush()
   })
 }
 
@@ -105,6 +112,10 @@ export function useDraft() {
       update({ tagIds: toggle(draft.value.tagIds, tagId, catalog) })
     },
     /** 新しくつくる / remix（DESIGN.md §7.2）。名前は引き継がない */
+    /** 待っている保存をすぐに実行する（ページを移動する前など） */
+    flush() {
+      scheduleSave.flush()
+    },
     replace(sideU?: SideU) {
       draft.value = {
         ...emptyDraft(),

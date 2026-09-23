@@ -539,7 +539,9 @@ type Draft = {
 - **下書きの状態**: `completedPayload` と、今の内容から作った payload を比べて判定する
   - `empty`（空）/ `editing`（一度も完成していない）/ `completed`（完成したときのまま）/ `editedAfterComplete`（完成後に曲やタグを変えた）
   - トップページのボタンはこの状態で変える（`wireframes.md` §4）
-- キーは `side-u:draft`。変更のたびに 300ms デバウンスして保存する
+- キーは `side-u:draft`
+- 保存のタイミング: 最後の変更から 1 秒後。変更が続いても 5 秒に 1 回は保存する（`src/editor/debounce.ts`）。画面が隠れたとき（`visibilitychange`）とページを離れるとき（`pagehide`）は待たずに保存する
+- 「保存中…」の表示は、未保存の状態が 1.5 秒以上続いたときだけ出す
 - 読み込み時に `v` を見て最新の形に移行する。カタログにない ID や選べない ID は取り除き、その旨を伝える
 - `localStorage` の読み書きはすべて `try/catch` で囲む
 

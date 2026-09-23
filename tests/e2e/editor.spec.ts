@@ -76,3 +76,21 @@ test('つまみをドラッグして、候補から Side U の途中に入れら
   await expect(page.locator('.count-number')).toHaveText('13/13')
   await expect(page.locator('.toast')).toContainText('が候補に移りました')
 })
+
+test('変更の直後にリロードしても、待たずに保存されている', async ({ page }) => {
+  await page.goto('/edit')
+  await page.getByLabel('名前（任意）').fill('あもん')
+  await addSongs(page, 2)
+  // 保存の待ち時間（1 秒）を待たずにリロードする
+  await page.reload()
+  await expect(page.getByLabel('名前（任意）')).toHaveValue('あもん')
+  await expect(page.locator('.count-number')).toHaveText('2/13')
+})
+
+test('ふだんの操作では「保存中…」を出さない', async ({ page }) => {
+  await page.goto('/edit')
+  await page.getByLabel('名前（任意）').pressSequentially('あもん', { delay: 100 })
+  await expect(page.locator('.save-status')).toHaveText('この端末に保存済み')
+  await page.waitForTimeout(1200)
+  await expect(page.locator('.save-status')).toHaveText('この端末に保存済み')
+})
