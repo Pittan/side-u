@@ -70,3 +70,18 @@ test('9:16 と正方形のそれぞれで、背景を透過にできる。透過
   // 9:16 はそのまま
   await expect(page.getByRole('radiogroup', { name: '9:16の背景' }).getByLabel('模様あり')).toBeChecked()
 })
+
+test('画像の説明文（ALT）をコピーできる', async ({ page, context }, testInfo) => {
+  // クリップボードの読み取りを許可できるのは Chromium だけ
+  test.skip(testInfo.project.name !== 'android', 'クリップボードの読み取りは Chromium でだけ確認できる')
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
+  await page.goto('/edit')
+  await page.getByLabel('名前（任意）').fill('あもん')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  const alt = await page.locator('.images img').first().getAttribute('alt')
+  await page.getByRole('region', { name: '画像の説明文（ALT）' }).getByRole('button', { name: 'コピー' }).click()
+  await expect(page.locator('.toast')).toContainText('説明文をコピーしました')
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(alt)
+  expect(alt).toMatch(/^SIDE U。あもん の13曲。1 /)
+})

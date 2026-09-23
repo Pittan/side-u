@@ -22,6 +22,15 @@ async function run(action: () => Promise<void> | void, success?: string) {
   }
 }
 
+async function copyAlt() {
+  try {
+    await navigator.clipboard.writeText(alt.value)
+    toast.show('説明文をコピーしました')
+  } catch {
+    toast.show('コピーできませんでした。説明文を長押ししてコピーしてください')
+  }
+}
+
 async function copyLink() {
   try {
     await navigator.clipboard.writeText(props.shareUrl)
@@ -72,6 +81,15 @@ async function copyLink() {
         </div>
       </li>
     </ul>
+  </section>
+
+  <section class="alt" aria-labelledby="alt-heading">
+    <h2 id="alt-heading" class="section-heading">画像の説明文（ALT）</h2>
+    <p class="note">X などに画像を投稿するとき、画像の説明として貼り付けると、読み上げ機能を使う人にも曲目が伝わります。</p>
+    <div class="alt-row">
+      <p class="alt-text">{{ alt }}</p>
+      <button type="button" class="button" @click="copyAlt">コピー</button>
+    </div>
   </section>
 
   <section class="link" aria-labelledby="link-heading">
@@ -199,6 +217,24 @@ async function copyLink() {
 .section-heading {
   margin: 1.5rem 0 0.5rem;
   font-size: 1rem;
+}
+
+.alt-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.alt-text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  font-size: 0.8125rem;
+  user-select: all;
 }
 
 .link-row {
