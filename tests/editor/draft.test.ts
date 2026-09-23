@@ -43,3 +43,21 @@ describe('toggleTag', () => {
     expect(toggleTag([], 13, catalog)).toEqual([13])
   })
 })
+
+describe('draftStatus', () => {
+  const base = { ...emptyDraft(), sideU: [1], name: 'x' }
+
+  it('空 / 作成中 / 完成 / 完成後に編集', async () => {
+    const { draftStatus } = await import('@/editor/draft')
+    expect(draftStatus(emptyDraft(), null)).toBe('empty')
+    expect(draftStatus(base, null)).toBe('editing')
+    expect(draftStatus({ ...base, completedPayload: '1abc' }, '1abc')).toBe('completed')
+    expect(draftStatus({ ...base, completedPayload: '1abc' }, '1abd')).toBe('editedAfterComplete')
+    expect(draftStatus({ ...base, completedPayload: '1abc' }, null)).toBe('editedAfterComplete')
+  })
+
+  it('完成したときの payload を読み込める', () => {
+    expect(parseDraft({ v: 1, completedPayload: '1abc' }, catalog).draft.completedPayload).toBe('1abc')
+    expect(parseDraft({ v: 1, completedPayload: 3 }, catalog).draft).not.toHaveProperty('completedPayload')
+  })
+})

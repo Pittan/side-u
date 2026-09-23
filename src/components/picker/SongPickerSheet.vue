@@ -96,10 +96,10 @@ function toggleExpanded(id: number) {
   expandedParents.value = next
 }
 
-function submit() {
+async function submit() {
   const ids = pendingSongIds.value.filter(id => !props.presentIds.has(id))
   pendingSongIds.value = []
-  close()
+  await close()
   if (ids.length) emit('add', ids)
 }
 
@@ -125,6 +125,8 @@ watch(
 let dragStartY: number | null = null
 const dragOffset = ref(0)
 function onPointerDown(event: PointerEvent) {
+  // ボタンや入力欄から始まった操作はスワイプにしない（ポインターを捕捉すると、クリックがボタンに届かなくなる）
+  if ((event.target as HTMLElement).closest('button, input')) return
   dragStartY = event.clientY
   ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
 }
@@ -171,7 +173,6 @@ defineExpose({ open })
           placeholder="曲名・よみがなで検索"
           aria-label="曲名・よみがなで検索"
           enterkeyhint="search"
-          @pointerdown.stop
         />
         <div v-if="!query.trim()" class="modes" role="group" aria-label="一覧の切り口">
           <button
@@ -180,7 +181,6 @@ defineExpose({ open })
             type="button"
             class="mode"
             :aria-pressed="mode === m.id"
-            @pointerdown.stop
             @click="mode = m.id"
           >
             {{ m.label }}

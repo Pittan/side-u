@@ -5,5 +5,5 @@
     "lib": ["ES2023", "DOM"],
     "paths": { "@/*": ["./src/*"], "@shared/*": ["./shared/*"] }
   },
-  "include": ["tests/**/*.ts", "shared/**/*.ts"]
+  "include": ["tests/**/*.ts", "shared/**/*.ts", "playwright.config.ts"]
 }

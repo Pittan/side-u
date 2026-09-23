@@ -4,7 +4,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { catalog } from '@shared/catalog-instance'
 import { buildFragment } from '@shared/fragment'
-import { encodePayload, SIDE_U_LENGTH } from '@shared/payload'
+import { SIDE_U_LENGTH } from '@shared/payload'
 import AppToast from '@/components/common/AppToast.vue'
 import ConfirmDialog from '@/components/common/ConfirmDialog.vue'
 import NameTagsPanel from '@/components/editor/NameTagsPanel.vue'
@@ -30,7 +30,7 @@ import { pendingSongIds } from '@/editor/picker-state'
 import { isAppleMusicUnavailable, songMeta } from '@/editor/song-meta'
 
 const router = useRouter()
-const { draft, listState, sideU, isComplete, saveStatus, removedOnLoad, setLists, setName, toggleTag, replace } =
+const { draft, listState, isComplete, currentPayload, saveStatus, removedOnLoad, setLists, setName, toggleTag, replace, markCompleted } =
   useDraft()
 const toast = useToast()
 
@@ -104,8 +104,9 @@ function onAdd(ids: number[]) {
 }
 
 function complete() {
-  if (!isComplete.value) return
-  const payload = encodePayload(sideU.value, catalog)
+  const payload = currentPayload.value
+  if (!payload) return
+  markCompleted(payload)
   router.push(`/u/${payload}${buildFragment({ name: draft.value.name || null })}`)
 }
 

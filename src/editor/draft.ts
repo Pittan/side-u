@@ -11,6 +11,22 @@ export type Draft = {
   tagIds: number[]
   name: string
   updatedAt: string
+  /** 「完成する」を押したときの payload。その後に曲やタグを変えると、今の内容と一致しなくなる */
+  completedPayload?: string
+}
+
+/**
+ * - empty: 何もない
+ * - editing: 作成中（一度も完成していない）
+ * - completed: 完成したときの内容のまま
+ * - editedAfterComplete: 完成したあとに曲やタグを変えた
+ */
+export type DraftStatus = 'empty' | 'editing' | 'completed' | 'editedAfterComplete'
+
+export function draftStatus(draft: Draft, currentPayload: string | null): DraftStatus {
+  if (isDraftEmpty(draft)) return 'empty'
+  if (!draft.completedPayload) return 'editing'
+  return draft.completedPayload === currentPayload ? 'completed' : 'editedAfterComplete'
 }
 
 export function emptyDraft(): Draft {
@@ -62,6 +78,7 @@ export function parseDraft(raw: unknown, catalog: Catalog): LoadResult {
     })
     .slice(0, MAX_TAGS)
 
+  const completedPayload = typeof input.completedPayload === 'string' ? input.completedPayload : undefined
   return {
     draft: {
       v: 1,
@@ -70,6 +87,7 @@ export function parseDraft(raw: unknown, catalog: Catalog): LoadResult {
       tagIds,
       name: typeof input.name === 'string' ? clampDisplayName(input.name) : '',
       updatedAt: typeof input.updatedAt === 'string' ? input.updatedAt : new Date(0).toISOString(),
+      ...(completedPayload ? { completedPayload } : {}),
     },
     removedSongIds,
   }

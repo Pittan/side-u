@@ -1,8 +1,8 @@
 // 下書きの状態（アプリ全体で 1 つ）と localStorage への保存（DESIGN.md §7.1）
-import { computed, readonly, ref, watch } from 'vue'
+import { computed, effectScope, readonly, ref, watch } from 'vue'
 import { catalog } from '@shared/catalog-instance'
-import { SIDE_U_LENGTH, type SideU } from '@shared/payload'
-import { emptyDraft, isDraftEmpty, parseDraft, toggleTag as toggle, type Draft } from '@/editor/draft'
+import { encodePayload, SIDE_U_LENGTH, type SideU } from '@shared/payload'
+import { draftStatus, emptyDraft, isDraftEmpty, parseDraft, toggleTag as toggle, type Draft } from '@/editor/draft'
 import type { ListState } from '@/editor/list-ops'
 import { useStorageHealth } from './useStorageHealth'
 
@@ -43,16 +43,20 @@ function init() {
   initialized = true
   if (!useStorageHealth().canPersist) saveStatus.value = 'unavailable'
   load()
-  watch(
-    draft,
-    () => {
-      if (saveStatus.value === 'unavailable') return
-      saveStatus.value = 'pending'
-      clearTimeout(timer)
-      timer = setTimeout(save, SAVE_DELAY_MS)
-    },
-    { deep: true },
-  )
+  // 最初に呼んだコンポーネントに紐づくと、そのコンポーネントが消えたときに保存が止まってしまうので、
+  // どのコンポーネントにも属さないスコープで監視する
+  effectScope(true).run(() => {
+    watch(
+      draft,
+      () => {
+        if (saveStatus.value === 'unavailable') return
+        saveStatus.value = 'pending'
+        clearTimeout(timer)
+        timer = setTimeout(save, SAVE_DELAY_MS)
+      },
+      { deep: true },
+    )
+  })
   // タブを閉じる・アプリを切り替えるときは待たずに保存する
   addEventListener('pagehide', () => {
     if (saveStatus.value === 'pending') {
@@ -61,6 +65,16 @@ function init() {
     }
   })
 }
+
+/** 今の Side U の payload。13 曲そろっていなければ null */
+const currentPayload = computed(() => {
+  if (draft.value.sideU.length !== SIDE_U_LENGTH) return null
+  try {
+    return encodePayload({ songIds: draft.value.sideU, tagIds: draft.value.tagIds }, catalog)
+  } catch {
+    return null
+  }
+})
 
 function update(patch: Partial<Omit<Draft, 'v' | 'updatedAt'>>) {
   draft.value = { ...draft.value, ...patch, updatedAt: new Date().toISOString() }
@@ -74,6 +88,11 @@ export function useDraft() {
     removedOnLoad,
     isEmpty: computed(() => isDraftEmpty(draft.value)),
     isComplete: computed(() => draft.value.sideU.length === SIDE_U_LENGTH),
+    currentPayload,
+    status: computed(() => draftStatus(draft.value, currentPayload.value)),
+    markCompleted(payload: string) {
+      update({ completedPayload: payload })
+    },
     listState: computed<ListState>(() => ({ sideU: [...draft.value.sideU], candidates: [...draft.value.candidates] })),
     sideU: computed<SideU>(() => ({ songIds: [...draft.value.sideU], tagIds: [...draft.value.tagIds] })),
     setLists(state: ListState) {

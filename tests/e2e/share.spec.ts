@@ -1,0 +1,58 @@
+import { expect, test } from '@playwright/test'
+import { addSongs } from './helpers'
+
+test('完成 → 共有画像 → ほかの人が開いて remix（名前は引き継がない）', async ({ page, browser }) => {
+  const requests: string[] = []
+  page.on('request', request => requests.push(request.url()))
+
+  await page.goto('/edit')
+  await page.getByLabel('名前（任意）').fill('あもん')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  await expect(page).toHaveURL(/\/u\/1[A-Za-z0-9_-]{42}#n=/)
+  await expect(page.getByRole('heading', { name: 'あもん の Side U ができました' })).toBeVisible()
+  await expect(page.locator('.images img')).toHaveCount(3)
+  await expect(page.locator('.images img').first()).toHaveAttribute('alt', /^SIDE U。あもん の13曲。1 /)
+
+  // 名前（fragment）はどのリクエストにも含まれない
+  expect(requests.filter(url => url.includes('%E3%81%82%E3%82%82%E3%82%93') || url.includes('あもん'))).toEqual([])
+
+  const other = await (await browser.newContext()).newPage()
+  await other.goto(page.url())
+  await expect(other.getByRole('heading', { name: 'あもん さんの Side U' })).toBeVisible()
+  await expect(other.locator('ol.songs li')).toHaveCount(13)
+  await other.getByRole('button', { name: 'この13曲をもとにつくる' }).click()
+  await expect(other).toHaveURL(/\/edit$/)
+  await expect(other.locator('.count-number')).toHaveText('13/13')
+  await expect(other.getByLabel('名前（任意）')).toHaveValue('')
+})
+
+test('完成後のトップは「完成した Side U を見る」、編集すると「完成後に編集中」', async ({ page }) => {
+  await page.goto('/edit')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  await page.goto('/')
+  await expect(page.getByRole('link', { name: '完成した Side U を見る' })).toBeVisible()
+  await page.getByRole('link', { name: '編集する' }).click()
+  await page.locator('ol.song-list .main').first().click()
+  await page.getByRole('button', { name: '↓ 下へ' }).click()
+  await page.goto('/')
+  await expect(page.getByRole('heading', { name: '完成後に編集中の Side U' })).toBeVisible()
+  await expect(page.getByRole('link', { name: '続きから' })).toBeVisible()
+})
+
+test('下書きがある状態で「新しくつくる」を押すと、下書きの概要を見せて確認する', async ({ page }) => {
+  await page.goto('/edit')
+  await addSongs(page, 5)
+  await page.goto('/')
+  await page.getByRole('button', { name: '新しくつくる' }).click()
+  await expect(page.getByRole('dialog')).toContainText('Side U 5/13曲')
+  await page.getByRole('button', { name: '破棄して新しくつくる' }).click()
+  await expect(page).toHaveURL(/\/edit$/)
+  await expect(page.locator('.count-number')).toHaveText('0/13')
+})
+
+test('壊れた URL では読み込めなかった旨を表示する', async ({ page }) => {
+  await page.goto('/u/1broken')
+  await expect(page.getByRole('heading', { name: 'このSide Uは読み込めませんでした' })).toBeVisible()
+})

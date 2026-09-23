@@ -19,9 +19,9 @@ watch(
   { immediate: true },
 )
 
-function confirm() {
+async function confirm() {
+  await close()
   emit('confirm')
-  close()
 }
 
 defineExpose({ open, close })

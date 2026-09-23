@@ -16,14 +16,24 @@ export function useOverlayHistory(key: string) {
     router.push({ query: { ...route.query, [QUERY_KEY]: key }, state: { overlay: key } })
   }
 
-  function close() {
+  /**
+   * 閉じ終わる（URL が変わる）まで待つ。閉じたあとに別のページへ移動する場合は、必ず await してから移動する。
+   * そうしないと、移動のあとに「戻る」が走って移動が打ち消される
+   */
+  async function close(): Promise<void> {
     if (!isOpen.value) return
     // 自分で積んだ履歴なら戻る。URL を直接開いた・リロードした場合は置き換えて、履歴を増やさない
     if (history.state?.overlay === key) {
-      router.back()
+      await new Promise<void>(resolve => {
+        const stop = router.afterEach(() => {
+          stop()
+          resolve()
+        })
+        router.back()
+      })
     } else {
       const { [QUERY_KEY]: _, ...query } = route.query
-      router.replace({ query })
+      await router.replace({ query })
     }
   }
 
