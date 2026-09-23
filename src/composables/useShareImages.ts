@@ -43,6 +43,8 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
   const generating = ref(false)
   /** 形ごとの「背景を透過にする」 */
   const transparent = reactive<Record<ImageFormat, boolean>>({ story: false, square: false })
+  /** 形ごとの「作り直している最中」。GPU のない端末では数秒かかることがある */
+  const rendering = reactive<Record<ImageFormat, boolean>>({ story: false, square: false })
   const backdrop = ref(readBackdrop())
   // 共有画像の模様は、画面を開くたび・「模様を変える」を押すたびに変える（背景の切り替えでは変えない）
   const patternSeed = ref(newPatternSeed())
@@ -55,6 +57,7 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
   async function render(format: ImageFormat) {
     if (!data.value) return
     const id = ++latestRender[format]
+    rendering[format] = true
     const isTransparent = transparent[format]
     const canvas = drawShareImage(format, data.value, {
       transparent: isTransparent,
@@ -63,6 +66,7 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
     })
     const blob = await canvasToBlob(canvas)
     if (id !== latestRender[format]) return
+    rendering[format] = false
     const previous = images.value[format]
     images.value = { ...images.value, [format]: { format, transparent: isTransparent, blob, url: URL.createObjectURL(blob) } }
     if (previous) URL.revokeObjectURL(previous.url)
@@ -118,5 +122,5 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
     a.click()
   }
 
-  return { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save, shufflePattern }
+  return { images, generating, rendering, transparent, backdrop, canCopy, canShare, copy, share, save, shufflePattern }
 }

@@ -57,6 +57,9 @@ test('壊れた URL では読み込めなかった旨を表示する', async ({ 
   await expect(page.getByRole('heading', { name: 'このSide Uは読み込めませんでした' })).toBeVisible()
 })
 
+// GPU のない環境（GitHub Actions など）では、画像の作り直しに数秒かかる
+const REGENERATE_TIMEOUT = 30_000
+
 test('9:16 と正方形のそれぞれで、背景を透過にできる。透過のときだけ「文字の後ろを暗くする」が出る', async ({ page }) => {
   await page.goto('/edit')
   await addSongs(page, 13)
@@ -66,7 +69,7 @@ test('9:16 と正方形のそれぞれで、背景を透過にできる。透過
   await expect(page.getByRole('switch', { name: '文字の後ろを暗くする' })).toHaveCount(0)
   await square.getByText('透過').click()
   await expect(page.getByRole('switch', { name: '文字の後ろを暗くする' })).toHaveCount(1)
-  await expect(page.locator('.images img').nth(1)).not.toHaveAttribute('src', before!)
+  await expect(page.locator('.images img').nth(1)).not.toHaveAttribute('src', before!, { timeout: REGENERATE_TIMEOUT })
   // 9:16 はそのまま
   await expect(page.getByRole('radiogroup', { name: '9:16の背景' }).getByLabel('模様あり')).toBeChecked()
 })
@@ -104,6 +107,25 @@ test('共有画像の模様は「模様を変える」で変わる', async ({ pa
   const before = await pixels()
   const src = await image.getAttribute('src')
   await page.getByRole('button', { name: '模様を変える' }).click()
-  await expect(image).not.toHaveAttribute('src', src!)
+  await expect(image).not.toHaveAttribute('src', src!, { timeout: REGENERATE_TIMEOUT })
   expect(await pixels()).not.toBe(before)
+})
+
+test('画像を作り直している最中は「作り直しています…」を出し、その画像の共有・保存を押せなくする', async ({ page }, testInfo) => {
+  // CPU を遅くできるのは Chromium だけ（作り直しに時間がかかる端末の再現）
+  test.skip(testInfo.project.name !== 'android', 'CPU を遅くできるのは Chromium だけ')
+  await page.goto('/edit')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  await expect(page.locator('.images img')).toHaveCount(2)
+  const cdp = await page.context().newCDPSession(page)
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 6 })
+  const square = page.locator('.image-item').nth(1)
+  await page.getByRole('radiogroup', { name: '正方形の背景' }).getByText('透過').click()
+  await expect(square.getByRole('status')).toHaveText('作り直しています…')
+  await expect(square.getByRole('button', { name: '保存' })).toBeDisabled()
+  await expect(square.getByRole('status')).toHaveCount(0, { timeout: REGENERATE_TIMEOUT })
+  await expect(square.getByRole('button', { name: '保存' })).toBeEnabled()
+  // 9:16 は作り直していないので押せる
+  await expect(page.locator('.image-item').first().getByRole('button', { name: '保存' })).toBeEnabled()
 })

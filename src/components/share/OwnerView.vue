@@ -8,7 +8,7 @@ import AppleMusicSection from './AppleMusicSection.vue'
 
 const props = defineProps<{ data: ShareImageData; shareUrl: string; songIds: number[]; tagIds: number[] }>()
 const toast = useToast()
-const { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save, shufflePattern } = useShareImages(
+const { images, generating, rendering, transparent, backdrop, canCopy, canShare, copy, share, save, shufflePattern } = useShareImages(
   computed(() => props.data),
 )
 const formats = Object.keys(FORMATS) as ImageFormat[]
@@ -58,6 +58,7 @@ async function copyLink() {
             :width="FORMATS[format].width"
             :height="FORMATS[format].height"
           />
+          <p v-if="rendering[format]" class="rendering" role="status">作り直しています…</p>
         </div>
         <p class="image-label">{{ FORMATS[format].label }}</p>
         <div class="background" role="radiogroup" :aria-label="`${FORMATS[format].label}の背景`">
@@ -75,11 +76,20 @@ async function copyLink() {
           <span>文字の後ろを暗くする</span>
         </label>
         <div v-if="images[format]" class="actions">
-          <button v-if="canShare" type="button" class="button" @click="run(() => share(images[format]!))">共有</button>
-          <button v-if="canCopy" type="button" class="button" @click="run(() => copy(images[format]!), '画像をコピーしました')">
+          <!-- 作り直している最中は、前の画像を共有しないよう押せなくする -->
+          <button v-if="canShare" type="button" class="button" :disabled="rendering[format]" @click="run(() => share(images[format]!))">
+            共有
+          </button>
+          <button
+            v-if="canCopy"
+            type="button"
+            class="button"
+            :disabled="rendering[format]"
+            @click="run(() => copy(images[format]!), '画像をコピーしました')"
+          >
             コピー
           </button>
-          <button type="button" class="button" @click="run(() => save(images[format]!))">保存</button>
+          <button type="button" class="button" :disabled="rendering[format]" @click="run(() => save(images[format]!))">保存</button>
         </div>
       </li>
     </ul>
@@ -141,6 +151,7 @@ async function copyLink() {
 }
 
 .frame {
+  position: relative;
   display: grid;
   place-items: center;
   border-radius: var(--radius-small);
@@ -150,6 +161,18 @@ async function copyLink() {
 
 .checker {
   background: repeating-conic-gradient(#c8c8d0 0% 25%, #f4f4f6 0% 50%) 50% / 20px 20px;
+}
+
+.rendering {
+  position: absolute;
+  inset: auto 0.5rem 0.5rem;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.7);
+  color: #fff;
+  font-size: 0.8125rem;
+  text-align: center;
 }
 
 .frame img {
