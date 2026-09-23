@@ -1,16 +1,30 @@
+/* 見た目はまだ仮。色・模様はビジュアルを決めてから差し替える */
 :root {
   --color-bg: #ffffff;
-  --color-fg: #111111;
-  --color-muted: #666666;
+  --color-surface: #f4f4f6;
+  --color-fg: #16161a;
+  --color-muted: #5f5f6b;
+  --color-border: #d5d5dc;
+  --color-accent: #0a7c86;
+  --color-accent-fg: #ffffff;
+  --color-danger: #b3261e;
   --font-sans: 'LINE Seed JP', system-ui, sans-serif;
+  --radius: 12px;
+  --radius-small: 8px;
+  --bottom-bar-height: 4.5rem;
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0e0e10;
-    --color-fg: #f2f2f2;
-    --color-muted: #a0a0a0;
+    --color-bg: #0f0f13;
+    --color-surface: #1c1c22;
+    --color-fg: #f2f2f5;
+    --color-muted: #a3a3ad;
+    --color-border: #3a3a44;
+    --color-accent: #5cc8d2;
+    --color-accent-fg: #0f0f13;
+    --color-danger: #ff8a80;
   }
 }
 
@@ -20,12 +34,17 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-sans);
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 main {
@@ -35,6 +54,58 @@ main {
 }
 
 :focus-visible {
-  outline: 3px solid currentColor;
+  outline: 3px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.button-primary {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-fg);
+}
+
+.button-danger {
+  border-color: var(--color-danger);
+  background: var(--color-danger);
+  color: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
