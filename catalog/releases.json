@@ -1,0 +1,982 @@
+[
+  {
+    "id": 11,
+    "title": "OMAJINAI★ペロリ",
+    "kana": "おまじないぺろり",
+    "kind": "single",
+    "releasedOn": "2002-03-21",
+    "trackIds": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 12,
+    "title": "彼氏募集中",
+    "kana": "かれしぼしゅうちゅう",
+    "kind": "single",
+    "releasedOn": "2002-11-01",
+    "trackIds": [
+      3,
+      4
+    ]
+  },
+  {
+    "id": 13,
+    "title": "スウィートドーナッツ",
+    "kana": "すうぃーとどーなっつ",
+    "kind": "single",
+    "releasedOn": "2003-08-06",
+    "trackIds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "id": 14,
+    "title": "モノクロームエフェクト",
+    "kana": "ものくろーむえふぇくと",
+    "kind": "single",
+    "releasedOn": "2004-03-17",
+    "trackIds": [
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": 15,
+    "title": "ビタミンドロップ",
+    "kana": "びたみんどろっぷ",
+    "kind": "single",
+    "releasedOn": "2004-09-08",
+    "trackIds": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 16,
+    "title": "リニアモーターガール",
+    "kana": "りにあもーたーがーる",
+    "kind": "single",
+    "releasedOn": "2005-09-21",
+    "trackIds": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": 17,
+    "title": "コンピューターシティ",
+    "kana": "こんぴゅーたーしてぃ",
+    "kind": "single",
+    "releasedOn": "2006-01-11",
+    "trackIds": [
+      16,
+      17
+    ]
+  },
+  {
+    "id": 18,
+    "title": "エレクトロ・ワールド",
+    "kana": "えれくとろわーるど",
+    "kind": "single",
+    "releasedOn": "2006-06-28",
+    "trackIds": [
+      18,
+      19
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Perfume 〜Complete Best〜",
+    "kana": "ぱふゅーむ こんぷりーとべすと",
+    "kind": "album",
+    "releasedOn": "2006-08-02",
+    "trackIds": [
+      20,
+      13,
+      16,
+      21,
+      12,
+      8,
+      11,
+      5,
+      14,
+      15,
+      17,
+      19
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Fan Service [sweet]",
+    "kana": "ふぁんさーびす すうぃーと",
+    "kind": "single",
+    "releasedOn": "2007-02-14",
+    "trackIds": [
+      22,
+      23
+    ]
+  },
+  {
+    "id": 20,
+    "title": "ポリリズム",
+    "kana": "ぽりりずむ",
+    "kind": "single",
+    "releasedOn": "2007-09-12",
+    "trackIds": [
+      24,
+      25,
+      26,
+      27,
+      28
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Baby cruising Love / マカロニ",
+    "kana": "べいびーくるーじんぐらぶ まかろに",
+    "kind": "single",
+    "releasedOn": "2008-01-16",
+    "trackIds": [
+      29,
+      30,
+      31,
+      32
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Fan Service 〜Prima Box〜",
+    "kana": "ふぁんさーびす ぷりまぼっくす",
+    "kind": "album",
+    "releasedOn": "2008-02-13",
+    "trackIds": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 3,
+    "title": "GAME",
+    "kana": "げーむ",
+    "kind": "album",
+    "releasedOn": "2008-04-16",
+    "trackIds": [
+      24,
+      33,
+      34,
+      29,
+      22,
+      30,
+      35,
+      36,
+      37,
+      38,
+      23,
+      39
+    ]
+  },
+  {
+    "id": 22,
+    "title": "love the world",
+    "kana": "らぶざわーるど",
+    "kind": "single",
+    "releasedOn": "2008-07-09",
+    "trackIds": [
+      40,
+      41,
+      42,
+      43
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Dream Fighter",
+    "kana": "どりーむふぁいたー",
+    "kind": "single",
+    "releasedOn": "2008-11-19",
+    "trackIds": [
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  {
+    "id": 24,
+    "title": "ワンルーム・ディスコ",
+    "kana": "わんるーむでぃすこ",
+    "kind": "single",
+    "releasedOn": "2009-03-25",
+    "trackIds": [
+      48,
+      49,
+      50,
+      51
+    ]
+  },
+  {
+    "id": 4,
+    "title": "⊿",
+    "kana": "とらいあんぐる",
+    "kind": "album",
+    "releasedOn": "2009-07-08",
+    "trackIds": [
+      52,
+      40,
+      44,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      48,
+      60
+    ]
+  },
+  {
+    "id": 25,
+    "title": "不自然なガール / ナチュラルに恋して",
+    "kana": "ふしぜんながーる なちゅらるにこいして",
+    "kind": "single",
+    "releasedOn": "2010-04-14",
+    "trackIds": [
+      61,
+      62,
+      63,
+      64
+    ]
+  },
+  {
+    "id": 26,
+    "title": "VOICE",
+    "kana": "ゔぉいす",
+    "kind": "single",
+    "releasedOn": "2010-08-11",
+    "trackIds": [
+      65,
+      66,
+      67,
+      68
+    ]
+  },
+  {
+    "id": 27,
+    "title": "ねぇ",
+    "kana": "ねぇ",
+    "kind": "single",
+    "releasedOn": "2010-11-10",
+    "trackIds": [
+      69,
+      70,
+      71,
+      72
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Perfume LIVE @東京ドーム「1 2 3 4 5 6 7 8 9 10 11」",
+    "kana": "ぱふゅーむ らいぶ あっと とうきょうどーむ いちにさんしごろくしちはちきゅうじゅうじゅういち",
+    "kind": "other",
+    "releasedOn": "2011-02-09",
+    "trackIds": [
+      183,
+      37,
+      61,
+      34,
+      48,
+      62,
+      40,
+      57,
+      66,
+      184,
+      182,
+      65,
+      16,
+      18,
+      20,
+      44,
+      7,
+      17,
+      22,
+      39,
+      19,
+      69,
+      24
+    ]
+  },
+  {
+    "id": 28,
+    "title": "レーザービーム / 微かなカオリ",
+    "kana": "れーざーびーむ かすかなかおり",
+    "kind": "single",
+    "releasedOn": "2011-05-18",
+    "trackIds": [
+      73,
+      74,
+      75,
+      76
+    ]
+  },
+  {
+    "id": 29,
+    "title": "スパイス",
+    "kana": "すぱいす",
+    "kind": "single",
+    "releasedOn": "2011-11-02",
+    "trackIds": [
+      77,
+      78,
+      79,
+      80
+    ]
+  },
+  {
+    "id": 5,
+    "title": "JPN",
+    "kana": "じぇーぴーえぬ",
+    "kind": "album",
+    "releasedOn": "2011-11-30",
+    "trackIds": [
+      81,
+      82,
+      83,
+      62,
+      84,
+      85,
+      69,
+      74,
+      66,
+      65,
+      86,
+      87,
+      61,
+      77
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Spring of Life",
+    "kana": "すぷりんぐおぶらいふ",
+    "kind": "single",
+    "releasedOn": "2012-04-11",
+    "trackIds": [
+      88,
+      89,
+      90,
+      91
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Spending all my time",
+    "kana": "すぺんでぃんぐおーるまいたいむ",
+    "kind": "single",
+    "releasedOn": "2012-08-15",
+    "trackIds": [
+      92,
+      93,
+      94,
+      95,
+      96,
+      97
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Perfume Global Compilation \"LOVE THE WORLD\"",
+    "kana": "ぱふゅーむぐろーばるこんぴれーしょん らぶざわーるど",
+    "kind": "album",
+    "releasedOn": "2012-09-12",
+    "trackIds": [
+      24,
+      53,
+      40,
+      18,
+      98,
+      25,
+      34,
+      37,
+      54,
+      29,
+      38,
+      70,
+      73,
+      78,
+      99,
+      44
+    ]
+  },
+  {
+    "id": 32,
+    "title": "未来のミュージアム",
+    "kana": "みらいのみゅーじあむ",
+    "kind": "single",
+    "releasedOn": "2013-02-27",
+    "trackIds": [
+      100,
+      101,
+      102,
+      103
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Magic of Love",
+    "kana": "まじっくおぶらぶ",
+    "kind": "single",
+    "releasedOn": "2013-05-22",
+    "trackIds": [
+      104,
+      105,
+      106,
+      107
+    ]
+  },
+  {
+    "id": 7,
+    "title": "LEVEL3",
+    "kana": "れべるすりー",
+    "kind": "album",
+    "releasedOn": "2013-10-02",
+    "trackIds": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      100,
+      113,
+      114,
+      93,
+      101,
+      105,
+      115,
+      116,
+      117
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Sweet Refrain",
+    "kana": "すうぃーとりふれいん",
+    "kind": "single",
+    "releasedOn": "2013-11-27",
+    "trackIds": [
+      120,
+      121,
+      122,
+      123
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Cling Cling",
+    "kana": "くりんくりん",
+    "kind": "single",
+    "releasedOn": "2014-07-16",
+    "trackIds": [
+      124,
+      125,
+      126,
+      127
+    ]
+  },
+  {
+    "id": 49,
+    "title": "LEVEL3 (Bonus Edition)",
+    "kana": "れべるすりー ぼーなすえでぃしょん",
+    "kind": "album",
+    "releasedOn": "2014-10-27",
+    "trackIds": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      100,
+      113,
+      114,
+      93,
+      101,
+      105,
+      115,
+      116,
+      117,
+      118,
+      119
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Perfume 5th Tour 2014「ぐるんぐるん」",
+    "kana": "ぱふゅーむ ふぃふすつあー にせんじゅうよん ぐるんぐるん",
+    "kind": "other",
+    "releasedOn": "2015-03-10",
+    "trackIds": [
+      124,
+      105,
+      111,
+      73,
+      127,
+      57,
+      121,
+      197,
+      18,
+      126,
+      25,
+      113,
+      78,
+      35,
+      7,
+      22,
+      125
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Relax In The City / Pick Me Up",
+    "kana": "りらっくすいんざしてぃ ぴっくみーあっぷ",
+    "kind": "single",
+    "releasedOn": "2015-04-29",
+    "trackIds": [
+      132,
+      133,
+      134,
+      135,
+      136,
+      137
+    ]
+  },
+  {
+    "id": 37,
+    "title": "STAR TRAIN",
+    "kana": "すたーとれいん",
+    "kind": "single",
+    "releasedOn": "2015-10-28",
+    "trackIds": [
+      138,
+      139
+    ]
+  },
+  {
+    "id": 8,
+    "title": "COSMIC EXPLORER",
+    "kana": "こずみっくえくすぷろーらー",
+    "kind": "album",
+    "releasedOn": "2016-04-06",
+    "trackIds": [
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      132,
+      133,
+      154,
+      125
+    ]
+  },
+  {
+    "id": 38,
+    "title": "I Don't Understand You",
+    "kana": "あいどんとあんだーすたんどゆー",
+    "kind": "digital",
+    "releasedOn": "2016-07-20",
+    "trackIds": [
+      157
+    ]
+  },
+  {
+    "id": 39,
+    "title": "TOKYO GIRL",
+    "kana": "とーきょーがーる",
+    "kind": "single",
+    "releasedOn": "2017-02-15",
+    "trackIds": [
+      158,
+      159,
+      160,
+      161
+    ]
+  },
+  {
+    "id": 40,
+    "title": "If you wanna",
+    "kana": "いふゆーわな",
+    "kind": "single",
+    "releasedOn": "2017-08-30",
+    "trackIds": [
+      162,
+      163,
+      164,
+      165
+    ]
+  },
+  {
+    "id": 41,
+    "title": "無限未来",
+    "kana": "むげんみらい",
+    "kind": "single",
+    "releasedOn": "2018-03-14",
+    "trackIds": [
+      166,
+      155,
+      168
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Future Pop",
+    "kana": "ふゅーちゃーぽっぷ",
+    "kind": "album",
+    "releasedOn": "2018-08-15",
+    "trackIds": [
+      169,
+      170,
+      162,
+      158,
+      167,
+      171,
+      172,
+      173,
+      166,
+      159,
+      174,
+      163
+    ]
+  },
+  {
+    "id": 51,
+    "title": "ナナナナナイロ",
+    "kana": "ななななないろ",
+    "kind": "digital",
+    "releasedOn": "2019-07-05",
+    "trackIds": [
+      176
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Perfume The Best \"P Cubed\"",
+    "kana": "ぱふゅーむざべすと ぴーきゅーぶど",
+    "kind": "album",
+    "releasedOn": "2019-09-18",
+    "trackIds": [
+      175,
+      13,
+      16,
+      18,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      34,
+      37,
+      40,
+      53,
+      44,
+      48,
+      54,
+      57,
+      61,
+      62,
+      65,
+      69,
+      70,
+      73,
+      74,
+      77,
+      84,
+      88,
+      92,
+      94,
+      100,
+      101,
+      110,
+      112,
+      113,
+      120,
+      124,
+      125,
+      126,
+      132,
+      133,
+      138,
+      148,
+      155,
+      158,
+      162,
+      163,
+      166,
+      167,
+      170,
+      172,
+      176
+    ]
+  },
+  {
+    "id": 52,
+    "title": "再生",
+    "kana": "さいせい",
+    "kind": "digital",
+    "releasedOn": "2019-11-29",
+    "trackIds": [
+      177
+    ]
+  },
+  {
+    "id": 53,
+    "title": "Perfume 8th Tour 2020 \"P Cubed\" in Dome",
+    "kana": "ぱふゅーむ えいとすつあー にせんにじゅう ぴーきゅーぶど いん どーむ",
+    "kind": "other",
+    "releasedOn": "2020-09-02",
+    "trackIds": [
+      199,
+      34,
+      92,
+      44,
+      73,
+      94,
+      101,
+      176,
+      25,
+      198,
+      41,
+      200,
+      177,
+      113,
+      20,
+      158,
+      24,
+      175,
+      84
+    ]
+  },
+  {
+    "id": 42,
+    "title": "Time Warp",
+    "kana": "たいむわーぷ",
+    "kind": "single",
+    "releasedOn": "2020-09-16",
+    "trackIds": [
+      201,
+      177,
+      202,
+      204
+    ]
+  },
+  {
+    "id": 43,
+    "title": "ポリゴンウェイヴ",
+    "kana": "ぽりごんうぇいゔ",
+    "kind": "digital",
+    "releasedOn": "2021-07-02",
+    "trackIds": [
+      205
+    ]
+  },
+  {
+    "id": 46,
+    "title": "ポリゴンウェイヴEP",
+    "kana": "ぽりごんうぇいゔ いーぴー",
+    "kind": "other",
+    "releasedOn": "2021-09-22",
+    "trackIds": [
+      210,
+      205,
+      211,
+      212,
+      213,
+      214,
+      215
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Flow",
+    "kana": "ふろー",
+    "kind": "single",
+    "releasedOn": "2022-03-09",
+    "trackIds": [
+      206,
+      207,
+      208,
+      209
+    ]
+  },
+  {
+    "id": 45,
+    "title": "さよならプラスティックワールド",
+    "kana": "さよならぷらすてぃっくわーるど",
+    "kind": "digital",
+    "releasedOn": "2022-04-29",
+    "trackIds": [
+      216
+    ]
+  },
+  {
+    "id": 47,
+    "title": "PLASMA",
+    "kana": "ぷらずま",
+    "kind": "album",
+    "releasedOn": "2022-07-27",
+    "trackIds": [
+      217,
+      218,
+      210,
+      177,
+      219,
+      220,
+      206,
+      213,
+      221,
+      222,
+      214,
+      216
+    ]
+  },
+  {
+    "id": 54,
+    "title": "Moon",
+    "kana": "むーん",
+    "kind": "single",
+    "releasedOn": "2023-09-06",
+    "trackIds": [
+      225,
+      226,
+      227,
+      228
+    ]
+  },
+  {
+    "id": 55,
+    "title": "すみっコディスコ",
+    "kana": "すみっこでぃすこ",
+    "kind": "digital",
+    "releasedOn": "2023-11-03",
+    "trackIds": [
+      229,
+      230,
+      231
+    ]
+  },
+  {
+    "id": 56,
+    "title": "The Light",
+    "kana": "ざらいと",
+    "kind": "digital",
+    "releasedOn": "2024-05-24",
+    "trackIds": [
+      232
+    ]
+  },
+  {
+    "id": 57,
+    "title": "ネビュラロマンス 前篇",
+    "kana": "ねびゅらろまんす ぜんぺん",
+    "kind": "album",
+    "releasedOn": "2024-10-30",
+    "trackIds": [
+      232,
+      226,
+      233,
+      234,
+      235,
+      229,
+      236,
+      237,
+      238,
+      239
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Human Factory - 電造人間 -",
+    "kana": "ひゅーまんふぁくとりー でんぞうにんげん",
+    "kind": "digital",
+    "releasedOn": "2025-02-07",
+    "trackIds": [
+      240
+    ]
+  },
+  {
+    "id": 59,
+    "title": "ネビュラロマンス",
+    "kana": "ねびゅらろまんす",
+    "kind": "digital",
+    "releasedOn": "2025-04-02",
+    "trackIds": [
+      241
+    ]
+  },
+  {
+    "id": 60,
+    "title": "巡ループ",
+    "kana": "めぐるーぷ",
+    "kind": "digital",
+    "releasedOn": "2025-07-10",
+    "trackIds": [
+      242
+    ]
+  },
+  {
+    "id": 61,
+    "title": "ネビュラロマンス 後篇",
+    "kana": "ねびゅらろまんす こうへん",
+    "kind": "album",
+    "releasedOn": "2025-09-17",
+    "trackIds": [
+      243,
+      244,
+      241,
+      245,
+      246,
+      247,
+      240,
+      225,
+      248,
+      242
+    ]
+  },
+  {
+    "id": 62,
+    "title": "ふめつのあなた",
+    "kana": "ふめつのあなた",
+    "kind": "digital",
+    "releasedOn": "2025-12-27",
+    "trackIds": [
+      249
+    ]
+  },
+  {
+    "id": 63,
+    "title": "コールドスリープ",
+    "kana": "こーるどすりーぷ",
+    "kind": "digital",
+    "releasedOn": "2026-05-15",
+    "trackIds": [
+      250
+    ]
+  }
+]

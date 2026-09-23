@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "side-u",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-01",
+  // 独自ドメインは初回デプロイ後に有効化する（DESIGN.md §5.1）
+  // "routes": [{ "pattern": "sideu.perfumehub.app", "custom_domain": true }],
+  "assets": {
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // MVP ではどのパスも Worker を通さない。動的 OGP のときに ["/u/*", "/og/*"] にする（DESIGN.md §10）
+    "run_worker_first": false
+  },
+  "observability": { "enabled": true }
+}

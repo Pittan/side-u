@@ -1,0 +1,4810 @@
+[
+  {
+    "id": 1,
+    "title": "OMAJINAI★ペロリ",
+    "kana": "おまじないぺろり",
+    "artist": "ぱふゅ〜む",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2002-03-21"
+  },
+  {
+    "id": 2,
+    "title": "OMAJINAI★ペロリ(オリジナルカラオケ)",
+    "kana": "おまじないぺろり(おりじなるからおけ)",
+    "artist": "ぱふゅ〜む",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2002-03-21",
+    "parentId": 1
+  },
+  {
+    "id": 3,
+    "title": "彼氏募集中",
+    "kana": "かれしぼしゅうちゅう",
+    "artist": "ぱふゅ〜む",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2002-11-01"
+  },
+  {
+    "id": 4,
+    "title": "彼氏募集中(オリジナルカラオケ)",
+    "kana": "かれしぼしゅうちゅう(おりじなるからおけ)",
+    "artist": "ぱふゅ〜む",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2002-11-01",
+    "parentId": 3
+  },
+  {
+    "id": 5,
+    "title": "スウィートドーナッツ",
+    "kana": "すうぃーとどーなっつ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660772",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2003-08-06"
+  },
+  {
+    "id": 6,
+    "title": "シークレットメッセージ",
+    "kana": "しーくれっとめっせーじ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2003-08-06"
+  },
+  {
+    "id": 7,
+    "title": "ジェニーはご機嫌ななめ",
+    "kana": "じぇにーはごきげんななめ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2003-08-06"
+  },
+  {
+    "id": 8,
+    "title": "モノクロームエフェクト",
+    "kana": "ものくろーむえふぇくと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660770",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2004-03-17"
+  },
+  {
+    "id": 9,
+    "title": "エレベーター",
+    "kana": "えれべーたー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2004-03-17"
+  },
+  {
+    "id": 10,
+    "title": "おいしいレシピ",
+    "kana": "おいしいれしぴ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2004-03-17"
+  },
+  {
+    "id": 11,
+    "title": "ビタミンドロップ",
+    "kana": "びたみんどろっぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660771",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2004-09-08"
+  },
+  {
+    "id": 12,
+    "title": "引力",
+    "kana": "いんりょく",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660769",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2004-09-08"
+  },
+  {
+    "id": 13,
+    "title": "リニアモーターガール",
+    "kana": "りにあもーたーがーる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660766",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2005-09-21"
+  },
+  {
+    "id": 14,
+    "title": "ファンデーション",
+    "kana": "ふぁんでーしょん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660773",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2005-09-21"
+  },
+  {
+    "id": 15,
+    "title": "コンピュータードライビング",
+    "kana": "こんぴゅーたーどらいびんぐ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660774",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2005-09-21"
+  },
+  {
+    "id": 16,
+    "title": "コンピューターシティ",
+    "kana": "こんぴゅーたーしてぃ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660767",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2006-01-11"
+  },
+  {
+    "id": 17,
+    "title": "Perfume",
+    "kana": "ぱふゅーむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660775",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2006-01-11"
+  },
+  {
+    "id": 18,
+    "title": "エレクトロ・ワールド",
+    "kana": "えれくとろわーるど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660768",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2006-06-28"
+  },
+  {
+    "id": 19,
+    "title": "wonder2",
+    "kana": "わんだーつー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660776",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2006-06-28"
+  },
+  {
+    "id": 20,
+    "title": "パーフェクトスター・パーフェクトスタイル",
+    "kana": "ぱーふぇくとすたーぱーふぇくとすたいる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660765",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2006-08-02"
+  },
+  {
+    "id": 21,
+    "title": "エレクトロ・ワールド(Album Version)",
+    "kana": "えれくとろわーるど(あるばむばーじょん)",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657660768",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2006-08-02",
+    "parentId": 18
+  },
+  {
+    "id": 22,
+    "title": "チョコレイト・ディスコ",
+    "kana": "ちょこれいとでぃすこ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641007",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-02-14"
+  },
+  {
+    "id": 23,
+    "title": "Twinkle Snow Powdery Snow",
+    "kana": "とうぃんくるすのー ぱうだりーすのー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666323",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-02-14"
+  },
+  {
+    "id": 24,
+    "title": "ポリリズム",
+    "kana": "ぽりりずむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-09-12"
+  },
+  {
+    "id": 25,
+    "title": "SEVENTH HEAVEN",
+    "kana": "せぶんすへぶん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666313",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-09-12"
+  },
+  {
+    "id": 26,
+    "title": "ポリリズム -extra short edit-",
+    "kana": "ぽりりずむ えくすとらしょーとえでぃっと",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657685990",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-09-12",
+    "parentId": 24
+  },
+  {
+    "id": 27,
+    "title": "ポリリズム 〜Original Instrumental〜",
+    "kana": "ぽりりずむ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-09-12",
+    "parentId": 24
+  },
+  {
+    "id": 28,
+    "title": "SEVENTH HEAVEN 〜Original Instrumental〜",
+    "kana": "せぶんすへぶん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2007-09-12",
+    "parentId": 25
+  },
+  {
+    "id": 29,
+    "title": "Baby cruising Love",
+    "kana": "べいびーくるーじんぐらぶ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657688078",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-01-16"
+  },
+  {
+    "id": 30,
+    "title": "マカロニ",
+    "kana": "まかろに",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657688079",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-01-16"
+  },
+  {
+    "id": 31,
+    "title": "Baby cruising Love 〜Original Instrumental〜",
+    "kana": "べいびーくるーじんぐらぶ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-01-16",
+    "parentId": 29
+  },
+  {
+    "id": 32,
+    "title": "マカロニ 〜Original Instrumental〜",
+    "kana": "まかろに おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-01-16",
+    "parentId": 30
+  },
+  {
+    "id": 33,
+    "title": "plastic smile",
+    "kana": "ぷらすちっくすまいる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666314",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 34,
+    "title": "GAME",
+    "kana": "げーむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666315",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 35,
+    "title": "セラミックガール",
+    "kana": "せらみっくがーる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666319",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 36,
+    "title": "Take me Take me",
+    "kana": "ていくみーていくみー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666320",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 37,
+    "title": "シークレットシークレット",
+    "kana": "しーくれっとしーくれっと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666321",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 38,
+    "title": "Butterfly",
+    "kana": "ばたふらい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666322",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 39,
+    "title": "Puppy love",
+    "kana": "ぱぴーらぶ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657666324",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-04-16"
+  },
+  {
+    "id": 40,
+    "title": "love the world",
+    "kana": "らぶざわーるど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671891",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-07-09"
+  },
+  {
+    "id": 41,
+    "title": "edge",
+    "kana": "えっじ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657689624",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-07-09"
+  },
+  {
+    "id": 42,
+    "title": "love the world -Original Instrumental-",
+    "kana": "らぶざわーるど おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-07-09",
+    "parentId": 40
+  },
+  {
+    "id": 43,
+    "title": "edge -extended mix-",
+    "kana": "えっじ えくすてんでっどみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657689626",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-07-09",
+    "parentId": 41
+  },
+  {
+    "id": 44,
+    "title": "Dream Fighter",
+    "kana": "どりーむふぁいたー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "658115976",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-11-19"
+  },
+  {
+    "id": 45,
+    "title": "願い",
+    "kana": "ねがい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "658115977",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-11-19"
+  },
+  {
+    "id": 46,
+    "title": "Dream Fighter -Original Instrumental-",
+    "kana": "どりーむふぁいたー おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-11-19",
+    "parentId": 44
+  },
+  {
+    "id": 47,
+    "title": "願い -Original Instrumental-",
+    "kana": "ねがい おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2008-11-19",
+    "parentId": 45
+  },
+  {
+    "id": 48,
+    "title": "ワンルーム・ディスコ",
+    "kana": "わんるーむでぃすこ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "663649112",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-03-25"
+  },
+  {
+    "id": 49,
+    "title": "23:30",
+    "kana": "にじゅうさんじはん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "663649113",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-03-25"
+  },
+  {
+    "id": 50,
+    "title": "ワンルーム・ディスコ -Original Instrumental-",
+    "kana": "わんるーむでぃすこ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-03-25",
+    "parentId": 48
+  },
+  {
+    "id": 51,
+    "title": "23:30 -Original Instrumental-",
+    "kana": "にじゅうさんじはん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-03-25",
+    "parentId": 49
+  },
+  {
+    "id": 52,
+    "title": "Take off",
+    "kana": "ていくおふ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671890",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 53,
+    "title": "edge(⊿-mix)",
+    "kana": "えっじ とらいあんぐるみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671893",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08",
+    "parentId": 41
+  },
+  {
+    "id": 54,
+    "title": "NIGHT FLIGHT",
+    "kana": "ないとふらいと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671894",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 55,
+    "title": "Kiss and Music",
+    "kana": "きすあんどみゅーじっく",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671895",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 56,
+    "title": "Zero Gravity",
+    "kana": "ぜろぐらびてぃー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671896",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 57,
+    "title": "I still love U",
+    "kana": "あいすてぃるらぶゆー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671897",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 58,
+    "title": "The best thing",
+    "kana": "ざべすとしんぐ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671898",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 59,
+    "title": "Speed of Sound",
+    "kana": "すぴーどおぶさうんど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671899",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08"
+  },
+  {
+    "id": 60,
+    "title": "願い(Album-mix)",
+    "kana": "ねがい あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "657671901",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2009-07-08",
+    "parentId": 45
+  },
+  {
+    "id": 61,
+    "title": "不自然なガール",
+    "kana": "ふしぜんながーる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "663529349",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-04-14"
+  },
+  {
+    "id": 62,
+    "title": "ナチュラルに恋して",
+    "kana": "なちゅらるにこいして",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "663529350",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-04-14"
+  },
+  {
+    "id": 63,
+    "title": "不自然なガール -Original Instrumental-",
+    "kana": "ふしぜんながーる おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-04-14",
+    "parentId": 61
+  },
+  {
+    "id": 64,
+    "title": "ナチュラルに恋して -Original Instrumental-",
+    "kana": "なちゅらるにこいして おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-04-14",
+    "parentId": 62
+  },
+  {
+    "id": 65,
+    "title": "VOICE",
+    "kana": "ゔぉいす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083593",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-08-11"
+  },
+  {
+    "id": 66,
+    "title": "575",
+    "kana": "ごしちご",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083592",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-08-11"
+  },
+  {
+    "id": 67,
+    "title": "VOICE -Original Instrumental-",
+    "kana": "ゔぉいす おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-08-11",
+    "parentId": 65
+  },
+  {
+    "id": 68,
+    "title": "575 -Original Instrumental-",
+    "kana": "ごしちご おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-08-11",
+    "parentId": 66
+  },
+  {
+    "id": 69,
+    "title": "ねぇ",
+    "kana": "ねぇ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083590",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-11-10"
+  },
+  {
+    "id": 70,
+    "title": "FAKE IT",
+    "kana": "ふぇいくいっと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465086759",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-11-10"
+  },
+  {
+    "id": 71,
+    "title": "ねぇ -Original Instrumental-",
+    "kana": "ねぇ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-11-10",
+    "parentId": 69
+  },
+  {
+    "id": 72,
+    "title": "FAKE IT -Original Instrumental-",
+    "kana": "ふぇいくいっと おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2010-11-10",
+    "parentId": 70
+  },
+  {
+    "id": 73,
+    "title": "レーザービーム",
+    "kana": "れーざーびーむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641225",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-05-18"
+  },
+  {
+    "id": 74,
+    "title": "微かなカオリ",
+    "kana": "かすかなかおり",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641226",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-05-18"
+  },
+  {
+    "id": 75,
+    "title": "レーザービーム -Original Instrumental-",
+    "kana": "れーざーびーむ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-05-18",
+    "parentId": 73
+  },
+  {
+    "id": 76,
+    "title": "微かなカオリ -Original Instrumental-",
+    "kana": "かすかなかおり おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-05-18",
+    "parentId": 74
+  },
+  {
+    "id": 77,
+    "title": "スパイス",
+    "kana": "すぱいす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641228",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-02"
+  },
+  {
+    "id": 78,
+    "title": "GLITTER",
+    "kana": "ぐりったー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465086761",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-02"
+  },
+  {
+    "id": 79,
+    "title": "スパイス -Original Instrumental-",
+    "kana": "すぱいす おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-02",
+    "parentId": 77
+  },
+  {
+    "id": 80,
+    "title": "GLITTER -Original Instrumental-",
+    "kana": "ぐりったー おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-02",
+    "parentId": 78
+  },
+  {
+    "id": 81,
+    "title": "The Opening",
+    "kana": "じおーぷにんぐ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083584",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30"
+  },
+  {
+    "id": 82,
+    "title": "レーザービーム(Album-mix)",
+    "kana": "れーざーびーむ あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083585",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30",
+    "parentId": 73
+  },
+  {
+    "id": 83,
+    "title": "GLITTER(Album-mix)",
+    "kana": "ぐりったー あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083586",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30",
+    "parentId": 78
+  },
+  {
+    "id": 84,
+    "title": "MY COLOR",
+    "kana": "まいからー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083588",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30"
+  },
+  {
+    "id": 85,
+    "title": "時の針",
+    "kana": "ときのはり",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083589",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30"
+  },
+  {
+    "id": 86,
+    "title": "心のスポーツ",
+    "kana": "こころのすぽーつ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083594",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30"
+  },
+  {
+    "id": 87,
+    "title": "Have a Stroll",
+    "kana": "はぶあすとろーる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465083595",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2011-11-30"
+  },
+  {
+    "id": 88,
+    "title": "Spring of Life",
+    "kana": "すぷりんぐおぶらいふ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444618416",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-04-11"
+  },
+  {
+    "id": 89,
+    "title": "コミュニケーション",
+    "kana": "こみゅにけーしょん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444618418",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-04-11"
+  },
+  {
+    "id": 90,
+    "title": "Spring of Life -Original Instrumental-",
+    "kana": "すぷりんぐおぶらいふ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-04-11",
+    "parentId": 88
+  },
+  {
+    "id": 91,
+    "title": "コミュニケーション -Original Instrumental-",
+    "kana": "こみゅにけーしょん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-04-11",
+    "parentId": 89
+  },
+  {
+    "id": 92,
+    "title": "Spending all my time",
+    "kana": "すぺんでぃんぐおーるまいたいむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444892949",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-08-15"
+  },
+  {
+    "id": 93,
+    "title": "ポイント",
+    "kana": "ぽいんと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444893071",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-08-15"
+  },
+  {
+    "id": 94,
+    "title": "Hurly Burly",
+    "kana": "はーりーばーりー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444893072",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-08-15"
+  },
+  {
+    "id": 95,
+    "title": "Spending all my time -Original Instrumental-",
+    "kana": "すぺんでぃんぐおーるまいたいむ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-08-15",
+    "parentId": 92
+  },
+  {
+    "id": 96,
+    "title": "ポイント -Original Instrumental-",
+    "kana": "ぽいんと おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-08-15",
+    "parentId": 93
+  },
+  {
+    "id": 97,
+    "title": "Hurly Burly -Original Instrumental-",
+    "kana": "はーりーばーりー おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-08-15",
+    "parentId": 94
+  },
+  {
+    "id": 98,
+    "title": "チョコレイト・ディスコ(2012-Mix)",
+    "kana": "ちょこれいとでぃすこ にせんじゅうにみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465086752",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-09-12",
+    "parentId": 22
+  },
+  {
+    "id": 99,
+    "title": "MY COLOR(LTW-Mix)",
+    "kana": "まいからー えるてぃーだぶりゅーみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1465086762",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2012-09-12",
+    "parentId": 84
+  },
+  {
+    "id": 100,
+    "title": "未来のミュージアム",
+    "kana": "みらいのみゅーじあむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1445029658",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-02-27"
+  },
+  {
+    "id": 101,
+    "title": "だいじょばない",
+    "kana": "だいじょばない",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1445030000",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-02-27"
+  },
+  {
+    "id": 102,
+    "title": "未来のミュージアム -Original Instrumental-",
+    "kana": "みらいのみゅーじあむ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-02-27",
+    "parentId": 100
+  },
+  {
+    "id": 103,
+    "title": "だいじょばない -Original Instrumental-",
+    "kana": "だいじょばない おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-02-27",
+    "parentId": 101
+  },
+  {
+    "id": 104,
+    "title": "Magic of Love",
+    "kana": "まじっくおぶらぶ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444633634",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-05-22"
+  },
+  {
+    "id": 105,
+    "title": "Handy Man",
+    "kana": "はんでぃーまん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444633635",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-05-22"
+  },
+  {
+    "id": 106,
+    "title": "Magic of Love -Original Instrumental-",
+    "kana": "まじっくおぶらぶ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-05-22",
+    "parentId": 104
+  },
+  {
+    "id": 107,
+    "title": "Handy Man -Original Instrumental-",
+    "kana": "はんでぃーまん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-05-22",
+    "parentId": 105
+  },
+  {
+    "id": 108,
+    "title": "Enter the Sphere",
+    "kana": "えんたーざすふぃあ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440777782",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 109,
+    "title": "Spring of Life(Album-mix)",
+    "kana": "すぷりんぐおぶらいふ あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440777860",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02",
+    "parentId": 88
+  },
+  {
+    "id": 110,
+    "title": "Magic of Love(Album-mix)",
+    "kana": "まじっくおぶらぶ あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440777863",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02",
+    "parentId": 104
+  },
+  {
+    "id": 111,
+    "title": "Clockwork",
+    "kana": "くろっくわーく",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440777865",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 112,
+    "title": "1mm",
+    "kana": "いちみり",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440777867",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 113,
+    "title": "Party Maker",
+    "kana": "ぱーてぃーめーかー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440777878",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 114,
+    "title": "ふりかえるといるよ",
+    "kana": "ふりかえるといるよ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440778032",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 115,
+    "title": "Sleeping Beauty",
+    "kana": "すりーぴんぐびゅーてぃー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440778044",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 116,
+    "title": "Spending all my time(Album-mix)",
+    "kana": "すぺんでぃんぐおーるまいたいむ あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440778046",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02",
+    "parentId": 92
+  },
+  {
+    "id": 117,
+    "title": "Dream Land",
+    "kana": "どりーむらんど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440778050",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-10-02"
+  },
+  {
+    "id": 118,
+    "title": "Spending all my time(Radio Mix)",
+    "kana": "すぺんでぃんぐおーるまいたいむ らじおみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440769888",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-10-27",
+    "parentId": 92
+  },
+  {
+    "id": 119,
+    "title": "Spending all my time(DV&LM remix)",
+    "kana": "すぺんでぃんぐおーるまいたいむ でぃーぶいあんどえるえむみっくす",
+    "artist": "Perfume",
+    "kind": "remix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440769894",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-10-27",
+    "parentId": 92
+  },
+  {
+    "id": 120,
+    "title": "Sweet Refrain",
+    "kana": "すうぃーとりふれいん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1445028026",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-11-27"
+  },
+  {
+    "id": 121,
+    "title": "恋は前傾姿勢",
+    "kana": "こいはぜんけいしせい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1445028035",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-11-27"
+  },
+  {
+    "id": 122,
+    "title": "Sweet Refrain -Original Instrumental-",
+    "kana": "すうぃーとりふれいん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-11-27",
+    "parentId": 120
+  },
+  {
+    "id": 123,
+    "title": "恋は前傾姿勢 -Original Instrumental-",
+    "kana": "こいはぜんけいしせい おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2013-11-27",
+    "parentId": 121
+  },
+  {
+    "id": 124,
+    "title": "Cling Cling",
+    "kana": "くりんくりん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641401",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16"
+  },
+  {
+    "id": 125,
+    "title": "Hold Your Hand",
+    "kana": "ほーるどゆあはんど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641419",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16"
+  },
+  {
+    "id": 126,
+    "title": "DISPLAY",
+    "kana": "でぃすぷれい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641423",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16"
+  },
+  {
+    "id": 127,
+    "title": "いじわるなハロー",
+    "kana": "いじわるなはろー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444855090",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16"
+  },
+  {
+    "id": 128,
+    "title": "Cling Cling - Original Instrumental -",
+    "kana": "くりんくりん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16",
+    "parentId": 124
+  },
+  {
+    "id": 129,
+    "title": "Hold Your Hand - Original Instrumental -",
+    "kana": "ほーるどゆあはんど おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16",
+    "parentId": 125
+  },
+  {
+    "id": 130,
+    "title": "DISPLAY - Original Instrumental -",
+    "kana": "でぃすぷれい おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16",
+    "parentId": 126
+  },
+  {
+    "id": 131,
+    "title": "いじわるなハロー - Original Instrumental -",
+    "kana": "いじわるなはろー おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2014-07-16",
+    "parentId": 127
+  },
+  {
+    "id": 132,
+    "title": "Relax In The City",
+    "kana": "りらっくすいんざしてぃ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444864372",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-04-29"
+  },
+  {
+    "id": 133,
+    "title": "Pick Me Up",
+    "kana": "ぴっくみーあっぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444864376",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-04-29"
+  },
+  {
+    "id": 134,
+    "title": "透明人間",
+    "kana": "とうめいにんげん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444864377",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-04-29"
+  },
+  {
+    "id": 135,
+    "title": "Relax In The City -Original Instrumental-",
+    "kana": "りらっくすいんざしてぃ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-04-29",
+    "parentId": 132
+  },
+  {
+    "id": 136,
+    "title": "Pick Me Up -Original Instrumental-",
+    "kana": "ぴっくみーあっぷ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-04-29",
+    "parentId": 133
+  },
+  {
+    "id": 137,
+    "title": "透明人間 -Original Instrumental-",
+    "kana": "とうめいにんげん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-04-29",
+    "parentId": 134
+  },
+  {
+    "id": 138,
+    "title": "STAR TRAIN",
+    "kana": "すたーとれいん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1445046471",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-10-28"
+  },
+  {
+    "id": 139,
+    "title": "TOKIMEKI LIGHTS",
+    "kana": "ときめきらいつ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1445046477",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-10-28"
+  },
+  {
+    "id": 140,
+    "title": "イミテーションワールド",
+    "kana": "いみてーしょんわーるど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-10-28"
+  },
+  {
+    "id": 141,
+    "title": "STAR TRAIN -Original Instrumental-",
+    "kana": "すたーとれいん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-10-28",
+    "parentId": 138
+  },
+  {
+    "id": 142,
+    "title": "TOKIMEKI LIGHTS -Original Instrumental-",
+    "kana": "ときめきらいつ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-10-28",
+    "parentId": 139
+  },
+  {
+    "id": 143,
+    "title": "イミテーションワールド -Original Instrumental-",
+    "kana": "いみてーしょんわーるど おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2015-10-28",
+    "parentId": 140
+  },
+  {
+    "id": 144,
+    "title": "Navigate",
+    "kana": "なびげーと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440800555",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 145,
+    "title": "Cosmic Explorer",
+    "kana": "こずみっくえくすぷろーらー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440800828",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 146,
+    "title": "Miracle Worker",
+    "kana": "みらくるわーかー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440800954",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 147,
+    "title": "Next Stage with YOU",
+    "kana": "ねくすとすてーじうぃずゆー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440800964",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 148,
+    "title": "STORY",
+    "kana": "すとーりー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440800970",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 149,
+    "title": "FLASH (Album-mix)",
+    "kana": "ふらっしゅ あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440800977",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06",
+    "parentId": 155
+  },
+  {
+    "id": 150,
+    "title": "Sweet Refrain(Album-mix)",
+    "kana": "すうぃーとりふれいん あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440801284",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06",
+    "parentId": 120
+  },
+  {
+    "id": 151,
+    "title": "Baby Face",
+    "kana": "べいびーふぇいす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440801293",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 152,
+    "title": "TOKIMEKI LIGHTS(Album-mix)",
+    "kana": "ときめきらいつ あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440801302",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06",
+    "parentId": 139
+  },
+  {
+    "id": 153,
+    "title": "STAR TRAIN(Album-mix)",
+    "kana": "すたーとれいん あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440801309",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06",
+    "parentId": 138
+  },
+  {
+    "id": 154,
+    "title": "Cling Cling(Album-mix)",
+    "kana": "くりんくりん あるばむみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1440801628",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06",
+    "parentId": 124
+  },
+  {
+    "id": 155,
+    "title": "FLASH",
+    "kana": "ふらっしゅ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1442464415",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06"
+  },
+  {
+    "id": 156,
+    "title": "FLASH -Original Instrumental-",
+    "kana": "ふらっしゅ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-04-06",
+    "parentId": 155
+  },
+  {
+    "id": 157,
+    "title": "I Don't Understand You",
+    "kana": "あいどんとあんだーすたんどゆー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1444865952",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2016-07-20"
+  },
+  {
+    "id": 158,
+    "title": "TOKYO GIRL",
+    "kana": "とーきょーがーる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479021791",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-02-15"
+  },
+  {
+    "id": 159,
+    "title": "宝石の雨",
+    "kana": "ほうせきのあめ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479021792",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-02-15"
+  },
+  {
+    "id": 160,
+    "title": "TOKYO GIRL -Original Instrumental-",
+    "kana": "とーきょーがーる おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-02-15",
+    "parentId": 158
+  },
+  {
+    "id": 161,
+    "title": "宝石の雨 -Original Instrumental-",
+    "kana": "ほうせきのあめ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-02-15",
+    "parentId": 159
+  },
+  {
+    "id": 162,
+    "title": "If you wanna",
+    "kana": "いふゆーわな",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479021920",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-08-30"
+  },
+  {
+    "id": 163,
+    "title": "Everyday",
+    "kana": "えぶりでい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479022136",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-08-30"
+  },
+  {
+    "id": 164,
+    "title": "If you wanna -Original Instrumental-",
+    "kana": "いふゆーわな おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-08-30",
+    "parentId": 162
+  },
+  {
+    "id": 165,
+    "title": "Everyday -Original Instrumental-",
+    "kana": "えぶりでい おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2017-08-30",
+    "parentId": 163
+  },
+  {
+    "id": 166,
+    "title": "無限未来",
+    "kana": "むげんみらい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297620",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-03-14"
+  },
+  {
+    "id": 167,
+    "title": "FUSION",
+    "kana": "ふゅーじょん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297602",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-03-14"
+  },
+  {
+    "id": 168,
+    "title": "無限未来 -Original Instrumental-",
+    "kana": "むげんみらい おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-03-14",
+    "parentId": 166
+  },
+  {
+    "id": 169,
+    "title": "Start-Up",
+    "kana": "すたーとあっぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297358",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-08-15"
+  },
+  {
+    "id": 170,
+    "title": "Future Pop",
+    "kana": "ふゅーちゃーぽっぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297359",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-08-15"
+  },
+  {
+    "id": 171,
+    "title": "Tiny Baby",
+    "kana": "たいにーべいびー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297606",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-08-15"
+  },
+  {
+    "id": 172,
+    "title": "Let Me Know",
+    "kana": "れっとみーのう",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297607",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-08-15"
+  },
+  {
+    "id": 173,
+    "title": "超来輪",
+    "kana": "ちょうらいりん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297609",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-08-15"
+  },
+  {
+    "id": 174,
+    "title": "天空",
+    "kana": "てんくう",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1420297990",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2018-08-15"
+  },
+  {
+    "id": 175,
+    "title": "Challenger",
+    "kana": "ちゃれんじゃー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479640871",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2019-09-18"
+  },
+  {
+    "id": 176,
+    "title": "ナナナナナイロ",
+    "kana": "ななななないろ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1479641759",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: ナナナナナイロ（デジタル配信）",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=78"
+      }
+    ],
+    "releasedOn": "2019-07-05"
+  },
+  {
+    "id": 177,
+    "title": "再生",
+    "kana": "さいせい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": {
+      "status": "available",
+      "songId": "1488564841",
+      "storefront": "jp",
+      "verifiedAt": null
+    },
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: 再生（デジタル配信）",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=77"
+      }
+    ],
+    "releasedOn": "2019-11-29"
+  },
+  {
+    "id": 178,
+    "title": "カウンターアトラクション",
+    "kana": "かうんたーあとらくしょん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "title": "シークレットシークレット(Reframe Remix)",
+    "kana": "しーくれっとしーくれっと りふれいむりみっくす",
+    "artist": "Perfume",
+    "kind": "remix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 37
+  },
+  {
+    "id": 180,
+    "title": "シークレットシークレット(Reframe2019 ver)",
+    "kana": "しーくれっとしーくれっと りふれいむにせんじゅうきゅうばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 37
+  },
+  {
+    "id": 181,
+    "title": "Three Walks",
+    "kana": "すりーうぉーくす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "title": "Perfumeの掟",
+    "kana": "ぱふゅーむのおきて",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Perfume LIVE @東京ドーム「1 2 3 4 5 6 7 8 9 10 11」",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=31"
+      }
+    ],
+    "releasedOn": "2011-02-09"
+  },
+  {
+    "id": 183,
+    "title": "GISHIKI",
+    "kana": "ぎしき",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Perfume LIVE @東京ドーム「1 2 3 4 5 6 7 8 9 10 11」",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=31"
+      }
+    ],
+    "releasedOn": "2011-02-09"
+  },
+  {
+    "id": 184,
+    "title": "1 2 3 4 5 6 7 8 9 10",
+    "kana": "いちにさんしごろくしちはちきゅうじゅう",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Perfume LIVE @東京ドーム「1 2 3 4 5 6 7 8 9 10 11」",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=31"
+      }
+    ],
+    "releasedOn": "2011-02-09"
+  },
+  {
+    "id": 185,
+    "title": "Baby Face(English ver.)",
+    "kana": "べいびーふぇいす いんぐりっしゅばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 151
+  },
+  {
+    "id": 186,
+    "title": "Recollect",
+    "kana": "りこれくと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "title": "Recollect(Reframe2019 ver)",
+    "kana": "りこれくと りふれいむ にせんじゅうきゅうばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 186
+  },
+  {
+    "id": 188,
+    "title": "DISPLAY(Reframe2019 ver)",
+    "kana": "でぃすぷれい りふれいむ にせんじゅうきゅうばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 126
+  },
+  {
+    "id": 189,
+    "title": "Record(Reframe2019 ver)",
+    "kana": "れこーど りふれいむ にせんじゅうきゅうばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 224
+  },
+  {
+    "id": 190,
+    "title": "Koe - Interlude",
+    "kana": "こえ いんたーるーど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "title": "Pose - Analysis",
+    "kana": "ぽーず あなりしす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "title": "Pose - Perspective",
+    "kana": "ぽーず ぱーすぺくてぃぶ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "title": "Body - Analysis",
+    "kana": "ぼでぃー あなりしす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "title": "Kiseki - Visualization",
+    "kana": "きせき びじゅあらいぜーしょん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "title": "Lyric Analysis",
+    "kana": "りりっくあなりしす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "title": "Challenger(Reframe2019 ver)",
+    "kana": "ちゃれんじゃー りふれいむ にせんじゅうきゅうばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "parentId": 175
+  },
+  {
+    "id": 197,
+    "title": "EPISODE 0",
+    "kana": "えぴそーどぜろ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Perfume 5th Tour 2014「ぐるんぐるん」",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=49"
+      }
+    ],
+    "releasedOn": "2015-03-10"
+  },
+  {
+    "id": 198,
+    "title": "Chrome",
+    "kana": "くろーむ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Perfume 8th Tour 2020 \"P Cubed\" in Dome",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=76"
+      }
+    ],
+    "releasedOn": "2020-09-02"
+  },
+  {
+    "id": 199,
+    "title": "Opera",
+    "kana": "おぺら",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Perfume 8th Tour 2020 \"P Cubed\" in Dome",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=76"
+      }
+    ],
+    "releasedOn": "2020-09-02"
+  },
+  {
+    "id": 200,
+    "title": "Visualization",
+    "kana": "びじゅあらいぜーしょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2020-09-02",
+    "parentId": 194
+  },
+  {
+    "id": 201,
+    "title": "Time Warp",
+    "kana": "たいむわーぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2020-09-16"
+  },
+  {
+    "id": 202,
+    "title": "Time Warp -Original Instrumental-",
+    "kana": "たいむわーぷ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2020-09-16",
+    "parentId": 201
+  },
+  {
+    "id": 204,
+    "title": "再生 -Original Instrumental-",
+    "kana": "さいせい おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ディスコグラフィ: Time Warp",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=80"
+      }
+    ],
+    "parentId": 177,
+    "releasedOn": "2020-09-16"
+  },
+  {
+    "id": 205,
+    "title": "ポリゴンウェイヴ",
+    "kana": "ぽりごんうぇいう",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-07-02"
+  },
+  {
+    "id": 206,
+    "title": "Flow",
+    "kana": "ふろー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-03-09"
+  },
+  {
+    "id": 207,
+    "title": "マワルカガミ(polygon wave live ver.)",
+    "kana": "まわるかがみ ぽりごんうぇいゔ らいぶばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-03-09",
+    "parentId": 220
+  },
+  {
+    "id": 208,
+    "title": "Flow (Instrumental)",
+    "kana": "ふろー いんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-03-09",
+    "parentId": 206
+  },
+  {
+    "id": 209,
+    "title": "マワルカガミ(polygon wave live ver./ Instrumental)",
+    "kana": "まわるかがみ ぽりごんうぇいゔ らいぶばーじょん いんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-03-09",
+    "parentId": 220
+  },
+  {
+    "id": 210,
+    "title": "ポリゴンウェイヴ (Original Mix)",
+    "kana": "ぽりごんうぇいゔ おりじなるみっくす",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-09-22",
+    "parentId": 205
+  },
+  {
+    "id": 211,
+    "title": "ポリゴンウェイヴ (Remix)",
+    "kana": "ぽりごんうぇいゔ りみっくす",
+    "artist": "Perfume",
+    "kind": "remix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-09-22",
+    "parentId": 205
+  },
+  {
+    "id": 212,
+    "title": "ポリゴンウェイヴ (Instrumental)",
+    "kana": "ぽりごんうぇいゔ いんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-09-22",
+    "parentId": 205
+  },
+  {
+    "id": 213,
+    "title": "∞ループ",
+    "kana": "むげんるーぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-09-22"
+  },
+  {
+    "id": 214,
+    "title": "アンドロイド＆",
+    "kana": "あんどろいどあんど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-09-22"
+  },
+  {
+    "id": 215,
+    "title": "システムリブート",
+    "kana": "しすてむりぶーと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2021-09-22"
+  },
+  {
+    "id": 216,
+    "title": "さよならプラスティックワールド",
+    "kana": "さよならぷらすてぃっくわーるど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-04-29"
+  },
+  {
+    "id": 217,
+    "title": "Plasma",
+    "kana": "ぷらずま",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-07-27"
+  },
+  {
+    "id": 218,
+    "title": "Time Warp (v1.1)",
+    "kana": "たいむわーぷ ばーじょん いってんいち",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-07-27",
+    "parentId": 201
+  },
+  {
+    "id": 219,
+    "title": "Spinning World",
+    "kana": "すぴにんぐわーるど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      },
+      {
+        "label": "公式ニュース: Spinning World 先行配信",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=3815"
+      }
+    ],
+    "releasedOn": "2022-07-15"
+  },
+  {
+    "id": 220,
+    "title": "マワルカガミ",
+    "kana": "まわるかがみ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-07-27"
+  },
+  {
+    "id": 221,
+    "title": "Drive'n The Rain",
+    "kana": "どらいびん ざ れいん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-07-27"
+  },
+  {
+    "id": 222,
+    "title": "ハテナビト",
+    "kana": "はてなびと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ],
+    "releasedOn": "2022-07-27"
+  },
+  {
+    "id": 223,
+    "title": "Intro",
+    "kana": "いんとろ",
+    "artist": "Perfume",
+    "kind": "other",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "title": "Record",
+    "kana": "れこーど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "perfume-database",
+        "url": "https://github.com/Pittan/perfume-database"
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "title": "Moon",
+    "kana": "むーん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: Moon",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=91"
+      },
+      {
+        "label": "公式ニュース: Moon 配信決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=3985"
+      },
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      }
+    ],
+    "releasedOn": "2023-08-17",
+    "memo": "2023-08-17 に先行配信、CD シングルは 2023-09-06"
+  },
+  {
+    "id": 226,
+    "title": "ラヴ・クラウド",
+    "kana": "らゔくらうど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: Moon",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=91"
+      },
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      }
+    ],
+    "releasedOn": "2023-09-06"
+  },
+  {
+    "id": 227,
+    "title": "Moon -Original Instrumental-",
+    "kana": "むーん おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: Moon",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=91"
+      }
+    ],
+    "releasedOn": "2023-09-06",
+    "parentId": 225
+  },
+  {
+    "id": 228,
+    "title": "ラヴ・クラウド-Original Instrumental-",
+    "kana": "らゔくらうど おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: Moon",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=91"
+      }
+    ],
+    "releasedOn": "2023-09-06",
+    "parentId": 226
+  },
+  {
+    "id": 229,
+    "title": "すみっコディスコ",
+    "kana": "すみっこでぃすこ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: すみっコディスコ",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=92"
+      },
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      }
+    ],
+    "releasedOn": "2023-11-03"
+  },
+  {
+    "id": 230,
+    "title": "すみっコディスコ-Movie Ver.-",
+    "kana": "すみっこでぃすこ むーびーばーじょん",
+    "artist": "Perfume",
+    "kind": "mix",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: すみっコディスコ",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=92"
+      }
+    ],
+    "releasedOn": "2023-11-03",
+    "parentId": 229
+  },
+  {
+    "id": 231,
+    "title": "すみっコディスコ-Original Instrumental-",
+    "kana": "すみっこでぃすこ おりじなるいんすとぅるめんたる",
+    "artist": "Perfume",
+    "kind": "instrumental",
+    "selectable": false,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: すみっコディスコ",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=92"
+      }
+    ],
+    "releasedOn": "2023-11-03",
+    "parentId": 229
+  },
+  {
+    "id": 232,
+    "title": "The Light",
+    "kana": "ざらいと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: The Light",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=94"
+      },
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      }
+    ],
+    "releasedOn": "2024-05-24"
+  },
+  {
+    "id": 233,
+    "title": "Cosmic Treat",
+    "kana": "こずみっくとりーと",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 234,
+    "title": "Starlight Dreams",
+    "kana": "すたーらいとどりーむす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 235,
+    "title": "IMA IMA IMA",
+    "kana": "いまいまいま",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 236,
+    "title": "Morning Cruising",
+    "kana": "もーにんぐくるーじんぐ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 237,
+    "title": "タイムカプセル",
+    "kana": "たいむかぷせる",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 238,
+    "title": "時空花",
+    "kana": "じくうか",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 239,
+    "title": "メビウス",
+    "kana": "めびうす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 前篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=95"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 前篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4144"
+      }
+    ],
+    "releasedOn": "2024-09-20",
+    "memo": "アルバムは 2024-09-20 に全曲先行配信（CD は 2024-10-30）。公式ニュース参照"
+  },
+  {
+    "id": 240,
+    "title": "Human Factory - 電造人間 -",
+    "kana": "ひゅーまんふぁくとりー でんぞうにんげん",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: Human Factory -電造人間- 配信リリース決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4179"
+      }
+    ],
+    "releasedOn": "2025-02-07"
+  },
+  {
+    "id": 241,
+    "title": "ネビュラロマンス",
+    "kana": "ねびゅらろまんす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 配信リリース",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4196"
+      }
+    ],
+    "releasedOn": "2025-04-02"
+  },
+  {
+    "id": 242,
+    "title": "巡ループ",
+    "kana": "めぐるーぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: 巡ループ 配信リリース決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4220"
+      }
+    ],
+    "releasedOn": "2025-07-10"
+  },
+  {
+    "id": 243,
+    "title": "Cipher",
+    "kana": "さいふぁー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 後篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4251"
+      }
+    ],
+    "releasedOn": "2025-08-18",
+    "memo": "アルバムは 2025-08-18 に全曲先行配信（CD は 2025-09-17）。公式ニュース参照"
+  },
+  {
+    "id": 244,
+    "title": "再起動世界",
+    "kana": "さいきどうせかい",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 後篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4251"
+      }
+    ],
+    "releasedOn": "2025-08-18",
+    "memo": "アルバムは 2025-08-18 に全曲先行配信（CD は 2025-09-17）。公式ニュース参照"
+  },
+  {
+    "id": 245,
+    "title": "ソーラ・ウィンド",
+    "kana": "そーらうぃんど",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 後篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4251"
+      }
+    ],
+    "releasedOn": "2025-08-18",
+    "memo": "アルバムは 2025-08-18 に全曲先行配信（CD は 2025-09-17）。公式ニュース参照"
+  },
+  {
+    "id": 246,
+    "title": "Virtual Fantasy",
+    "kana": "ばーちゃるふぁんたじー",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 後篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4251"
+      }
+    ],
+    "releasedOn": "2025-08-18",
+    "memo": "アルバムは 2025-08-18 に全曲先行配信（CD は 2025-09-17）。公式ニュース参照"
+  },
+  {
+    "id": 247,
+    "title": "Teenage Dreams",
+    "kana": "てぃーんえいじどりーむす",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 後篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4251"
+      }
+    ],
+    "releasedOn": "2025-08-18",
+    "memo": "アルバムは 2025-08-18 に全曲先行配信（CD は 2025-09-17）。公式ニュース参照"
+  },
+  {
+    "id": 248,
+    "title": "exit",
+    "kana": "えぐじっと",
+    "aliases": [
+      "いぐじっと"
+    ],
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ネビュラロマンス 後篇",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=96"
+      },
+      {
+        "label": "公式ニュース: ネビュラロマンス 後篇 発売決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4251"
+      }
+    ],
+    "releasedOn": "2025-08-18",
+    "memo": "アルバムは 2025-08-18 に全曲先行配信（CD は 2025-09-17）。公式ニュース参照"
+  },
+  {
+    "id": 249,
+    "title": "ふめつのあなた",
+    "kana": "ふめつのあなた",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: ふめつのあなた",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=100"
+      },
+      {
+        "label": "公式ニュース: ふめつのあなた 配信リリース決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4300"
+      }
+    ],
+    "releasedOn": "2025-12-27"
+  },
+  {
+    "id": 250,
+    "title": "コールドスリープ",
+    "kana": "こーるどすりーぷ",
+    "artist": "Perfume",
+    "kind": "canonical",
+    "selectable": true,
+    "appleMusic": null,
+    "sources": [
+      {
+        "label": "公式ディスコグラフィ: コールドスリープ",
+        "url": "https://www.perfume-web.jp/discography/detail.php?id=101"
+      },
+      {
+        "label": "公式ニュース: コールドスリープ 配信リリース決定",
+        "url": "https://www.perfume-web.jp/news/detail.php?id=4319"
+      }
+    ],
+    "releasedOn": "2026-05-15"
+  }
+]

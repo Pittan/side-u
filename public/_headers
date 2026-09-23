@@ -1,0 +1,11 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://js-cdn.music.apple.com; connect-src 'self' https://api.music.apple.com https://*.apple.com; img-src 'self' data: blob:; font-src https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-src https://*.apple.com; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/u/*
+  X-Robots-Tag: noindex, nofollow
+
+/spike/*
+  X-Robots-Tag: noindex, nofollow
