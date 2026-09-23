@@ -38,3 +38,9 @@ test('画像を変換できない環境（手元）では、OGP 画像は共通�
   expect(dynamic.headers()['cache-control']).toBe('public, max-age=3600')
   expect(Buffer.compare(await dynamic.body(), await fallback.body())).toBe(0)
 })
+
+test('robots.txt で共有ページや OGP 画像を禁止しない（X などのカードが出なくなるため）', async ({ request }, testInfo) => {
+  test.skip(testInfo.project.name !== 'android', 'サーバーの応答の確認なので 1 回でよい')
+  const robots = await (await request.get('/robots.txt')).text()
+  expect(robots).not.toMatch(/^Disallow:\s*\/(u|og)\b/m)
+})

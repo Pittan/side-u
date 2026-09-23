@@ -639,6 +639,7 @@ MusicKit v3 が実際に通信する先は M0 で確認して絞る。
   - `og:description`: `#タグ 1. 曲名 / 2. 曲名 / …`（200 文字で切る。`shared/og-meta.ts`）
   - `og:image`: `https://<host>/og/<payload>.png`
   - あわせて `twitter:description`・`twitter:image`・`<meta name="robots" content="noindex,nofollow">` を足す
+- 検索結果に出さないのは `X-Robots-Tag` と `<meta name="robots">` だけで行い、**`robots.txt` では `/u/` を禁止しない**（X の Twitterbot などは `robots.txt` に従うので、禁止すると共有したときのカードが出なくなる）
 - 壊れた payload は 404。メタデータは共通のまま（アプリが「読み込めませんでした」を出す）
 - Worker が返すレスポンスにも `_headers` と同じセキュリティヘッダーを付ける（`worker/headers.ts`。同じ内容であることをテストで確認）
 

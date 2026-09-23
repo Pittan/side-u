@@ -1,3 +1,4 @@
+# 共有ページ（/u/）は X-Robots-Tag と <meta name="robots"> で noindex にしている。
+# robots.txt では禁止しない（X などは robots.txt に従うため、禁止すると共有したときのカードが出なくなる）
 User-agent: *
 Allow: /
-Disallow: /u/
