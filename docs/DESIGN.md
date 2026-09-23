@@ -592,7 +592,7 @@ MusicKit JS には、Apple の秘密鍵（`.p8`）で署名した JWT（開発�
 ### 8.2 流れ
 
 1. 13 曲のマッピングを確認する。`unavailable` の曲があれば一覧で示し、配信されている別バージョンを提案する（勝手には差し替えない）
-2. MusicKit JS v3 を動的に読み込み、開発者トークンで `MusicKit.configure()` を呼ぶ
+2. **確認画面を開いた時点で** MusicKit JS v3 を読み込み、`MusicKit.configure()` まで済ませる（準備が終わるまでボタンは「準備中…」）。スマホのブラウザは、ボタンを押した直後でないとサインインの画面（ポップアップ）を開かせないため、ボタンを押したら `music.authorize()` を **await を挟まずに最初に呼ぶ**。サインイン中は「ポップアップを許可してください」と案内し、`やめる` で確認画面に戻れる
 3. `music.authorize()` を呼ぶ前に下書きを保存し、`sessionStorage` に「作成を再開する」フラグを置く
 4. `POST https://api.music.apple.com/v1/me/library/playlists`
 

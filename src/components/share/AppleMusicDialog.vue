@@ -9,7 +9,7 @@ const props = defineProps<{ payload: string; songIds: number[]; name: string | n
 
 const { isOpen, open, close } = useOverlayHistory('apple-music')
 const dialog = ref<HTMLDialogElement>()
-const { name, missing, resolution, trackIds, state, createdAt, create, reset } = useAppleMusic(props)
+const { name, missing, resolution, trackIds, state, createdAt, readiness, prepare, create, cancel, reset } = useAppleMusic(props)
 
 const ERROR_MESSAGES = {
   cancelled: 'サインインがキャンセルされました。',
@@ -27,7 +27,11 @@ watch(
   isOpen,
   async value => {
     await nextTick()
-    if (value && !dialog.value?.open) dialog.value?.showModal()
+    if (value && !dialog.value?.open) {
+      dialog.value?.showModal()
+      // サインインのボタンを押す前に、MusicKit の準備を済ませておく
+      void prepare()
+    }
     if (!value && dialog.value?.open) {
       dialog.value.close()
       if (state.value.step === 'done' || state.value.step === 'error') reset()
@@ -37,8 +41,10 @@ watch(
 )
 
 function onCancel() {
-  // 作成中は閉じない
-  if (state.value.step !== 'authorizing' && state.value.step !== 'creating') close()
+  // プレイリストを作っている最中は閉じない
+  if (state.value.step === 'creating') return
+  if (state.value.step === 'authorizing') cancel()
+  close()
 }
 
 defineExpose({ open })
@@ -88,13 +94,32 @@ defineExpose({ open })
 
         <div class="actions">
           <button type="button" class="button" @click="close">やめる</button>
-          <button type="button" class="button button-primary" :disabled="trackIds.length === 0" @click="create">
-            {{ createdAt ? 'もう一度つくる' : 'Apple Music でつくる' }}（{{ trackIds.length }}曲）
+          <button
+            type="button"
+            class="button button-primary"
+            :disabled="trackIds.length === 0 || readiness !== 'ready'"
+            @click="create"
+          >
+            <template v-if="readiness === 'ready'">{{ createdAt ? 'もう一度つくる' : 'Apple Music でつくる' }}（{{ trackIds.length }}曲）</template>
+            <template v-else>準備中…</template>
           </button>
         </div>
+        <p v-if="readiness === 'failed'" role="alert" class="warning">
+          Apple Music に接続できませんでした。
+          <button type="button" class="link-button" @click="prepare">もう一度</button>
+        </p>
       </template>
 
-      <p v-else-if="state.step === 'authorizing'" class="progress" role="status">Apple ID でサインインしています…</p>
+      <template v-else-if="state.step === 'authorizing'">
+        <p class="progress" role="status">Apple ID でサインインしています…</p>
+        <p class="note">
+          サインインの画面が開かないときは、ブラウザがポップアップを止めているかもしれません。
+          ポップアップを許可するか、Safari や Chrome で開き直してからお試しください。
+        </p>
+        <div class="actions">
+          <button type="button" class="button" @click="cancel">やめる</button>
+        </div>
+      </template>
       <p v-else-if="state.step === 'creating'" class="progress" role="status">プレイリストをつくっています…</p>
 
       <template v-else-if="state.step === 'done'">
@@ -204,6 +229,16 @@ h3 {
 .note {
   color: var(--color-muted);
   font-size: 0.8125rem;
+}
+
+.link-button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .progress {

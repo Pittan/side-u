@@ -49,17 +49,38 @@ export class AppleMusicError extends Error {
   }
 }
 
-export async function authorize(developerToken: string): Promise<{ developerToken: string; musicUserToken: string }> {
-  const MusicKit = await loadScript()
-  const music = await MusicKit.configure({ developerToken, app: { name: 'SIDE U', build: '1' } })
-  try {
-    const musicUserToken = await music.authorize()
-    if (!musicUserToken) throw new AppleMusicError('cancelled')
-    return { developerToken, musicUserToken }
-  } catch (error) {
-    if (error instanceof AppleMusicError) throw error
-    throw new AppleMusicError('cancelled')
-  }
+export type PreparedMusicKit = { developerToken: string; instance: MusicKitInstance }
+
+let preparing: Promise<PreparedMusicKit> | null = null
+
+/**
+ * MusicKit の読み込みと初期設定。サインインのボタンを押す前（確認画面を開いたとき）に済ませておく。
+ * スマホのブラウザは「ボタンを押した直後」でないとサインインの画面（ポップアップ）を開かせないので、
+ * 押してから読み込むと、その間に扱いが切れて黙って止められる
+ */
+export function prepareMusicKit(developerToken: string): Promise<PreparedMusicKit> {
+  preparing ??= (async () => {
+    const MusicKit = await loadScript()
+    const instance = await MusicKit.configure({ developerToken, app: { name: 'SIDE U', build: '1' } })
+    return { developerToken, instance }
+  })().catch(error => {
+    preparing = null
+    throw error instanceof AppleMusicError ? error : new AppleMusicError('network')
+  })
+  return preparing
+}
+
+/** ボタンを押した処理の中で、await を挟まずに最初に呼ぶ（サインインの画面をすぐに開くため） */
+export function authorize(prepared: PreparedMusicKit): Promise<{ developerToken: string; musicUserToken: string }> {
+  return prepared.instance.authorize().then(
+    musicUserToken => {
+      if (!musicUserToken) throw new AppleMusicError('cancelled')
+      return { developerToken: prepared.developerToken, musicUserToken }
+    },
+    () => {
+      throw new AppleMusicError('cancelled')
+    },
+  )
 }
 
 export async function createLibraryPlaylist(

@@ -2,22 +2,38 @@ import { expect, test, type Page } from '@playwright/test'
 import { addSongs } from './helpers'
 
 /** MusicKit と Apple Music API を偽物に差し替える。送られた内容を返す */
-async function mockAppleMusic(page: Page, { status = 201, authorize = true } = {}) {
+async function mockAppleMusic(
+  page: Page,
+  { status = 201, authorize = 'ok' as 'ok' | 'cancel' | 'never', scriptDelayMs = 0 } = {},
+) {
   const requests: Array<{ headers: Record<string, string>; body: unknown }> = []
-  await page.route('https://js-cdn.music.apple.com/**', route =>
-    route.fulfill({
+  // authorize() が呼ばれたとき、直前のクリックから何ミリ秒たっていたかを記録する
+  await page.addInitScript(() => {
+    document.addEventListener('click', () => ((window as any).__lastClickAt = performance.now()), true)
+  })
+  const authorizeBody = {
+    ok: "return 'test-music-user-token'",
+    cancel: "throw new Error('cancelled')",
+    never: 'return new Promise(() => {})',
+  }[authorize]
+  await page.route('https://js-cdn.music.apple.com/**', async route => {
+    if (scriptDelayMs) await new Promise(resolve => setTimeout(resolve, scriptDelayMs))
+    await route.fulfill({
       contentType: 'text/javascript',
       body: `
         window.MusicKit = {
           configure: async () => ({
-            authorize: async () => { ${authorize ? "return 'test-music-user-token'" : "throw new Error('cancelled')"} },
+            authorize: async () => {
+              window.__authorizeDelayMs = performance.now() - (window.__lastClickAt ?? 0);
+              ${authorizeBody}
+            },
             musicUserToken: 'test-music-user-token',
           }),
         };
         document.dispatchEvent(new Event('musickitloaded'));
       `,
-    }),
-  )
+    })
+  })
   await page.route('https://api.music.apple.com/**', async route => {
     requests.push({ headers: route.request().headers(), body: route.request().postDataJSON() })
     await route.fulfill({ status, json: status === 201 ? { data: [{ id: 'p.test123' }] } : { errors: [] } })
@@ -70,7 +86,7 @@ test('Apple Music の利用登録がないとき（403）は、その旨を表�
 })
 
 test('サインインをキャンセルしたときは、その旨を表示してやり直せる', async ({ page }) => {
-  await mockAppleMusic(page, { authorize: false })
+  await mockAppleMusic(page, { authorize: 'cancel' })
   await page.goto('/edit')
   await addSongs(page, 13)
   await page.getByRole('button', { name: '完成する' }).click()
@@ -79,4 +95,32 @@ test('サインインをキャンセルしたときは、その旨を表示し�
   await expect(page.getByRole('alert')).toContainText('キャンセル')
   await page.getByRole('button', { name: 'もう一度' }).click()
   await expect(page.getByRole('button', { name: /Apple Music でつくる/ })).toBeVisible()
+})
+
+test('サインインはボタンを押した直後に始まる（スマホでポップアップが止められないように）', async ({ page }) => {
+  // MusicKit の読み込みが遅くても、確認画面を開いたときに準備を済ませておく
+  await mockAppleMusic(page, { scriptDelayMs: 1500 })
+  await page.goto('/edit')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  await page.getByRole('button', { name: 'Apple MusicにSide Uをつくる' }).click()
+  const submit = page.getByRole('button', { name: /Apple Music でつくる/ })
+  await expect(page.getByRole('button', { name: '準備中…' })).toBeDisabled()
+  await expect(submit).toBeEnabled({ timeout: 10_000 })
+  await submit.click()
+  await expect(page.getByRole('dialog')).toContainText('つくりました')
+  expect(await page.evaluate(() => (window as any).__authorizeDelayMs)).toBeLessThan(100)
+})
+
+test('サインインの画面が戻ってこないときは「やめる」で確認画面に戻れる', async ({ page }) => {
+  await mockAppleMusic(page, { authorize: 'never' })
+  await page.goto('/edit')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  await page.getByRole('button', { name: 'Apple MusicにSide Uをつくる' }).click()
+  await page.getByRole('button', { name: /Apple Music でつくる/ }).click()
+  await expect(page.getByRole('dialog').getByRole('status')).toContainText('サインインしています')
+  await expect(page.getByRole('dialog')).toContainText('ポップアップ')
+  await page.getByRole('button', { name: 'やめる' }).click()
+  await expect(page.getByRole('button', { name: /Apple Music でつくる/ })).toBeEnabled()
 })
