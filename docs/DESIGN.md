@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | ドメイン | **`sideu.perfumehub.app`** | |
 | フロントエンド | **Vite + Vue 3 SPA**（`<script setup>` + TypeScript） | 静的配信を主経路にでき、バンドルが小さい |
-| ホスティング | **Cloudflare Workers + Static Assets**。Worker の入口は最初から置くが、MVP ではどのパスも Worker を通さない | すべて無料の静的配信。**動的 OGP は設定とハンドラを足すだけで入れられる構成にしておく**（§5、§10） |
+| ホスティング | **Cloudflare Workers + Static Assets**。`/u/*`（共有ページ）と `/og/*`（OGP 画像）だけ Worker を通し、それ以外は静的配信 | 通常の利用は無料の静的配信で済む（§5、§10） |
 | 画面構成 | **編集画面が中心**。曲の追加・並べ替え・削除、名前・タグの編集を好きな順番で行える | ステップ式にせず、悩みながら入れ替えられるようにする |
 | 選べる曲数 | **1 本のリストの中に境目**があり、上が Side U（最大 13 曲）、下が候補。合計 50 曲まで。完成と共有は 13 曲ちょうど | 候補を入れておいて、後から絞り込めるようにする |
 | 境目の挙動 | **iPhone のホーム画面のアイコン並べ替えと同じ**。途中に入れると後ろが繰り下がり、13 曲目が候補の先頭にあふれる（§4.10） | |
@@ -20,7 +20,7 @@
 | 共有画像 | **9:16 / 正方形** の 2 つの形。それぞれ背景を模様あり・透過から選べる。保存・共有に加えて**クリップボードへのコピー**ができる。**画面のカードもこの画像そのもの**で、3 種類を横に並べて見せる | Instagram のストーリーズで写真に重ねて使えるようにする |
 | ビジュアル | **幾何学模様**を使う。模様は共有 URL から決まるので、Side U ごとに違い、同じ URL なら同じになる | 公式の素材を使わずに Perfume らしさを出す |
 | フォント | **LINE Seed JP を Google Fonts から読み込む**（§6.4） | |
-| 動的 OGP | **MVP では作らない**。共通の OGP 画像 1 枚にする（§10） | URL の形式は後から追加しても変えなくてよい |
+| 動的 OGP | 共有ページのメタデータに 13 曲とタグ。画像は背景に `cf.image` の `draw` で文字を重ねる（§10） | 表示名は出さない |
 | Apple Music 未配信曲 | **選択可**。プレイリスト作成前に警告し、配信されている別バージョンを提案する | |
 | 別ミックス/リミックス | 親曲にまとめて、**「別バージョン」として折りたたむ** | |
 | 曲 ID | **perfume-database の ID（1–224）を引き継ぐ**。新曲は 225 から採番 | |
@@ -64,8 +64,11 @@ side-u/
 │     ├─ useStorageHealth.ts     # 保存できる環境かどうかの判定（§7）
 │     ├─ useShareImage.ts        # 画像の生成・共有・保存・コピー
 │     └─ useAppleMusic.ts
-├─ worker/                       # MVP ではほぼ空。動的 OGP のときにハンドラを足す
-│  └─ index.ts
+├─ worker/                       # 動的 OGP（§10）
+│  ├─ index.ts                   # /u/:payload と /og/:payload.png の振り分け
+│  ├─ share-page.ts              # 共有ページのメタデータの差し替え
+│  ├─ og-image.ts                # OGP 画像（cf.image の draw）
+│  └─ headers.ts                 # セキュリティヘッダー（_headers と同じ）
 ├─ public/
 │  ├─ og/default.png
 │  └─ _headers
@@ -626,19 +629,34 @@ MusicKit JS には、Apple の秘密鍵（`.p8`）で署名した JWT（開発�
 
 MusicKit v3 が実際に通信する先は M0 で確認して絞る。
 
-## 10. 後回しにする機能: 動的 OGP
+## 10. 動的 OGP
 
-MVP では、すべての共有 URL で `og/default.png` と共通のメタデータを使う。§5.2 の準備をしてあるので、後から次の変更だけで対応でき、既存の URL はそのまま使える。
+共有 URL を SNS に貼ったときのカードに、その人の 13 曲とタグを出す。表示名は fragment にあってサーバーに届かないので、どちらにも出さない。
 
-1. `wrangler.jsonc` の `run_worker_first` に `/u/*` と `/og/*` を足し、`images` バインディングを追加する
-2. `worker/share-page.ts`: `/u/:payload` で `decodePayload` を実行し、`env.ASSETS` から取得した `index.html` の `data-og` のメタタグを HTMLRewriter で差し替える。デコードに失敗したら差し替えずにそのまま返す
-3. `worker/og-image.ts`: `/og/:payload.png` で Cloudflare Images バインディングの `.text()` を使って描画し、Cache API に保存する。失敗したときや無料枠を使い切ったときは `default.png` を返す
-4. `_headers` の `/u/*` の設定を Worker のレスポンスにも付ける
+### 10.1 共有ページのメタデータ（`worker/share-page.ts`）
 
-実装するときに確認すること:
+- `run_worker_first` の `/u/*` で Worker を通し、`env.ASSETS` から取った `index.html` の `data-og` のメタタグを HTMLRewriter で差し替える
+  - `og:description`: `#タグ 1. 曲名 / 2. 曲名 / …`（200 文字で切る。`shared/og-meta.ts`）
+  - `og:image`: `https://<host>/og/<payload>.png`
+  - あわせて `twitter:description`・`twitter:image`・`<meta name="robots" content="noindex,nofollow">` を足す
+- 壊れた payload は 404。メタデータは共通のまま（アプリが「読み込めませんでした」を出す）
+- Worker が返すレスポンスにも `_headers` と同じセキュリティヘッダーを付ける（`worker/headers.ts`。同じ内容であることをテストで確認）
 
-- `.text()` で改行が使えるか / PNG で出力できるか / 1 枚の画像が無料枠（月 5,000 回）の何回分になるか
-- フォント: Cloudflare Images の `font.url` には 1 つのフォントファイルの URL を渡す必要があるので、Google Fonts の分割ファイルは使えない。LINE Seed JP（OFL）の TTF を、カタログの文字でサブセット化して自前のドメインに置く
+### 10.2 OGP 画像（`worker/og-image.ts`）
+
+- 背景画像 `public/images/og-base.png`（1200×630。「SIDE U」のロゴ・模様・フッターは描き込み済み）に、13 曲（2 列）とタグを重ねる
+- **文字は `fetch` の `cf.image` の `draw` で描く**。Images バインディングの `.text()` は Cloudflare 側の不具合で失敗する（`9410`。2026-09 時点。Cloudflare Community で報告されている回避策）
+  - 改行は使えないので 1 行ずつ描く（13 曲＋タグで 14 個）
+  - 描いた文字を縮められないので、長い曲名は全角・半角から幅を見積もって文字を小さくする（`shared/og-layout.ts` の `fitFontSize`）
+  - 位置は `shared/og-layout.ts` に一か所にまとめ、背景画像の生成（`scripts/generate-static-images.ts`）と共有する
+- フォント: LINE Seed JP Bold から曲名・タグの文字だけを抜き出した `public/fonts/og-lineseedjp-bold.woff2`（`pnpm og:font`。OFL のライセンス文を同じ場所に置く）。曲やタグを追加して文字が足りなくなると `catalog:validate` がエラーにする
+- 成功したら `Cache-Control: public, max-age=31536000, immutable` で Cache API にも保存する（同じ payload は同じ画像）
+- 次の場合は共通の画像 `og/default.png` を 1 時間だけキャッシュして返す
+  - payload が壊れている / `OG_DYNAMIC` が `off`
+  - 変換に失敗した（応答が画像でない、`cf-resized` がない、または `err` を含む。失敗すると加工前の背景がそのまま返ることがあり、それを 1 年キャッシュしないため）
+  - **localhost で動いている**（手元の miniflare は文字を描かずに `cf-resized: internal=ok` を返すので、成功と見分けられない）
+- 無料枠: ゾーンの画像変換は月 5,000 ユニーク変換まで。同じ payload は月 1 回だけ数えられる。超えると変換が失敗し、共通の画像になる（課金はされない）
+- 止めたいときは `wrangler.jsonc` の `OG_DYNAMIC` を `off` にしてデプロイする
 
 ## 11. テスト
 

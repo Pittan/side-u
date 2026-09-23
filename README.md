@@ -16,7 +16,8 @@ pnpm build
 pnpm catalog:validate    # 楽曲データの検証（--strict で公開前チェック）
 pnpm test                # 単体テスト
 pnpm test:e2e            # E2E テスト（iPhone: WebKit / Android: Chromium）
-pnpm images:generate     # 共通の OGP 画像とアイコンを作り直す
+pnpm images:generate     # 共通の OGP 画像・動的 OGP の背景・アイコンを作り直す
+pnpm og:font             # 動的 OGP 用のフォント（曲名とタグの文字だけ）を作り直す
 ```
 
 楽曲データの原本は `catalog/*.json`。`pnpm catalog:import` は perfume-database からの初回取り込み用で、再実行すると手作業の編集が上書きされる。
@@ -80,4 +81,4 @@ Apple Music の開発者トークン（有効期限 180 日）を作り直すた
 - [x] 本物の Apple Music で 13 曲のプレイリストが曲順どおりにできる
 - [x] 実機確認用のページ `/spike/share-image` を削除する
 - [x] Cloudflare Web Analytics の自動設定をオフにする（計測用のスクリプトが差し込まれないこと）
-- [ ] 共有 URL を X・LINE・Discord に貼って、共通の OGP 画像が出る
+- [ ] 共有 URL を X・LINE・Discord に貼って、13 曲とタグの入った OGP 画像が出る

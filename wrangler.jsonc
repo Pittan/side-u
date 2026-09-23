@@ -10,8 +10,12 @@
   "assets": {
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    // MVP ではどのパスも Worker を通さない。動的 OGP のときに ["/u/*", "/og/*"] にする（DESIGN.md §10）
-    "run_worker_first": false
+    // 共有ページ（メタデータの差し替え）と OGP 画像だけ Worker を通す。それ以外は静的配信（DESIGN.md §10）
+    "run_worker_first": ["/u/*", "/og/*"]
+  },
+  "vars": {
+    // "off" にすると動的 OGP を止め、共通の画像とメタデータを返す
+    "OG_DYNAMIC": "on"
   },
   "observability": { "enabled": true }
 }

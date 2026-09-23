@@ -6,6 +6,7 @@
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { chromium } from '@playwright/test'
+import { OG_HEIGHT, OG_LAYOUT, OG_WIDTH } from '../shared/og-layout.ts'
 
 const BACKGROUND = '#0d0f1a'
 const FOREGROUND = '#f5f7ff'
@@ -53,6 +54,26 @@ const ogHtml = `<!doctype html><html><head><link rel="stylesheet" href="${FONT_C
   <p class="note">sideu.perfumehub.app ・ 非公式ファンツール</p>
 </body></html>`
 
+// 動的 OGP の背景。曲名とタグは Worker が重ねるので、ここでは描かない（位置は shared/og-layout.ts）
+const baseHtml = `<!doctype html><html><head><link rel="stylesheet" href="${FONT_CSS}"><style>
+  body { margin: 0; width: ${OG_WIDTH}px; height: ${OG_HEIGHT}px; background: ${BACKGROUND}; color: ${FOREGROUND};
+    font-family: 'LINE Seed JP', sans-serif; overflow: hidden; position: relative; }
+  svg { position: absolute; inset: 0; }
+  .logo { position: absolute; left: 64px; top: 52px; margin: 0; font-size: 72px; font-weight: 800; line-height: 1; letter-spacing: 0.02em; }
+  .sub { position: absolute; left: 68px; top: 132px; margin: 0; font-size: 24px; letter-spacing: 0.08em; opacity: 0.8; }
+  .note { position: absolute; right: 64px; top: 64px; margin: 0; font-size: 18px; opacity: 0.55; }
+  .rule { position: absolute; left: 64px; right: 64px; top: ${OG_LAYOUT.tagsTop - 22}px; height: 1px; background: rgb(255 255 255 / 0.12); }
+</style></head><body>
+  <svg width="${OG_WIDTH}" height="${OG_HEIGHT}">
+    <g opacity="0.35">${prisms(1080, 120, 150)}</g>
+    ${Array.from({ length: 5 }, (_, i) => `<line x1="${700 + i * 22}" y1="${OG_HEIGHT + 20}" x2="${1260 + i * 22}" y2="${OG_HEIGHT - 260}" stroke="${COLORS[0]}" stroke-opacity="0.1" stroke-width="2" />`).join('')}
+  </svg>
+  <p class="logo">SIDE U</p>
+  <p class="sub">Selected by You</p>
+  <p class="note">sideu.perfumehub.app ・ 非公式ファンツール</p>
+  <div class="rule"></div>
+</body></html>`
+
 const iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="${BACKGROUND}"/>
   <polygon points="${triangle(32, 36, 22, -Math.PI / 2)}" fill="none" stroke="${COLORS[0]}" stroke-width="3.5" stroke-linejoin="round"/>
@@ -67,6 +88,9 @@ try {
   await page.setContent(ogHtml, { waitUntil: 'networkidle' })
   await page.evaluate('document.fonts.ready')
   await page.screenshot({ path: resolve(publicDir, 'og/default.png') })
+  await page.setContent(baseHtml, { waitUntil: 'networkidle' })
+  await page.evaluate('document.fonts.ready')
+  await page.screenshot({ path: resolve(publicDir, 'images/og-base.png') })
 
   writeFileSync(resolve(publicDir, 'favicon.svg'), iconSvg)
   const icon = await browser.newPage({ viewport: { width: 180, height: 180 } })
@@ -77,4 +101,4 @@ try {
 } finally {
   await browser.close()
 }
-console.log('public/og/default.png, public/favicon.svg, public/apple-touch-icon.png を作りました')
+console.log('public/og/default.png, public/images/og-base.png, public/favicon.svg, public/apple-touch-icon.png を作りました')

@@ -19,7 +19,8 @@
     "test:e2e": "playwright test",
     "apple:token": "tsx scripts/generate-apple-token.ts",
     "images:generate": "tsx scripts/generate-static-images.ts",
-    "catalog:verify-am": "tsx scripts/verify-apple-music.ts"
+    "catalog:verify-am": "tsx scripts/verify-apple-music.ts",
+    "og:font": "tsx scripts/build-og-font.ts"
   },
   "dependencies": {
     "sortablejs": "^1.15.7",
@@ -27,19 +28,20 @@
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.57.3",
+    "@cloudflare/vite-plugin": "^1.58.0",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2",
     "@types/sortablejs": "^1.15.9",
     "@vitejs/plugin-vue": "^6.0.9",
     "@vue/tsconfig": "^0.9.1",
     "jose": "^6.2.12",
+    "subset-font": "^2.9.0",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "vite": "^8.3.0",
     "vitest": "^5.0.1",
     "vue-tsc": "^3.3.11",
-    "wrangler": "^4.136.3",
+    "wrangler": "^4.137.0",
     "zod": "^4.6.5"
   }
 }

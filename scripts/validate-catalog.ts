@@ -157,6 +157,15 @@ for (const tag of tags) {
   tagIds.add(tag.id)
 }
 
+// 動的 OGP 用のフォントに、曲名とタグの文字がすべて入っているか（足りなければ pnpm og:font を実行する）
+const ogCharsPath = resolve('public/fonts/og-chars.txt')
+if (existsSync(ogCharsPath)) {
+  const ogChars = new Set(readFileSync(ogCharsPath, 'utf8'))
+  const texts = [...songs.filter(song => song.selectable).map(song => song.title), ...tags.map(tag => tag.label)]
+  const missing = [...new Set(texts.join(''))].filter(char => !ogChars.has(char))
+  if (missing.length) errors.push(`OGP 用のフォントにない文字があります: ${missing.join('')}（pnpm og:font を実行してください）`)
+}
+
 // 公開済みの ID（共有 URL が壊れないように）
 for (const id of lock.songIds) {
   const song = byId.get(id)
