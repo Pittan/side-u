@@ -4,7 +4,7 @@ import { decodeBase64Url, encodeBase64Url } from '@shared/base64url'
 import { crc16 } from '@shared/crc16'
 import { catalog, pickSongs, randomSideU, seededRandom, unselectableId } from '../helpers'
 
-const sideU = { songIds: pickSongs(), tagIds: [2, 7, 13] }
+const sideU = { songIds: pickSongs(), tagIds: [2, 9, 16] }
 
 /** v1 の body を直接組み立てる（CRC を正しく付け直す） */
 function rawV1(songIds: number[], tags: number[]): string {
@@ -36,8 +36,8 @@ describe('encodePayload / decodePayload', () => {
   })
 
   it('同じ内容は同じ文字列になる（タグの順番は問わない）', () => {
-    const a = encodePayload({ songIds: sideU.songIds, tagIds: [13, 2, 7] }, catalog)
-    const b = encodePayload({ songIds: sideU.songIds, tagIds: [2, 7, 13] }, catalog)
+    const a = encodePayload({ songIds: sideU.songIds, tagIds: [16, 2, 9] }, catalog)
+    const b = encodePayload({ songIds: sideU.songIds, tagIds: [2, 9, 16] }, catalog)
     expect(a).toBe(b)
   })
 
@@ -96,9 +96,9 @@ describe('decodePayload の不正な入力', () => {
 
   it('タグが正規形でなければ受け付けない', () => {
     const songs = pickSongs()
-    expect(decodePayload(rawV1(songs, [7, 2]), catalog)).toEqual({ ok: false, error: 'non-canonical' })
+    expect(decodePayload(rawV1(songs, [9, 2]), catalog)).toEqual({ ok: false, error: 'non-canonical' })
     expect(decodePayload(rawV1(songs, [0, 2]), catalog)).toEqual({ ok: false, error: 'non-canonical' })
-    expect(decodePayload(rawV1(songs, [2, 7]), catalog).ok).toBe(true)
+    expect(decodePayload(rawV1(songs, [2, 9]), catalog).ok).toBe(true)
   })
 
   it('base64url の余りのビットが 0 でないものは受け付けない', () => {

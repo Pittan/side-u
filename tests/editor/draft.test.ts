@@ -30,17 +30,17 @@ describe('parseDraft', () => {
   })
 
   it('タグは 1 カテゴリ 1 つまで、名前は整形する', () => {
-    const { draft } = parseDraft({ v: 1, tagIds: [1, 2, 7, 999], name: '‮あいうえおかきくけこさし' }, catalog)
-    expect(draft.tagIds).toEqual([1, 7])
+    const { draft } = parseDraft({ v: 1, tagIds: [1, 2, 9, 999], name: '‮あいうえおかきくけこさし' }, catalog)
+    expect(draft.tagIds).toEqual([1, 9])
     expect(draft.name).toBe('あいうえおかきくけこ')
   })
 })
 
 describe('toggleTag', () => {
   it('同じカテゴリのタグは入れ替わり、選択中のタグは外れる', () => {
-    expect(toggleTag([1, 7], 2, catalog)).toEqual([7, 2])
-    expect(toggleTag([1, 7], 7, catalog)).toEqual([1])
-    expect(toggleTag([], 13, catalog)).toEqual([13])
+    expect(toggleTag([1, 9], 2, catalog)).toEqual([9, 2])
+    expect(toggleTag([1, 9], 9, catalog)).toEqual([1])
+    expect(toggleTag([], 16, catalog)).toEqual([16])
   })
 })
 
