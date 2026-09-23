@@ -15,6 +15,7 @@ import { useDraft } from '@/composables/useDraft'
 import { useToast } from '@/composables/useToast'
 import {
   addMany,
+  move,
   moveDown,
   moveUp,
   remove,
@@ -27,6 +28,7 @@ import {
   type Pos,
 } from '@/editor/list-ops'
 import { pendingSongIds } from '@/editor/picker-state'
+import { useSortableLists } from '@/editor/useSortableLists'
 import { isAppleMusicUnavailable, songMeta } from '@/editor/song-meta'
 
 const router = useRouter()
@@ -40,6 +42,8 @@ const panel = ref<InstanceType<typeof NameTagsPanel>>()
 const panelSentinel = ref<HTMLElement>()
 const panelVisible = ref(true)
 const selectedId = ref<number | null>(null)
+const sideUList = ref<HTMLElement>()
+const candidateList = ref<HTMLElement>()
 const announcement = ref('')
 
 const presentIds = computed(() => new Set([...draft.value.sideU, ...draft.value.candidates]))
@@ -85,6 +89,11 @@ function onRowAction(action: 'up' | 'down' | 'other' | 'remove', id: number) {
   const op = { up: moveUp, down: moveDown, other: pos.list === 'sideU' ? toCandidates : toSideU }[action]
   apply(state => op(state, pos), id)
 }
+
+useSortableLists({ sideU: sideUList, candidates: candidateList }, (from, to) => {
+  const id = listState.value[from.list][from.index]
+  if (id !== undefined) apply(state => move(state, from, to), id)
+})
 
 function canMoveUp(list: ListName, index: number) {
   return !(list === 'sideU' && index === 0)
@@ -181,7 +190,7 @@ onBeforeUnmount(() => {
 
       <section class="side-u" aria-labelledby="side-u-heading">
         <h2 id="side-u-heading" class="list-heading">SIDE U</h2>
-        <ol class="song-list">
+        <ol ref="sideUList" class="song-list">
           <SongRow
             v-for="(id, index) in draft.sideU"
             :key="id"
@@ -215,7 +224,7 @@ onBeforeUnmount(() => {
         <p v-if="draft.candidates.length === 0" class="hint">
           13曲に入りきらない曲や、迷っている曲をここに置いておけます。共有されるのは Side U の13曲だけです。
         </p>
-        <ul class="song-list">
+        <ul ref="candidateList" class="song-list" :class="{ 'is-empty': draft.candidates.length === 0 }">
           <SongRow
             v-for="(id, index) in draft.candidates"
             :key="id"
@@ -396,6 +405,12 @@ onBeforeUnmount(() => {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.song-list.is-empty {
+  min-height: 3rem;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-small);
 }
 
 .empty-slot button {

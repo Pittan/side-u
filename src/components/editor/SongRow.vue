@@ -18,6 +18,9 @@ const emit = defineEmits<{ toggle: []; up: []; down: []; other: []; remove: [] }
 
 <template>
   <li class="row" :class="{ expanded }">
+    <div class="row-head">
+    <!-- ドラッグ用のつまみ。キーボードや読み上げでは、行の操作ボタンで並べ替える -->
+    <span class="handle" aria-hidden="true" title="ドラッグで並べ替え">≡</span>
     <button type="button" class="main" :aria-expanded="expanded" @click="emit('toggle')">
       <span v-if="number !== undefined" class="number" aria-hidden="true">{{ String(number).padStart(2, '0') }}</span>
       <span class="text">
@@ -30,6 +33,7 @@ const emit = defineEmits<{ toggle: []; up: []; down: []; other: []; remove: [] }
         </span>
       </span>
     </button>
+    </div>
     <div v-if="expanded" class="actions" role="group" :aria-label="`${song.title} の操作`">
       <button type="button" class="action" :disabled="!canMoveUp" @click="emit('up')">↑ 上へ</button>
       <button type="button" class="action" :disabled="!canMoveDown" @click="emit('down')">↓ 下へ</button>
@@ -49,12 +53,40 @@ const emit = defineEmits<{ toggle: []; up: []; down: []; other: []; remove: [] }
   background: var(--color-surface);
 }
 
+.row-head {
+  display: flex;
+  align-items: stretch;
+}
+
+.handle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  color: var(--color-muted);
+  font-size: 1.25rem;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.row-ghost {
+  opacity: 0.4;
+}
+
+.row-chosen {
+  background: var(--color-surface);
+}
+
 .main {
   display: flex;
+  flex: 1;
+  min-width: 0;
   gap: 0.75rem;
   width: 100%;
   min-height: 3.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 0;
   border: none;
   background: transparent;
   color: inherit;

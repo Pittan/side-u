@@ -52,3 +52,27 @@ test('リロードしても下書きが残る', async ({ page }) => {
   await page.reload()
   await expect(page.locator('.count-number')).toHaveText('13/13')
 })
+
+test('つまみをドラッグして、候補から Side U の途中に入れられる（13 曲目が候補にあふれる）', async ({ page }, testInfo) => {
+  // iOS では SortableJS がタッチイベントで動くが、Playwright の WebKit はタッチでのドラッグを再現できない。iPhone は実機で確認する
+  test.skip(testInfo.project.name === 'iphone', 'WebKit ではタッチでのドラッグを再現できない')
+  await page.goto('/edit')
+  await addSongs(page, 14)
+  const candidate = (await page.locator('ul.song-list .title').first().innerText()).trim()
+  const thirteenth = (await page.locator('ol.song-list .title').nth(12).innerText()).replace(/^\d+曲目\s*/, '')
+  const handle = page.locator('ul.song-list .handle').first()
+  await handle.scrollIntoViewIfNeeded()
+  // 下に固定されたバーに隠れないよう、少し上までスクロールする
+  await page.evaluate(() => window.scrollBy(0, 200))
+  const from = (await handle.boundingBox())!
+  const to = (await page.locator('ol.song-list .row').nth(11).boundingBox())!
+  const x = from.x + from.width / 2
+  await page.mouse.move(x, from.y + from.height / 2)
+  await page.mouse.down()
+  for (let i = 1; i <= 25; i++) await page.mouse.move(x, from.y + (to.y + 10 - from.y) * (i / 25))
+  await page.mouse.up()
+  await expect(page.locator('ol.song-list .title').nth(11)).toContainText(candidate)
+  await expect(page.locator('ul.song-list .title').first()).toHaveText(thirteenth)
+  await expect(page.locator('.count-number')).toHaveText('13/13')
+  await expect(page.locator('.toast')).toContainText('が候補に移りました')
+})

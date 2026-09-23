@@ -19,6 +19,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "sortablejs": "^1.15.7",
     "vue": "^3.5.43",
     "vue-router": "^5.3.1"
   },
@@ -26,6 +27,7 @@
     "@cloudflare/vite-plugin": "^1.57.3",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2",
+    "@types/sortablejs": "^1.15.9",
     "@vitejs/plugin-vue": "^6.0.9",
     "@vue/tsconfig": "^0.9.1",
     "tsx": "^4.23.15",
