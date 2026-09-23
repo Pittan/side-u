@@ -1,12 +1,12 @@
 // 共有画像（DESIGN.md §6.1）。本人の完成画面のカードもこの画像そのもの。見た目は仮。
 import { createPattern, trianglePoints, type Pattern } from '@shared/pattern'
 
-export type ImageVariant = 'story' | 'square' | 'transparent'
+/** 画像の形。背景を透過にするかは、形ごとに選べる（DrawOptions.transparent） */
+export type ImageFormat = 'story' | 'square'
 
-export const VARIANTS: Record<ImageVariant, { label: string; width: number; height: number; transparent: boolean }> = {
-  story: { label: '9:16', width: 1080, height: 1920, transparent: false },
-  square: { label: '正方形', width: 1080, height: 1080, transparent: false },
-  transparent: { label: '背景透過', width: 1080, height: 1350, transparent: true },
+export const FORMATS: Record<ImageFormat, { label: string; width: number; height: number }> = {
+  story: { label: '9:16', width: 1080, height: 1920 },
+  square: { label: '正方形', width: 1080, height: 1080 },
 }
 
 export type ShareImageData = {
@@ -82,15 +82,18 @@ function fitText(ctx: CanvasRenderingContext2D, text: string, weight: number, si
 }
 
 export type DrawOptions = {
+  /** 背景を塗らずに透過にする（別の写真の上に置く前提） */
+  transparent?: boolean
   /**
-   * 背景透過版で、文字の後ろに黒から透明へのグラデーションを敷くか。
+   * 透過のときに、文字の後ろに黒から透明へのグラデーションを敷くか。
    * 背景に置く写真によって文字が読みにくくなるのを防ぐ（利用者が切り替える）
    */
   backdrop?: boolean
 }
 
-export function drawShareImage(variant: ImageVariant, data: ShareImageData, options: DrawOptions = {}): HTMLCanvasElement {
-  const { width, height, transparent } = VARIANTS[variant]
+export function drawShareImage(format: ImageFormat, data: ShareImageData, options: DrawOptions = {}): HTMLCanvasElement {
+  const { width, height } = FORMATS[format]
+  const transparent = options.transparent ?? false
   const pattern = createPattern(data.payload)
   const canvas = document.createElement('canvas')
   canvas.width = width
@@ -120,8 +123,8 @@ export function drawShareImage(variant: ImageVariant, data: ShareImageData, opti
 
   const left = padding
   const maxWidth = width - left * 2
-  const top = variant === 'story' ? 220 : padding
-  const bottom = height - (variant === 'story' ? 220 : padding)
+  const top = format === 'story' ? 220 : padding
+  const bottom = height - (format === 'story' ? 220 : padding)
 
   ctx.fillStyle = transparent ? '#ffffff' : pattern.foreground
   ctx.textBaseline = 'alphabetic'

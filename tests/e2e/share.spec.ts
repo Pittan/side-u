@@ -11,7 +11,7 @@ test('完成 → 共有画像 → ほかの人が開いて remix（名前は引�
   await page.getByRole('button', { name: '完成する' }).click()
   await expect(page).toHaveURL(/\/u\/1[A-Za-z0-9_-]{42}#n=/)
   await expect(page.getByRole('heading', { name: 'あもん の Side U ができました' })).toBeVisible()
-  await expect(page.locator('.images img')).toHaveCount(3)
+  await expect(page.locator('.images img')).toHaveCount(2)
   await expect(page.locator('.images img').first()).toHaveAttribute('alt', /^SIDE U。あもん の13曲。1 /)
 
   // 名前（fragment）はどのリクエストにも含まれない
@@ -55,4 +55,18 @@ test('下書きがある状態で「新しくつくる」を押すと、下書�
 test('壊れた URL では読み込めなかった旨を表示する', async ({ page }) => {
   await page.goto('/u/1broken')
   await expect(page.getByRole('heading', { name: 'このSide Uは読み込めませんでした' })).toBeVisible()
+})
+
+test('9:16 と正方形のそれぞれで、背景を透過にできる。透過のときだけ「文字の後ろを暗くする」が出る', async ({ page }) => {
+  await page.goto('/edit')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  const square = page.getByRole('radiogroup', { name: '正方形の背景' })
+  const before = await page.locator('.images img').nth(1).getAttribute('src')
+  await expect(page.getByRole('switch', { name: '文字の後ろを暗くする' })).toHaveCount(0)
+  await square.getByText('透過').click()
+  await expect(page.getByRole('switch', { name: '文字の後ろを暗くする' })).toHaveCount(1)
+  await expect(page.locator('.images img').nth(1)).not.toHaveAttribute('src', before!)
+  // 9:16 はそのまま
+  await expect(page.getByRole('radiogroup', { name: '9:16の背景' }).getByLabel('模様あり')).toBeChecked()
 })

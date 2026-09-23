@@ -1,11 +1,13 @@
-// 3 種類の共有画像を作り、共有・コピー・保存する（DESIGN.md §6.1・§6.3）。
+// 共有画像を作り、共有・コピー・保存する（DESIGN.md §6.1・§6.3）。
+// 形（9:16 / 正方形）ごとに、背景を模様ありにするか透過にするかを選べる。
 // 画像はブラウザの中だけで作り、どこにもアップロードしない。
-import { onBeforeUnmount, ref, watch, type Ref } from 'vue'
-import { canvasToBlob, drawShareImage, loadFonts, VARIANTS, type ImageVariant, type ShareImageData } from '@/render/share-image'
+import { onBeforeUnmount, reactive, ref, watch, type Ref } from 'vue'
+import { canvasToBlob, drawShareImage, FORMATS, loadFonts, type ImageFormat, type ShareImageData } from '@/render/share-image'
 
-export type GeneratedImage = { variant: ImageVariant; blob: Blob; url: string }
+export type GeneratedImage = { format: ImageFormat; transparent: boolean; blob: Blob; url: string }
 
 const BACKDROP_KEY = 'side-u:transparent-backdrop'
+const ALL_FORMATS = Object.keys(FORMATS) as ImageFormat[]
 
 function supportsImageClipboard(): boolean {
   if (typeof ClipboardItem === 'undefined' || !navigator.clipboard?.write) return false
@@ -22,7 +24,7 @@ function supportsFileShare(): boolean {
   }
 }
 
-/** 透過版のグラデーションのオン・オフ。前回の選択を覚えておく（初期値はオン） */
+/** 透過のときの「文字の後ろを暗くする」。前回の選択を覚えておく（初期値はオン） */
 function readBackdrop(): boolean {
   try {
     return localStorage.getItem(BACKDROP_KEY) !== 'off'
@@ -32,55 +34,57 @@ function readBackdrop(): boolean {
 }
 
 export function useShareImages(data: Ref<ShareImageData | null>) {
-  const images = ref<GeneratedImage[]>([])
+  const images = ref<Partial<Record<ImageFormat, GeneratedImage>>>({})
   const generating = ref(false)
+  /** 形ごとの「背景を透過にする」 */
+  const transparent = reactive<Record<ImageFormat, boolean>>({ story: false, square: false })
   const backdrop = ref(readBackdrop())
   const canCopy = supportsImageClipboard()
   const canShare = supportsFileShare()
 
-  async function render(variant: ImageVariant, value: ShareImageData): Promise<GeneratedImage> {
-    const blob = await canvasToBlob(drawShareImage(variant, value, { backdrop: backdrop.value }))
-    return { variant, blob, url: URL.createObjectURL(blob) }
-  }
+  // 切り替えを連打したときに、古い画像があとから届いて上書きしないようにする
+  const latestRender: Record<ImageFormat, number> = { story: 0, square: 0 }
 
-  function revoke(list: GeneratedImage[]) {
-    for (const image of list) URL.revokeObjectURL(image.url)
+  async function render(format: ImageFormat) {
+    if (!data.value) return
+    const id = ++latestRender[format]
+    const isTransparent = transparent[format]
+    const canvas = drawShareImage(format, data.value, { transparent: isTransparent, backdrop: backdrop.value })
+    const blob = await canvasToBlob(canvas)
+    if (id !== latestRender[format]) return
+    const previous = images.value[format]
+    images.value = { ...images.value, [format]: { format, transparent: isTransparent, blob, url: URL.createObjectURL(blob) } }
+    if (previous) URL.revokeObjectURL(previous.url)
   }
 
   watch(
     data,
     async value => {
-      revoke(images.value)
-      images.value = []
       if (!value) return
       generating.value = true
       await loadFonts(value)
-      const next: GeneratedImage[] = []
-      for (const variant of Object.keys(VARIANTS) as ImageVariant[]) next.push(await render(variant, value))
-      images.value = next
+      for (const format of ALL_FORMATS) await render(format)
       generating.value = false
     },
     { immediate: true },
   )
 
-  // グラデーションを切り替えたら、透過版だけを作り直す
-  watch(backdrop, async value => {
+  // 切り替えた形だけを作り直す
+  for (const format of ALL_FORMATS) watch(() => transparent[format], () => render(format))
+  watch(backdrop, value => {
     try {
       localStorage.setItem(BACKDROP_KEY, value ? 'on' : 'off')
     } catch {
       // 覚えておけなくても切り替えはできる
     }
-    if (!data.value) return
-    const index = images.value.findIndex(image => image.variant === 'transparent')
-    if (index === -1) return
-    const next = await render('transparent', data.value)
-    revoke([images.value[index]!])
-    images.value = images.value.map((image, i) => (i === index ? next : image))
+    for (const format of ALL_FORMATS) if (transparent[format]) render(format)
   })
 
-  onBeforeUnmount(() => revoke(images.value))
+  onBeforeUnmount(() => {
+    for (const image of Object.values(images.value)) URL.revokeObjectURL(image.url)
+  })
 
-  const fileName = (variant: ImageVariant) => `side-u-${variant}.png`
+  const fileName = (image: GeneratedImage) => `side-u-${image.format}${image.transparent ? '-transparent' : ''}.png`
 
   async function copy(image: GeneratedImage) {
     // Safari はクリック処理の中で同期的に ClipboardItem を作る必要がある
@@ -88,15 +92,15 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
   }
 
   async function share(image: GeneratedImage) {
-    await navigator.share({ files: [new File([image.blob], fileName(image.variant), { type: 'image/png' })] })
+    await navigator.share({ files: [new File([image.blob], fileName(image), { type: 'image/png' })] })
   }
 
   function save(image: GeneratedImage) {
     const a = document.createElement('a')
     a.href = image.url
-    a.download = fileName(image.variant)
+    a.download = fileName(image)
     a.click()
   }
 
-  return { images, generating, backdrop, canCopy, canShare, copy, share, save }
+  return { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save }
 }

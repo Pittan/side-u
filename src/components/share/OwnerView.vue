@@ -1,14 +1,15 @@
 <script setup lang="ts">
 // 作った本人が開いた場合（wireframes.md §3.1）。カードは共有画像そのもの
 import { computed } from 'vue'
-import { altText, VARIANTS, type ShareImageData } from '@/render/share-image'
-import { useShareImages, type GeneratedImage } from '@/composables/useShareImages'
+import { altText, FORMATS, type ImageFormat, type ShareImageData } from '@/render/share-image'
+import { useShareImages } from '@/composables/useShareImages'
 import { useToast } from '@/composables/useToast'
 import AppleMusicSection from './AppleMusicSection.vue'
 
 const props = defineProps<{ data: ShareImageData; shareUrl: string; songIds: number[]; tagIds: number[] }>()
 const toast = useToast()
-const { images, generating, backdrop, canCopy, canShare, copy, share, save } = useShareImages(computed(() => props.data))
+const { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save } = useShareImages(computed(() => props.data))
+const formats = Object.keys(FORMATS) as ImageFormat[]
 const alt = computed(() => altText(props.data))
 
 async function run(action: () => Promise<void> | void, success?: string) {
@@ -30,7 +31,6 @@ async function copyLink() {
   }
 }
 
-const label = (image: GeneratedImage) => VARIANTS[image.variant].label
 </script>
 
 <template>
@@ -38,21 +38,37 @@ const label = (image: GeneratedImage) => VARIANTS[image.variant].label
     <h2 id="images-heading" class="visually-hidden">共有画像</h2>
     <p v-if="generating" class="status">画像を作っています…</p>
     <ul class="images">
-      <li v-for="image in images" :key="image.variant" class="image-item">
-        <div class="frame" :class="{ checker: image.variant === 'transparent' }">
-          <img :src="image.url" :alt="alt" :width="VARIANTS[image.variant].width" :height="VARIANTS[image.variant].height" />
+      <li v-for="format in formats" :key="format" class="image-item">
+        <div class="frame" :class="{ checker: transparent[format] }" :style="{ aspectRatio: `${FORMATS[format].width} / ${FORMATS[format].height}` }">
+          <img
+            v-if="images[format]"
+            :src="images[format]!.url"
+            :alt="alt"
+            :width="FORMATS[format].width"
+            :height="FORMATS[format].height"
+          />
         </div>
-        <p class="image-label">{{ label(image) }}</p>
-        <label v-if="image.variant === 'transparent'" class="switch">
+        <p class="image-label">{{ FORMATS[format].label }}</p>
+        <div class="background" role="radiogroup" :aria-label="`${FORMATS[format].label}の背景`">
+          <label class="segment">
+            <input v-model="transparent[format]" type="radio" :name="`background-${format}`" :value="false" />
+            <span>模様あり</span>
+          </label>
+          <label class="segment">
+            <input v-model="transparent[format]" type="radio" :name="`background-${format}`" :value="true" />
+            <span>透過</span>
+          </label>
+        </div>
+        <label v-if="transparent[format]" class="switch">
           <input v-model="backdrop" type="checkbox" role="switch" />
           <span>文字の後ろを暗くする</span>
         </label>
-        <div class="actions">
-          <button v-if="canShare" type="button" class="button" @click="run(() => share(image))">共有</button>
-          <button v-if="canCopy" type="button" class="button" @click="run(() => copy(image), '画像をコピーしました')">
+        <div v-if="images[format]" class="actions">
+          <button v-if="canShare" type="button" class="button" @click="run(() => share(images[format]!))">共有</button>
+          <button v-if="canCopy" type="button" class="button" @click="run(() => copy(images[format]!), '画像をコピーしました')">
             コピー
           </button>
-          <button type="button" class="button" @click="run(() => save(image))">保存</button>
+          <button type="button" class="button" @click="run(() => save(images[format]!))">保存</button>
         </div>
       </li>
     </ul>
@@ -105,7 +121,6 @@ const label = (image: GeneratedImage) => VARIANTS[image.variant].label
 .frame {
   display: grid;
   place-items: center;
-  aspect-ratio: 9 / 16;
   border-radius: var(--radius-small);
   background: var(--color-surface);
   overflow: hidden;
@@ -124,6 +139,40 @@ const label = (image: GeneratedImage) => VARIANTS[image.variant].label
 .image-label {
   margin: 0;
   font-weight: 700;
+}
+
+.background {
+  display: inline-flex;
+  justify-self: start;
+  padding: 0.125rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.segment input {
+  position: absolute;
+  opacity: 0;
+}
+
+.segment span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.segment input:checked + span {
+  background: var(--color-fg);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
+.segment input:focus-visible + span {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .switch {
