@@ -12,8 +12,6 @@ export const router = createRouter({
     { path: '/terms', component: () => import('./pages/docs/TermsPage.vue') },
     { path: '/sources', component: () => import('./pages/docs/SourcesPage.vue') },
     { path: '/help/storage', component: () => import('./pages/docs/StorageHelpPage.vue') },
-    // M0 の実機確認用。公開前に削除する
-    { path: '/spike/share-image', component: () => import('./spikes/ShareImageSpike.vue') },
     { path: '/:pathMatch(.*)*', component: () => import('./pages/NotFoundPage.vue') },
   ],
 })
