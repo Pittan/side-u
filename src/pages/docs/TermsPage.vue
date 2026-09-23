@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import DocLayout from '@/components/common/DocLayout.vue'
+import ContactInfo from '@/components/common/ContactInfo.vue'
 import { DISCLAIMER, DOCS_UPDATED_ON } from '@/site'
 </script>
 
@@ -24,6 +25,9 @@ import { DISCLAIMER, DOCS_UPDATED_ON } from '@/site'
       <li>名前には、ほかの人を傷つける言葉や、ほかの人になりすます言葉を使わないでください。</li>
       <li>共有 URL や共有画像は、あなたの判断で共有してください。</li>
     </ul>
+
+    <h2>運営者</h2>
+    <ContactInfo />
 
     <h2>免責</h2>
     <ul>

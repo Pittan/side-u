@@ -12,6 +12,8 @@
   --radius: 12px;
   --radius-small: 8px;
   --bottom-bar-height: 4.5rem;
+  /* 曲リストの行で、つまみ・番号に使う幅（空き枠も同じ位置にそろえる） */
+  --row-handle-width: 2.25rem;
   color-scheme: light dark;
 }
 

@@ -5,6 +5,8 @@ import { canvasToBlob, drawShareImage, loadFonts, VARIANTS, type ImageVariant, t
 
 export type GeneratedImage = { variant: ImageVariant; blob: Blob; url: string }
 
+const BACKDROP_KEY = 'side-u:transparent-backdrop'
+
 function supportsImageClipboard(): boolean {
   if (typeof ClipboardItem === 'undefined' || !navigator.clipboard?.write) return false
   const supports = (ClipboardItem as unknown as { supports?: (type: string) => boolean }).supports
@@ -20,35 +22,63 @@ function supportsFileShare(): boolean {
   }
 }
 
+/** 透過版のグラデーションのオン・オフ。前回の選択を覚えておく（初期値はオン） */
+function readBackdrop(): boolean {
+  try {
+    return localStorage.getItem(BACKDROP_KEY) !== 'off'
+  } catch {
+    return true
+  }
+}
+
 export function useShareImages(data: Ref<ShareImageData | null>) {
   const images = ref<GeneratedImage[]>([])
   const generating = ref(false)
+  const backdrop = ref(readBackdrop())
   const canCopy = supportsImageClipboard()
   const canShare = supportsFileShare()
 
-  function revoke() {
-    for (const image of images.value) URL.revokeObjectURL(image.url)
-    images.value = []
+  async function render(variant: ImageVariant, value: ShareImageData): Promise<GeneratedImage> {
+    const blob = await canvasToBlob(drawShareImage(variant, value, { backdrop: backdrop.value }))
+    return { variant, blob, url: URL.createObjectURL(blob) }
+  }
+
+  function revoke(list: GeneratedImage[]) {
+    for (const image of list) URL.revokeObjectURL(image.url)
   }
 
   watch(
     data,
     async value => {
-      revoke()
+      revoke(images.value)
+      images.value = []
       if (!value) return
       generating.value = true
       await loadFonts(value)
       const next: GeneratedImage[] = []
-      for (const variant of Object.keys(VARIANTS) as ImageVariant[]) {
-        const blob = await canvasToBlob(drawShareImage(variant, value))
-        next.push({ variant, blob, url: URL.createObjectURL(blob) })
-      }
+      for (const variant of Object.keys(VARIANTS) as ImageVariant[]) next.push(await render(variant, value))
       images.value = next
       generating.value = false
     },
     { immediate: true },
   )
-  onBeforeUnmount(revoke)
+
+  // グラデーションを切り替えたら、透過版だけを作り直す
+  watch(backdrop, async value => {
+    try {
+      localStorage.setItem(BACKDROP_KEY, value ? 'on' : 'off')
+    } catch {
+      // 覚えておけなくても切り替えはできる
+    }
+    if (!data.value) return
+    const index = images.value.findIndex(image => image.variant === 'transparent')
+    if (index === -1) return
+    const next = await render('transparent', data.value)
+    revoke([images.value[index]!])
+    images.value = images.value.map((image, i) => (i === index ? next : image))
+  })
+
+  onBeforeUnmount(() => revoke(images.value))
 
   const fileName = (variant: ImageVariant) => `side-u-${variant}.png`
 
@@ -68,5 +98,5 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
     a.click()
   }
 
-  return { images, generating, canCopy, canShare, copy, share, save }
+  return { images, generating, backdrop, canCopy, canShare, copy, share, save }
 }

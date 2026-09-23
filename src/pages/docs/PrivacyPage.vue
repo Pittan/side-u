@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import DocLayout from '@/components/common/DocLayout.vue'
-import { CONTACT, DOCS_UPDATED_ON } from '@/site'
+import ContactInfo from '@/components/common/ContactInfo.vue'
+import { DOCS_UPDATED_ON } from '@/site'
 </script>
 
 <template>
@@ -74,7 +75,6 @@ import { CONTACT, DOCS_UPDATED_ON } from '@/site'
     </ul>
 
     <h2>お問い合わせ</h2>
-    <p v-if="CONTACT"><a :href="CONTACT.url" rel="noopener">{{ CONTACT.label }}</a></p>
-    <p v-else>連絡先は準備中です。</p>
+    <ContactInfo />
   </DocLayout>
 </template>

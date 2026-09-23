@@ -420,7 +420,8 @@ onBeforeUnmount(() => {
   gap: 0.75rem;
   width: 100%;
   min-height: 3.25rem;
-  padding: 0.5rem 0.75rem;
+  /* つまみの幅だけ空けて、番号の位置を曲の行とそろえる */
+  padding: 0.5rem 0.75rem 0.5rem var(--row-handle-width);
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-small);
   background: transparent;

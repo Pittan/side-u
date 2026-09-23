@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { catalog } from '@shared/catalog-instance'
 import DocLayout from '@/components/common/DocLayout.vue'
-import { CONTACT, DOCS_UPDATED_ON } from '@/site'
+import ContactInfo from '@/components/common/ContactInfo.vue'
+import { DOCS_UPDATED_ON } from '@/site'
 
 const selectableCount = catalog.songs.filter(song => song.selectable).length
 const latestRelease = [...catalog.releases].sort((a, b) => b.releasedOn.localeCompare(a.releasedOn))[0]
@@ -30,7 +31,6 @@ const latestRelease = [...catalog.releases].sort((a, b) => b.releasedOn.localeCo
 
     <h2>訂正のお願い</h2>
     <p>曲名の誤り、足りない曲などに気づいたら、お知らせください。</p>
-    <p v-if="CONTACT"><a :href="CONTACT.url" rel="noopener">{{ CONTACT.label }}</a></p>
-    <p v-else>連絡先は準備中です。</p>
+    <ContactInfo />
   </DocLayout>
 </template>

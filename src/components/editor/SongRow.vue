@@ -20,7 +20,13 @@ const emit = defineEmits<{ toggle: []; up: []; down: []; other: []; remove: [] }
   <li class="row" :class="{ expanded }">
     <div class="row-head">
     <!-- ドラッグ用のつまみ。キーボードや読み上げでは、行の操作ボタンで並べ替える -->
-    <span class="handle" aria-hidden="true" title="ドラッグで並べ替え">≡</span>
+    <span class="handle" aria-hidden="true" title="ドラッグで並べ替え">
+      <svg viewBox="0 0 10 16" width="10" height="16" fill="currentColor">
+        <circle cx="2" cy="2" r="1.5" /><circle cx="8" cy="2" r="1.5" />
+        <circle cx="2" cy="8" r="1.5" /><circle cx="8" cy="8" r="1.5" />
+        <circle cx="2" cy="14" r="1.5" /><circle cx="8" cy="14" r="1.5" />
+      </svg>
+    </span>
     <button type="button" class="main" :aria-expanded="expanded" @click="emit('toggle')">
       <span v-if="number !== undefined" class="number" aria-hidden="true">{{ String(number).padStart(2, '0') }}</span>
       <span class="text">
@@ -55,16 +61,19 @@ const emit = defineEmits<{ toggle: []; up: []; down: []; other: []; remove: [] }
 
 .row-head {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
+/* つまみは曲名の 1 行目にそろえる（行の上下中央にしない） */
 .handle {
-  display: grid;
+  display: flex;
   flex: none;
-  place-items: center;
-  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  width: var(--row-handle-width);
+  height: calc(1.6em + 1rem);
   color: var(--color-muted);
-  font-size: 1.25rem;
+  opacity: 0.7;
   cursor: grab;
   touch-action: none;
   user-select: none;

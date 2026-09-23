@@ -81,7 +81,15 @@ function fitText(ctx: CanvasRenderingContext2D, text: string, weight: number, si
   return current
 }
 
-export function drawShareImage(variant: ImageVariant, data: ShareImageData): HTMLCanvasElement {
+export type DrawOptions = {
+  /**
+   * 背景透過版で、文字の後ろに黒から透明へのグラデーションを敷くか。
+   * 背景に置く写真によって文字が読みにくくなるのを防ぐ（利用者が切り替える）
+   */
+  backdrop?: boolean
+}
+
+export function drawShareImage(variant: ImageVariant, data: ShareImageData, options: DrawOptions = {}): HTMLCanvasElement {
   const { width, height, transparent } = VARIANTS[variant]
   const pattern = createPattern(data.payload)
   const canvas = document.createElement('canvas')
@@ -91,18 +99,17 @@ export function drawShareImage(variant: ImageVariant, data: ShareImageData): HTM
 
   const padding = 80
   if (transparent) {
-    // 写真の上でも読めるよう、半透明の板を敷く
+    if (options.backdrop) {
+      // 文字のある左側を濃く、右へ向かって透明にする（右側は背景の写真を見せる）
+      const gradient = ctx.createLinearGradient(0, 0, width, 0)
+      gradient.addColorStop(0, 'rgb(0 0 0 / 0.78)')
+      gradient.addColorStop(0.55, 'rgb(0 0 0 / 0.55)')
+      gradient.addColorStop(1, 'rgb(0 0 0 / 0)')
+      ctx.fillStyle = gradient
+      ctx.fillRect(0, 0, width, height)
+    }
     ctx.save()
-    ctx.fillStyle = pattern.background
-    ctx.globalAlpha = 0.78
-    ctx.beginPath()
-    ctx.roundRect(padding / 2, padding / 2, width - padding, height - padding, 56)
-    ctx.fill()
-    ctx.restore()
-    ctx.save()
-    ctx.beginPath()
-    ctx.roundRect(padding / 2, padding / 2, width - padding, height - padding, 56)
-    ctx.clip()
+    ctx.globalAlpha = 0.6
     drawPattern(ctx, pattern, width, height)
     ctx.restore()
   } else {
@@ -111,13 +118,19 @@ export function drawShareImage(variant: ImageVariant, data: ShareImageData): HTM
     drawPattern(ctx, pattern, width, height)
   }
 
-  const left = padding + (transparent ? 24 : 0)
+  const left = padding
   const maxWidth = width - left * 2
-  const top = variant === 'story' ? 220 : padding + (transparent ? 24 : 0)
-  const bottom = height - (variant === 'story' ? 220 : padding + (transparent ? 24 : 0))
+  const top = variant === 'story' ? 220 : padding
+  const bottom = height - (variant === 'story' ? 220 : padding)
 
-  ctx.fillStyle = pattern.foreground
+  ctx.fillStyle = transparent ? '#ffffff' : pattern.foreground
   ctx.textBaseline = 'alphabetic'
+  if (transparent) {
+    // グラデーションがなくても、どんな写真の上でも最低限読めるように影を付ける
+    ctx.shadowColor = 'rgb(0 0 0 / 0.6)'
+    ctx.shadowBlur = 12
+    ctx.shadowOffsetY = 2
+  }
 
   let y = top + 96
   ctx.font = `800 104px ${FONT}`
@@ -151,7 +164,7 @@ export function drawShareImage(variant: ImageVariant, data: ShareImageData): HTM
     ctx.fillStyle = pattern.accent
     fitText(ctx, data.tags.map(tag => `#${tag}`).join('   '), 700, 40, maxWidth, 24)
     ctx.fillText(data.tags.map(tag => `#${tag}`).join('   '), left, tagsY)
-    ctx.fillStyle = pattern.foreground
+    ctx.fillStyle = transparent ? '#ffffff' : pattern.foreground
   }
 
   ctx.globalAlpha = 0.6

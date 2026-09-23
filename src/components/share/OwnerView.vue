@@ -8,7 +8,7 @@ import AppleMusicSection from './AppleMusicSection.vue'
 
 const props = defineProps<{ data: ShareImageData; shareUrl: string; songIds: number[]; tagIds: number[] }>()
 const toast = useToast()
-const { images, generating, canCopy, canShare, copy, share, save } = useShareImages(computed(() => props.data))
+const { images, generating, backdrop, canCopy, canShare, copy, share, save } = useShareImages(computed(() => props.data))
 const alt = computed(() => altText(props.data))
 
 async function run(action: () => Promise<void> | void, success?: string) {
@@ -43,6 +43,10 @@ const label = (image: GeneratedImage) => VARIANTS[image.variant].label
           <img :src="image.url" :alt="alt" :width="VARIANTS[image.variant].width" :height="VARIANTS[image.variant].height" />
         </div>
         <p class="image-label">{{ label(image) }}</p>
+        <label v-if="image.variant === 'transparent'" class="switch">
+          <input v-model="backdrop" type="checkbox" role="switch" />
+          <span>文字の後ろを暗くする</span>
+        </label>
         <div class="actions">
           <button v-if="canShare" type="button" class="button" @click="run(() => share(image))">共有</button>
           <button v-if="canCopy" type="button" class="button" @click="run(() => copy(image), '画像をコピーしました')">
@@ -120,6 +124,21 @@ const label = (image: GeneratedImage) => VARIANTS[image.variant].label
 .image-label {
   margin: 0;
   font-weight: 700;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.switch input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--color-accent);
 }
 
 .actions {
