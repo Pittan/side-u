@@ -8,7 +8,9 @@ import AppleMusicSection from './AppleMusicSection.vue'
 
 const props = defineProps<{ data: ShareImageData; shareUrl: string; songIds: number[]; tagIds: number[] }>()
 const toast = useToast()
-const { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save } = useShareImages(computed(() => props.data))
+const { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save, shufflePattern } = useShareImages(
+  computed(() => props.data),
+)
 const formats = Object.keys(FORMATS) as ImageFormat[]
 const alt = computed(() => altText(props.data))
 
@@ -82,6 +84,8 @@ async function copyLink() {
       </li>
     </ul>
   </section>
+
+  <button type="button" class="button shuffle" @click="shufflePattern">模様を変える</button>
 
   <section class="alt" aria-labelledby="alt-heading">
     <h2 id="alt-heading" class="section-heading">画像の説明文（ALT）</h2>
@@ -217,6 +221,10 @@ async function copyLink() {
 .section-heading {
   margin: 1.5rem 0 0.5rem;
   font-size: 1rem;
+}
+
+.shuffle {
+  margin-top: 0.75rem;
 }
 
 .alt-row {

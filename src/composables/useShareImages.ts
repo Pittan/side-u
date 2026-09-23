@@ -33,12 +33,19 @@ function readBackdrop(): boolean {
   }
 }
 
+/** 模様のシード。9:16 と正方形で同じ模様になるよう、1 回の生成で 1 つだけ作る */
+function newPatternSeed(): string {
+  return crypto.getRandomValues(new Uint32Array(1))[0]!.toString(36)
+}
+
 export function useShareImages(data: Ref<ShareImageData | null>) {
   const images = ref<Partial<Record<ImageFormat, GeneratedImage>>>({})
   const generating = ref(false)
   /** 形ごとの「背景を透過にする」 */
   const transparent = reactive<Record<ImageFormat, boolean>>({ story: false, square: false })
   const backdrop = ref(readBackdrop())
+  // 共有画像の模様は、画面を開くたび・「模様を変える」を押すたびに変える（背景の切り替えでは変えない）
+  const patternSeed = ref(newPatternSeed())
   const canCopy = supportsImageClipboard()
   const canShare = supportsFileShare()
 
@@ -49,7 +56,11 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
     if (!data.value) return
     const id = ++latestRender[format]
     const isTransparent = transparent[format]
-    const canvas = drawShareImage(format, data.value, { transparent: isTransparent, backdrop: backdrop.value })
+    const canvas = drawShareImage(format, data.value, {
+      transparent: isTransparent,
+      backdrop: backdrop.value,
+      patternSeed: `${data.value.payload}:${patternSeed.value}`,
+    })
     const blob = await canvasToBlob(canvas)
     if (id !== latestRender[format]) return
     const previous = images.value[format]
@@ -80,6 +91,11 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
     for (const format of ALL_FORMATS) if (transparent[format]) render(format)
   })
 
+  async function shufflePattern() {
+    patternSeed.value = newPatternSeed()
+    await Promise.all(ALL_FORMATS.map(render))
+  }
+
   onBeforeUnmount(() => {
     for (const image of Object.values(images.value)) URL.revokeObjectURL(image.url)
   })
@@ -102,5 +118,5 @@ export function useShareImages(data: Ref<ShareImageData | null>) {
     a.click()
   }
 
-  return { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save }
+  return { images, generating, transparent, backdrop, canCopy, canShare, copy, share, save, shufflePattern }
 }

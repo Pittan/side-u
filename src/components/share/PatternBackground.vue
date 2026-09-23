@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// ほかの人の共有ページの背景の飾り（SVG）。共有画像と同じ模様を描く
+// ほかの人の共有ページの背景の飾り（SVG）。payload から決めるので、同じ URL なら同じ模様になる
 import { computed } from 'vue'
 import { createPattern, trianglePoints } from '@shared/pattern'
 

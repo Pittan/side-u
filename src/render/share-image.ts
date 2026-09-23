@@ -82,6 +82,11 @@ function fitText(ctx: CanvasRenderingContext2D, text: string, weight: number, si
 }
 
 export type DrawOptions = {
+  /**
+   * 模様の乱数のシード。共有画像は作るたびに模様を変えるので、呼び出し側で決める。
+   * 省略すると payload から決める（同じ URL なら同じ模様）
+   */
+  patternSeed?: string
   /** 背景を塗らずに透過にする（別の写真の上に置く前提） */
   transparent?: boolean
   /**
@@ -94,7 +99,7 @@ export type DrawOptions = {
 export function drawShareImage(format: ImageFormat, data: ShareImageData, options: DrawOptions = {}): HTMLCanvasElement {
   const { width, height } = FORMATS[format]
   const transparent = options.transparent ?? false
-  const pattern = createPattern(data.payload)
+  const pattern = createPattern(options.patternSeed ?? data.payload)
   const canvas = document.createElement('canvas')
   canvas.width = width
   canvas.height = height

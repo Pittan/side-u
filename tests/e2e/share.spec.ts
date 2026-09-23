@@ -85,3 +85,25 @@ test('画像の説明文（ALT）をコピーできる', async ({ page, context 
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(alt)
   expect(alt).toMatch(/^SIDE U。あもん の13曲。1 /)
 })
+
+test('共有画像の模様は「模様を変える」で変わる', async ({ page }) => {
+  await page.goto('/edit')
+  await addSongs(page, 13)
+  await page.getByRole('button', { name: '完成する' }).click()
+  const image = page.locator('.images img').first()
+  await expect(image).toHaveAttribute('src', /^blob:/)
+  const pixels = () =>
+    image.evaluate(async (img: HTMLImageElement) => {
+      await img.decode()
+      const canvas = document.createElement('canvas')
+      canvas.width = 64
+      canvas.height = 64
+      canvas.getContext('2d')!.drawImage(img, 0, 0, 64, 64)
+      return Array.from(canvas.getContext('2d')!.getImageData(0, 0, 64, 64).data).join()
+    })
+  const before = await pixels()
+  const src = await image.getAttribute('src')
+  await page.getByRole('button', { name: '模様を変える' }).click()
+  await expect(image).not.toHaveAttribute('src', src!)
+  expect(await pixels()).not.toBe(before)
+})
